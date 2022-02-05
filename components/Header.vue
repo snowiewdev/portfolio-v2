@@ -1,5 +1,8 @@
 <template>
-  <nav>Snowie Wong</nav>
+  <nav class="header">
+    <nuxt-link to="/projects"> Projects </nuxt-link>
+    <nuxt-link to="/projects"> Snowie Wong </nuxt-link>
+  </nav>
 </template>
 
 <script>

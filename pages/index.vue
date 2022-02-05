@@ -1,6 +1,9 @@
 <!-- Home -->
 <template>
-  <h1 class="bg-gray-100 testing text-2xl">Hello World</h1>
+  <div>
+    <h1 class="bg-gray-100 testing text-2xl">Hello World</h1>
+    <img src="/assets/img/black-eye.svg" alt="" />
+  </div>
 </template>
 
 <script>
