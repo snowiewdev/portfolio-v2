@@ -18,6 +18,13 @@ module.exports = {
   ],
   theme: {
     extend: {
+      screens: {
+        sm: "640px",
+        md: "768px",
+        lg: "1024px",
+        xl: "1280px",
+        "2xl": "1536px",
+      },
       colors: {
         "light-primary": "#E9E9E9", // main background
         "light-secondary": "#D2D1D1",

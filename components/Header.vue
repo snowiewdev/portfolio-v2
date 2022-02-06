@@ -1,14 +1,38 @@
 <template>
-  <nav class="header">
-    <nuxt-link to="/projects"> Projects </nuxt-link>
-    <nuxt-link to="/projects"> Snowie Wong </nuxt-link>
-  </nav>
+  <div class="header">
+    <nav class="grid grid-cols-3 py-2">
+      <nuxt-link to="/projects"> Projects </nuxt-link>
+      <nuxt-link to="/" class="justify-self-center"> Snowie Wong </nuxt-link>
+      <DarkLightModeToggleBtn class="justify-self-end" />
+    </nav>
+    <PrimaryDivider />
+  </div>
 </template>
 
 <script>
+import PrimaryDivider from "~/components/PrimaryDivider.vue";
+import DarkLightModeToggleBtn from "~/components/DarkLightModeToggleBtn.vue";
+
 export default {
   name: "Header",
+  components: {
+    PrimaryDivider,
+    DarkLightModeToggleBtn,
+  },
 };
 </script>
 
-<style></style>
+<style lang="scss" scoped>
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+}
+
+a {
+  font-family: $header-font;
+  @apply text-black dark:text-white;
+}
+</style>
