@@ -15,6 +15,7 @@
 
 <script>
 import Eye from "~/components/Eye.vue";
+import RotatingCircle from "~/components/RotatingCircle.vue";
 
 export default {
   name: "IndexPage",

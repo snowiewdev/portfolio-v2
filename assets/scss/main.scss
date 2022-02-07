@@ -35,9 +35,18 @@ h4 {
   text-transform: none;
 }
 
-/* general transition */
+/* transition / animation */
 .transition-style-1 {
   transition: $transition-1;
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 /* dark & light mode */
