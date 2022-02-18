@@ -40,19 +40,24 @@ export default {
   justify-content: center;
   align-items: center;
   transform: rotate(-45deg);
-
-  .dark {
-    border-color: $white;
-    background-color: $white;
-  }
 }
 
 .pupil {
   position: absolute;
   width: 12px;
   height: 12px;
-  // border: 2px solid $black;
   border-radius: 50%;
   background-color: $black;
+}
+
+.dark {
+  .eye {
+    border-color: $white;
+  }
+
+  .iris {
+    border-color: $white;
+    background-color: $white;
+  }
 }
 </style>

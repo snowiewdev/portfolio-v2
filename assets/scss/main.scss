@@ -12,6 +12,7 @@ h6,
 a {
   font-family: $header-font;
   transition: $transition-1;
+  @apply text-black dark:text-white;
 }
 
 p,
@@ -19,6 +20,7 @@ span,
 div {
   font-family: $body-font;
   transition: $transition-1;
+  @apply text-black dark:text-white;
 }
 
 h1,
