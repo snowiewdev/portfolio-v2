@@ -1,11 +1,11 @@
 <template>
   <div class="header">
-    <nav class="grid grid-cols-3 py-2">
+    <nav class="grid grid-cols-3 py-2 box-spacing">
       <nuxt-link to="/projects"> Projects </nuxt-link>
       <nuxt-link to="/" class="justify-self-center"> Snowie Wong </nuxt-link>
       <DarkLightModeToggleBtn class="justify-self-end" />
     </nav>
-    <PrimaryDivider />
+    <PrimaryDivider class="box-spacing" />
   </div>
 </template>
 

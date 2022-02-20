@@ -24,16 +24,25 @@ export default {
 
 <style lang="scss" scoped>
 .rotating-circle {
-  width: 300px;
-  height: 300px;
-  background: url("~assets/image/explore-circle-black.svg") no-repeat center
+  width: 200px;
+  height: 200px;
+  background: url("~assets/image/explore-circle-black.png") no-repeat center
     center;
+  background-size: cover;
   animation: 20s linear infinite rotation;
 }
 
 .dark {
   .rotating-circle {
-    background-image: url("~assets/image/explore-circle-white.svg");
+    background-image: url("~assets/image/explore-circle-white.png");
+    background-size: cover;
+  }
+}
+
+@screen lg {
+  .rotating-circle {
+    width: 300px;
+    height: 300px;
   }
 }
 </style>

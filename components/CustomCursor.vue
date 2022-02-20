@@ -15,7 +15,7 @@ export default {
     setUpCursor() {
       let cursor = document.querySelector(".cursor");
       let cursorLazy = document.querySelector(".cursor-lazy");
-      let cursorScale = document.querySelectorAll(".cursor-scale");
+      let cursorScale = document.querySelectorAll("a, .cursor-scale");
 
       const editCursor = (event, target) => {
         target.style.top = event.clientY + "px";
@@ -30,6 +30,8 @@ export default {
       cursorScale.forEach((link) => {
         link.addEventListener("mousemove", () => {
           cursor.classList.add("grow");
+          cursorLazy.classList.add("border-hide");
+
           if (link.classList.contains("small")) {
             cursor.classList.remove("grow");
             cursor.classList.add("grow-small");
@@ -38,6 +40,8 @@ export default {
 
         link.addEventListener("mouseleave", () => {
           cursor.classList.remove("grow");
+          cursorLazy.classList.remove("border-hide");
+
           cursor.classList.remove("grow-small");
         });
       });
@@ -60,7 +64,7 @@ body {
   position: absolute;
   top: 0;
   left: 0;
-  transform: translate3d(-50%, -50%, 0);
+  transform: translate3d(-50%, -50%, 0) scale(1);
   pointer-events: none;
   border-radius: 50%;
   z-index: 1000;
@@ -71,6 +75,7 @@ body {
   height: 10px;
   background: $black;
   transition-duration: 0ms;
+  transition-timing-function: ease-out;
 }
 
 .cursor-lazy {
@@ -79,6 +84,7 @@ body {
   border: 2px solid $black;
   transition-duration: 200ms;
   transition-timing-function: ease-out;
+  opacity: 1;
 }
 
 .dark {
@@ -91,10 +97,15 @@ body {
   }
 }
 
-.cursor-scale {
-  transform: scale(2);
+.grow {
+  transform: translate3d(-50%, -50%, 0) scale(4);
   background: white;
   mix-blend-mode: difference;
   border: none;
+}
+
+.border-hide {
+  opacity: 0;
+  transform: translate3d(-50%, -50%, 0) scale(0);
 }
 </style>

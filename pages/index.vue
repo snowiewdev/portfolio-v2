@@ -39,20 +39,32 @@ export default {
 }
 
 .home-page-main-text {
-  font-size: clamp(4rem, 5vw, 6rem);
+  font-size: clamp(2.4rem, 5vw, 6rem);
   line-height: 1.3;
   margin-top: 2rem;
   margin-bottom: 3rem;
 }
 
 .rotating-circle-1 {
-  top: 10%;
-  right: -7%;
+  top: 7%;
+  right: -70px;
   animation-direction: reverse;
 }
 
 .rotating-circle-2 {
-  bottom: 10%;
-  left: -7%;
+  bottom: 7%;
+  left: -70px;
+}
+
+@screen lg {
+  .rotating-circle-1 {
+    top: 10%;
+    right: -7%;
+  }
+
+  .rotating-circle-2 {
+    bottom: 10%;
+    left: -7%;
+  }
 }
 </style>

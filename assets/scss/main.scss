@@ -66,3 +66,7 @@ $header-height: 50px;
 .nav-bar {
   height: $header-height;
 }
+
+.box-spacing {
+  @apply lg:container lg:mx-auto lg:px-0 sm:px-4 px-2;
+}
