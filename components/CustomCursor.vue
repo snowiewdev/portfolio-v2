@@ -1,13 +1,11 @@
 <template>
   <div>
     <div class="cursor"></div>
-    <div class="cursor-point"></div>
+    <div class="cursor-lazy"></div>
   </div>
 </template>
 
 <script>
-import gsap from "gsap";
-
 export default {
   name: "CustomCursor",
   mounted() {
@@ -16,26 +14,17 @@ export default {
   methods: {
     setUpCursor() {
       let cursor = document.querySelector(".cursor");
-      let cursorPoint = document.querySelector(".cursor-point");
+      let cursorLazy = document.querySelector(".cursor-lazy");
       let cursorScale = document.querySelectorAll(".cursor-scale");
-      let mouseX = 0;
-      let mouseY = 0;
 
-      gsap.to({}, 0.016, {
-        repeat: -1,
-        onRepeat: function () {
-          gsap.set(cursor, {
-            css: {
-              left: mouseX,
-              top: mouseY,
-            },
-          });
-        },
-      });
+      const editCursor = (event, target) => {
+        target.style.top = event.clientY + "px";
+        target.style.left = event.clientX + "px";
+      };
 
-      window.addEventListener("mousemove", (e) => {
-        mouseX = e.clientX;
-        mouseY = e.clientY;
+      window.addEventListener("mousemove", (event) => {
+        editCursor(event, cursor);
+        editCursor(event, cursorLazy);
       });
 
       cursorScale.forEach((link) => {
@@ -60,40 +49,49 @@ export default {
 <style lang="scss">
 // hide default cursor
 body {
-  // cursor: none;
+  cursor: none;
   // cursor: url("https://ia601409.us.archive.org/7/items/minikoo/minikoo.svg"),
   // pointer;
+  overflow: hidden;
 }
 
-.cursor-point {
-  position: fixed;
-  width: 10px;
-  height: 10px;
-  margin-left: -5px;
-  margin-top: -5px;
-  border-radius: 50%;
-  background: $black;
-  transform-origin: center center;
+.cursor,
+.cursor-lazy {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translate3d(-50%, -50%, 0);
   pointer-events: none;
-}
-
-.cursor {
-  position: fixed;
-  width: 40px;
-  height: 40px;
-  margin-left: -20px;
-  margin-top: -20px;
   border-radius: 50%;
-  border: 2px solid $black;
-  transition-duration: 200ms;
-  transition-timing-function: ease-out;
-  // transition: transform 0.3s ease;
-  transform-origin: center center;
-  pointer-events: none;
   z-index: 1000;
 }
 
-.hover-cursor-grow {
+.cursor {
+  width: 10px;
+  height: 10px;
+  background: $black;
+  transition-duration: 0ms;
+}
+
+.cursor-lazy {
+  width: 45px;
+  height: 45px;
+  border: 2px solid $black;
+  transition-duration: 200ms;
+  transition-timing-function: ease-out;
+}
+
+.dark {
+  .cursor {
+    background: $white;
+  }
+
+  .cursor-lazy {
+    border-color: $white;
+  }
+}
+
+.cursor-scale {
   transform: scale(2);
   background: white;
   mix-blend-mode: difference;

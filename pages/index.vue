@@ -1,6 +1,8 @@
 <!-- Home -->
 <template>
-  <div class="home-page-container flex flex-col justify-center align-center">
+  <div
+    class="home-page-container relative flex flex-col justify-center align-center"
+  >
     <h4 class="">ch.01</h4>
     <h1 class="home-page-main-text">
       Creative <br />
@@ -10,6 +12,8 @@
     <div class="flex justify-center align-center py-6">
       <nuxt-link to="/projects"><Eye /></nuxt-link>
     </div>
+    <rotating-circle class="rotating-circle-1"> </rotating-circle>
+    <rotating-circle class="rotating-circle-2"> </rotating-circle>
   </div>
 </template>
 
@@ -21,6 +25,7 @@ export default {
   name: "IndexPage",
   components: {
     Eye,
+    RotatingCircle,
   },
 };
 </script>
@@ -30,6 +35,7 @@ export default {
   width: 100%;
   height: 100vh;
   text-align: center;
+  overflow: hidden;
 }
 
 .home-page-main-text {
@@ -37,5 +43,16 @@ export default {
   line-height: 1.3;
   margin-top: 2rem;
   margin-bottom: 3rem;
+}
+
+.rotating-circle-1 {
+  top: 10%;
+  right: -7%;
+  animation-direction: reverse;
+}
+
+.rotating-circle-2 {
+  bottom: 10%;
+  left: -7%;
 }
 </style>

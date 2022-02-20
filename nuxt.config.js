@@ -67,4 +67,6 @@ export default {
     },
     transpile: ["gsap"],
   },
+
+  // generate: { fallback: "404.html" },
 };

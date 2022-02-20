@@ -17,13 +17,14 @@ export default {
     };
   },
   methods: {
-    toggleDarkMode() {
+    toggleDarkMode(e) {
+      e.preventDefault();
       this.isDarkMode = !this.isDarkMode;
       document.body.classList.toggle("dark");
       this.isDarkMode
         ? (localStorage.theme = "dark")
         : (localStorage.theme = "light"); // update system preference
-      this.$store.commit("toggleDarkMode");
+      // this.$store.commit("toggleDarkMode");
     },
   },
 };
