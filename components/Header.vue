@@ -1,7 +1,9 @@
 <template>
   <div class="header">
     <nav class="grid grid-cols-3 py-2 box-spacing">
-      <nuxt-link to="/projects"> Projects </nuxt-link>
+      <nuxt-link to="/projects" class="justify-self-start">
+        Projects
+      </nuxt-link>
       <nuxt-link to="/" class="justify-self-center"> Snowie Wong </nuxt-link>
       <DarkLightModeToggleBtn class="justify-self-end" />
     </nav>
