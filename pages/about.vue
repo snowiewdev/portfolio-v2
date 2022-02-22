@@ -1,13 +1,15 @@
 <!-- About -->
 <template>
-  <div>
-    <PageTitleSection :section-number="1" title="About" index-style="chapter">
+  <div class="about-container">
+    <PageTitleSection :section-number="3" title="About" index-style="chapter">
     </PageTitleSection>
+    <FullWidthImageSection src="" alt=""></FullWidthImageSection>
   </div>
 </template>
 
 <script>
 import PageTitleSection from "~/components/PageTitleSection.vue";
+import FullWidthImageSection from "~/components/FullWidthImageSection.vue";
 
 export default {
   data() {
@@ -15,6 +17,7 @@ export default {
   },
   components: {
     PageTitleSection,
+    FullWidthImageSection,
   },
 };
 </script>
