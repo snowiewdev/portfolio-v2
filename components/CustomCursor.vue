@@ -53,15 +53,19 @@ export default {
 <style lang="scss">
 // hide default cursor
 body {
-  cursor: none;
+  // cursor: none;
   // cursor: url("https://ia601409.us.archive.org/7/items/minikoo/minikoo.svg"),
   // pointer;
-  overflow: hidden;
+  position: relative;
+  max-width: 100vw;
+  height: 100%;
+  overflow-x: hidden;
 }
 
 .cursor,
 .cursor-lazy {
-  position: absolute;
+  // position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   transform: translate3d(-50%, -50%, 0) scale(1);

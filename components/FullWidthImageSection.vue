@@ -1,6 +1,6 @@
 <template>
   <div class="full-width-image-section">
-    <img :src="src" :alt="alt" />
+    <img :src="getImgUrl(src)" :alt="alt" />
   </div>
 </template>
 
@@ -17,6 +17,11 @@ export default {
       default: "",
     },
   },
+  methods: {
+    getImgUrl(img) {
+      return require(`~/assets/image/${img}`);
+    },
+  },
 };
 </script>
 
@@ -28,6 +33,7 @@ export default {
   margin: 0 auto;
 
   img {
+    display: block;
     width: 100%;
     height: 100%;
   }

@@ -66,5 +66,6 @@ export default {
 <style lang="scss" scoped>
 .page-title-section {
   height: 70vh;
+  max-height: 600px;
 }
 </style>

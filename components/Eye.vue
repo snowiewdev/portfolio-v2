@@ -9,21 +9,8 @@
 <script>
 export default {
   name: "Eye",
-  mounted() {
-    // this.initEyeBallMovement();
-  },
-  methods: {
-    // initEyeBallMovement() {
-    //   document.querySelector("body").addEventListener("mousemove", (event) => {
-    //     let eye = document.querySelector(".eye-inner");
-    //     let x = eye.getBoundingClientRect().left + eye.clientWidth / 4;
-    //     let y = eye.getBoundingClientRect().top + eye.clientHeight / 4;
-    //     let radian = Math.atan2(event.pageX - x, event.pageY - y);
-    //     let degree = radian * (180 / Math.PI) * -1 + 270;
-    //     eye.style.transform = `rotate(${degree}deg)`;
-    //   });
-    // },
-  },
+  mounted() {},
+  methods: {},
 };
 </script>
 

@@ -40,6 +40,11 @@ h4 {
   font-size: clamp(1rem, 2vw, 1.2rem);
 }
 
+.body-font-title {
+  font-family: $body-font;
+  text-transform: uppercase;
+}
+
 /* transition / animation */
 .transition-style-1 {
   transition: $transition-1;
@@ -58,6 +63,14 @@ h4 {
 body {
   background: $light-primary;
   @extend .transition-style-1;
+
+  /* hide scrollbar */
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
 }
 
 .dark {
@@ -70,6 +83,18 @@ $header-height: 50px;
   height: $header-height;
 }
 
+.header > nav,
+.footer > nav {
+  font-size: 0.9rem;
+}
+
+@screen sm {
+  .header > nav,
+  .footer > nav {
+    font-size: 1rem;
+  }
+}
+
 /* custom container size*/
 .box-spacing {
   @apply lg:container lg:mx-auto px-2;
@@ -79,4 +104,10 @@ $header-height: 50px;
   .box-spacing {
     max-width: 1440px;
   }
+}
+
+.content-section {
+  width: 70vw;
+  margin: 0 auto;
+  min-height: 280px;
 }

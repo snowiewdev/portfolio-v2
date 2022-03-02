@@ -31,6 +31,10 @@ export default {
 </script>
 
 <style scoped lang="scss">
+body {
+  overflow: hidden;
+}
+
 .home-page-container {
   width: 100%;
   height: 100vh;
