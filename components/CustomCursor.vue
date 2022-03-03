@@ -16,6 +16,9 @@ export default {
       let cursor = document.querySelector(".cursor");
       let cursorLazy = document.querySelector(".cursor-lazy");
       let cursorScale = document.querySelectorAll("a, .cursor-scale");
+      // let cursorDiff = document.querySelectorAll(
+      //   "p, img, h1, h2, h3, h4, h5, h6"
+      // );
 
       const editCursor = (event, target) => {
         target.style.top = event.clientY + "px";
@@ -45,6 +48,18 @@ export default {
           cursor.classList.remove("grow-small");
         });
       });
+
+      // cursorDiff.forEach((link) => {
+      //   link.addEventListener("mousemove", () => {
+      //     cursor.classList.add("mix-blend-diff");
+      //     cursorLazy.classList.add("mix-blend-diff");
+      //   });
+
+      //   link.addEventListener("mouseleave", () => {
+      //     cursor.classList.remove("mix-blend-diff");
+      //     cursorLazy.classList.remove("mix-blend-diff");
+      //   });
+      // });
     },
   },
 };
@@ -111,5 +126,9 @@ body {
 .border-hide {
   opacity: 0;
   transform: translate3d(-50%, -50%, 0) scale(0);
+}
+
+.mix-blend-diff {
+  mix-blend-mode: difference;
 }
 </style>

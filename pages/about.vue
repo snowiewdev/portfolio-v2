@@ -11,7 +11,7 @@
     <div
       class="box-spacing content-section about-content-section about-content-section--one pb-12"
     >
-      <div class="about-content-section__text-container">
+      <div class="about-content-section__text-container pr-0 md:pr-8">
         <p class="pb-6">
           Hi, my name is Snowie Wong. I’ve been working as a web developer for a
           year at a digital agency based in Hong Kong. I AM REALLY INTO
@@ -25,8 +25,14 @@
           WOOCOMMERCE
         </p>
       </div>
-      <div class="about-content-section__image-container flex justify-end">
-        <img src="~/assets/image/me-light.jpg" alt="me" />
+      <div
+        class="about-content-section__image-container flex justify-center md:justify-end"
+      >
+        <img
+          class="about-content-section__image"
+          src="~/assets/image/me-light.jpg"
+          alt="me"
+        />
       </div>
     </div>
 
@@ -34,9 +40,11 @@
       class="box-spacing content-section about-content-section about-content-section--two pb-12"
     >
       <div class="about-content-section__image-container">
-        <img src="~/assets/image/cat-light.jpg" alt="me" />
+        <img class="" src="~/assets/image/cat-light.jpg" alt="me" />
       </div>
-      <div class="about-content-section__text-container md:text-right">
+      <div
+        class="about-content-section__text-container md:text-right pl-0 md:pl-8"
+      >
         <p class="pb-6">
           APART FROM CODING, I LOVE CATS AND OTHER ANIMALS. I ENJOY LISTENING TO
           MUSIC WITH HEAVY BEATS LIKE EDM and HEAVY METAL. YOU MAY SPOT ME
@@ -54,6 +62,11 @@
         THANKS FOR VIEWING MY PORTFOLIO, AND ALL THE LIBRARIES AND RESOURCES I
         USED WITHIN the open source community. WITHOUT THEM, THIS CANNOT HAPPEN.
       </p>
+      <nuxt-link to="/" class="inline-block"> View Credits </nuxt-link>
+    </div>
+
+    <div class="marquee">
+      <h2 class="">Design & Develop & Deliver &</h2>
     </div>
   </div>
 </template>
@@ -84,7 +97,12 @@ export default {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  font-size: 1.2rem;
+}
+
+.about-content-section__image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
 }
 
 .about-content-section--full-width {
@@ -92,7 +110,6 @@ export default {
   flex-direction: column;
   justify-content: center;
   max-width: 768px;
-  font-size: 1.2rem;
 }
 
 @screen md {

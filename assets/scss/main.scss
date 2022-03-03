@@ -23,6 +23,23 @@ div {
   @apply text-black dark:text-white;
 }
 
+p {
+  font-size: 0.9rem;
+  /* text-align: justify; */
+}
+
+@screen md {
+  p {
+    font-size: 1rem;
+  }
+}
+
+@screen lg {
+  p {
+    font-size: 1.2rem;
+  }
+}
+
 h1,
 h2,
 h3 {
@@ -107,7 +124,14 @@ $header-height: 50px;
 }
 
 .content-section {
-  width: 70vw;
+  width: 85vw;
+  max-width: 997px;
   margin: 0 auto;
   min-height: 280px;
+}
+
+@screen xl {
+  .content-section {
+    width: 70vw;
+  }
 }
