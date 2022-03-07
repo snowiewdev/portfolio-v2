@@ -65,23 +65,30 @@
       <nuxt-link to="/" class="inline-block"> View Credits </nuxt-link>
     </div>
 
-    <div class="marquee">
-      <h2 class="">Design & Develop & Deliver &</h2>
-    </div>
+    <MarqueeSection
+      :topContent="topMarqueeText"
+      :bottomContent="bottomMarqueeText"
+    >
+    </MarqueeSection>
   </div>
 </template>
 
 <script>
 import PageTitleSection from "~/components/PageTitleSection.vue";
 import FullWidthImageSection from "~/components/FullWidthImageSection.vue";
+import MarqueeSection from "~/components/MarqueeSection.vue";
 
 export default {
   data() {
-    return {};
+    return {
+      topMarqueeText: "Design & Develop & Debug & Deliver & ",
+      bottomMarqueeText: "Coffee & Coding & Tea & Coding & Cats & ",
+    };
   },
   components: {
     PageTitleSection,
     FullWidthImageSection,
+    MarqueeSection,
   },
 };
 </script>

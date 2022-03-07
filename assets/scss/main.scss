@@ -23,6 +23,11 @@ div {
   @apply text-black dark:text-white;
 }
 
+.marquee span {
+  font-family: $header-font;
+  font-weight: 500;
+}
+
 p {
   font-size: 0.9rem;
   /* text-align: justify; */

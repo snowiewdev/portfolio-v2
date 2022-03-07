@@ -32,6 +32,7 @@ export default {
   width: 100%;
   z-index: 100;
   user-select: none;
+  // backdrop-filter: blur(15px);
   // mix-blend-mode: difference;
 }
 
