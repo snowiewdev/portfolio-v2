@@ -1,5 +1,5 @@
 <template>
-  <div class="">
+  <div class="layout-container">
     <CustomCursor />
     <NoiseBackground />
     <Header />
@@ -24,4 +24,10 @@ export default {
 };
 </script>
 
-<style></style>
+<style>
+.layout-container {
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+}
+</style>

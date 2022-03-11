@@ -1,7 +1,5 @@
 <template>
-  <div
-    class="page-title-section flex flex-col justify-center align-center text-center"
-  >
+  <div class="page-title-section" :class="sectionStyleClass">
     <h4 class="mb-4">{{ sectionNumberText }}</h4>
     <h1 class="page-title">{{ title }}</h1>
   </div>
@@ -23,6 +21,10 @@ export default {
       type: String,
       default: "chapter", // chapter & romans
     },
+    sectionStyle: {
+      type: String,
+      default: "full", // half & full
+    },
   },
   computed: {
     sectionNumberText() {
@@ -33,6 +35,11 @@ export default {
       if (this.indexStyle == "romans") {
         return this.getRomanNumber(this.sectionNumber);
       }
+    },
+    sectionStyleClass() {
+      return {
+        "half-height": this.sectionStyle == "half",
+      };
     },
   },
   methods: {
@@ -67,5 +74,21 @@ export default {
 .page-title-section {
   height: 70vh;
   max-height: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.half-height {
+  max-height: 280px;
+  justify-content: flex-end;
+}
+
+@screen sm {
+  .half-height {
+    max-height: 360px;
+  }
 }
 </style>

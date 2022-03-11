@@ -3,6 +3,7 @@
   <div class="about-container">
     <PageTitleSection :section-number="3" title="About" index-style="chapter">
     </PageTitleSection>
+
     <!-- <FullWidthImageSection
       src="about-cover-image.jpg"
       alt="about cover image"
@@ -13,16 +14,18 @@
     >
       <div class="about-content-section__text-container pr-0 md:pr-8">
         <p class="pb-6">
-          Hi, my name is Snowie Wong. I’ve been working as a web developer for a
-          year at a digital agency based in Hong Kong. I AM REALLY INTO
-          FRONT-END DEVELOPMENT AND ANIMATIONS. I LOVE CSS, YOU CAN FIND ME ON
-          CSS BATTLE SOMETIMES LOL
+          Hi, my name is Snowie Wong. I've been working as a
+          <span class="highlight-yellow"> web developer</span> for a year at a
+          digital agency based in Hong Kong. I am really into
+          <span class="highlight-mint">front-end development</span> and
+          animations. I love CSS, You can find me on
+          <span class="highlight-pink">CSS Battle</span> sometimes LOL
         </p>
         <h4 class="body-font-title mt-4 mb-6">Skills</h4>
         <p class="pb-6">
-          VUE.JS // NUXT.JS // JAVASCRIPT // SCSS // CSS // GSAP // TAILWINDCSS
-          // BOOTSTRAP // PHP // MYSQL // HTML // WORDPRESS // ELEMENTOR //
-          WOOCOMMERCE
+          <span class="highlight-green">VUE.JS</span> // NUXT.JS // JAVASCRIPT
+          // SCSS // CSS // GSAP // TAILWINDCSS // BOOTSTRAP // PHP // MYSQL //
+          HTML // WORDPRESS // ELEMENTOR // WOOCOMMERCE
         </p>
       </div>
       <div
@@ -46,24 +49,26 @@
         class="about-content-section__text-container md:text-right pl-0 md:pl-8"
       >
         <p class="pb-6">
-          APART FROM CODING, I LOVE CATS AND OTHER ANIMALS. I ENJOY LISTENING TO
-          MUSIC WITH HEAVY BEATS LIKE EDM and HEAVY METAL. YOU MAY SPOT ME
-          WATCHING GIGS AND FEEDING STRAY CATS SOMETIMES.
+          Aprat from <span class="highlight-yellow">coding</span>, I love cats
+          and other animals. I enjoy listening to music with heavy beats like
+          EDM and Heavy Metal. You may spot me
+          <span class="highlight-pink">watching gigs</span> and
+          <span class="highlight-mint">feeding stray cats</span> sometimes.
         </p>
         <p class="py-6">
-          I also enjoy travelling a lot and am opened to worldwide job
-          opportunities.
+          I also enjoy <span class="highlight-green">travelling</span> a lot and
+          am opened to worldwide job opportunities.
         </p>
       </div>
     </div>
 
-    <div class="content-section about-content-section--full-width text-center">
-      <p class="pb-6">
-        THANKS FOR VIEWING MY PORTFOLIO, AND ALL THE LIBRARIES AND RESOURCES I
-        USED WITHIN the open source community. WITHOUT THEM, THIS CANNOT HAPPEN.
+    <FullWidthContentSection>
+      <p class="">
+        Thanks for viewing my portfolio, and all the libraries and resources I
+        used within the open source community. Without them, this cannot happen.
       </p>
       <nuxt-link to="/" class="inline-block"> View Credits </nuxt-link>
-    </div>
+    </FullWidthContentSection>
 
     <MarqueeSection
       :topContent="topMarqueeText"
@@ -76,6 +81,7 @@
 <script>
 import PageTitleSection from "~/components/PageTitleSection.vue";
 import FullWidthImageSection from "~/components/FullWidthImageSection.vue";
+import FullWidthContentSection from "~/components/FullWidthContentSection.vue";
 import MarqueeSection from "~/components/MarqueeSection.vue";
 
 export default {
@@ -88,6 +94,7 @@ export default {
   components: {
     PageTitleSection,
     FullWidthImageSection,
+    FullWidthContentSection,
     MarqueeSection,
   },
 };
@@ -110,13 +117,6 @@ export default {
   width: 100%;
   height: auto;
   object-fit: cover;
-}
-
-.about-content-section--full-width {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  max-width: 768px;
 }
 
 @screen md {
