@@ -21,9 +21,11 @@
       </p>
     </FullWidthContentSection>
 
-    <div class="content-section title-link">
-      <h2 class="text-center">Drop Me An Email</h2>
-    </div>
+    <RotatingTitleLink
+      text="Drop-Me-An-Email"
+      link="mailto:snowiewongdev@gmail.com"
+    >
+    </RotatingTitleLink>
 
     <div class="social-link-section"></div>
   </div>
@@ -32,6 +34,7 @@
 <script>
 import PageTitleSection from "~/components/PageTitleSection.vue";
 import FullWidthContentSection from "~/components/FullWidthContentSection.vue";
+import RotatingTitleLink from "~/components/RotatingTitleLink.vue";
 
 export default {
   data() {
@@ -59,6 +62,7 @@ export default {
   components: {
     PageTitleSection,
     FullWidthContentSection,
+    RotatingTitleLink,
   },
 };
 </script>

@@ -19,13 +19,17 @@ p,
 span,
 div {
   font-family: $body-font;
-  transition: $transition-1;
+  /* transition: $transition-1; */
   @apply text-black dark:text-white;
 }
 
 .marquee span {
   font-family: $header-font;
   font-weight: 500;
+}
+
+.rotating-link span {
+  font-family: $header-font;
 }
 
 p {
