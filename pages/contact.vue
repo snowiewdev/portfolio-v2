@@ -29,8 +29,10 @@
 
     <SocialLinkSection :social-links="socialLinks"> </SocialLinkSection>
 
-    <rotating-circle class="rotating-circle-1"> </rotating-circle>
-    <rotating-circle class="rotating-circle-2"> </rotating-circle>
+    <rotating-circle class="rotating-circle-1" location="contact">
+    </rotating-circle>
+    <rotating-circle class="rotating-circle-2" location="contact">
+    </rotating-circle>
   </div>
 </template>
 
