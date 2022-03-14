@@ -1,5 +1,5 @@
 <template>
-  <div class="title-link-container flex justify-center mb-8">
+  <div class="title-link-container flex justify-center mb-8 -mt-8">
     <RotatingLink :text="text" :link="link"> </RotatingLink>
   </div>
 </template>

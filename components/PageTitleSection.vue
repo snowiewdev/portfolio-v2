@@ -88,7 +88,7 @@ export default {
 
 @screen sm {
   .half-height {
-    max-height: 360px;
+    max-height: 340px;
   }
 }
 </style>

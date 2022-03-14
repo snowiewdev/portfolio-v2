@@ -1,5 +1,11 @@
 <template>
-  <a class="rotating-link" :href="link" target="_blank">
+  <a
+    :id="id"
+    class="rotating-link"
+    :class="typeClass"
+    :href="link"
+    target="_blank"
+  >
     <div>
       <span class="rotating-link-text">{{ text }}</span>
     </div>
@@ -8,8 +14,12 @@
 
 <script>
 export default {
-  name: "RotatingLink",
+  name: "",
   props: {
+    id: {
+      type: String,
+      default: "rotatingLink",
+    },
     text: {
       type: String,
       default: "",
@@ -18,18 +28,25 @@ export default {
       type: String,
       default: "#",
     },
-    // style:{
-    //   type: String,
-    //   default: "",
-    // }
+    type: {
+      type: String,
+      default: "title", // title, body
+    },
   },
   mounted() {
     this.initRotatingLink();
   },
+  computed: {
+    typeClass() {
+      return `rotating-link-${this.type}`;
+    },
+  },
   methods: {
     initRotatingLink() {
-      const rotatingLink = document.querySelector(".rotating-link");
-      const rotatingLinkText = document.querySelector(".rotating-link-text");
+      const rotatingLink = document.querySelector("#" + this.id);
+      const rotatingLinkText = document.querySelector(
+        "#" + this.id + " .rotating-link-text"
+      );
 
       // create an array with splitted text
       let wordArray = rotatingLinkText.innerText.split("");
@@ -50,14 +67,22 @@ export default {
 </script>
 
 <style lang="scss">
+.rotating-link-title span {
+  // font-family: $header-font;
+  font-size: clamp(1.6rem, 4vw, 2.5rem);
+}
+
+.rotating-link-body span {
+  // font-family: $body-font;
+  font-size: clamp(1rem, 2vw, 1.2rem);
+}
+
 .rotating-link {
   user-select: none;
   text-align: center;
-  font-size: clamp(2rem, 4vw, 2.5rem);
   line-height: 1;
   display: block;
   position: relative;
-  font-family: $header-font;
 }
 
 @mixin rotating-text($index) {

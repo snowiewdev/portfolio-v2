@@ -28,8 +28,12 @@ div {
   font-weight: 500;
 }
 
-.rotating-link span {
+.rotating-link-title span {
   font-family: $header-font;
+}
+
+.rotating-link-body span {
+  font-family: $body-font;
 }
 
 p {
@@ -47,6 +51,10 @@ p {
   p {
     font-size: 1.2rem;
   }
+}
+
+:focus {
+  outline: none;
 }
 
 h1,

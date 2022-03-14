@@ -27,7 +27,7 @@ export default {
 <style>
 .layout-container {
   width: 100%;
-  max-width: 100%;
+  max-width: 100vw;
   margin: 0 auto;
 }
 </style>
