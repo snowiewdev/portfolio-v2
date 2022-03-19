@@ -1,0 +1,74 @@
+{
+  "1": {
+    "id": 1,
+    "projectName": "Ayes",
+    "coverImage": {
+      "url": "",
+      "alt": ""
+    },
+    "role": "",
+    "description": "",
+    "website": {
+      "url": "https://www.ayeshk.com/ayes/home",
+      "isLive": true
+    },
+    "technology": "Vue // JavaScript // GSAP // Bootstrap // SCSS // PHP // MySQL // AWS // Git",
+    "desktopImage": [],
+    "highlightSection": [],
+    "tabletImage": [],
+    "mobileImages": [
+      {
+        "before": {
+          "url": "",
+          "alt": ""
+        },
+        "after": {
+          "url": "",
+          "alt": ""
+        }
+      }
+    ]
+  },
+  "2": {
+    "id": 2,
+    "projectName": "KingFook",
+    "type": "E-commerce",
+    "imgUrl": ""
+  },
+  "3": {
+    "id": 3,
+    "projectName": "BM Pack",
+    "type": "E-commerce",
+    "imgUrl": ""
+  },
+  "4": {
+    "id": 4,
+    "projectName": "Elite Premium",
+    "type": "Company Website",
+    "imgUrl": ""
+  },
+  "5": {
+    "id": 5,
+    "projectName": "Soul Pure Beauty",
+    "type": "E-commerce",
+    "imgUrl": ""
+  },
+  "6": {
+    "id": 6,
+    "projectName": "Immortality Aquaponics",
+    "type": "Company Website",
+    "imgUrl": ""
+  },
+  "7": {
+    "id": 7,
+    "projectName": "Initial Engineering",
+    "type": "Company Website",
+    "imgUrl": ""
+  },
+  "8": {
+    "id": 8,
+    "projectName": "Catstelecom",
+    "type": "E-Commerce",
+    "imgUrl": ""
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "projects": [
+    {
+      "id": 1,
+      "projectName": "Ayes",
+      "type": "E-commerce",
+      "imgUrl": ""
+    },
+    {
+      "id": 2,
+      "projectName": "KingFook",
+      "type": "E-commerce",
+      "imgUrl": ""
+    },
+    {
+      "id": 3,
+      "projectName": "BM Pack",
+      "type": "E-commerce",
+      "imgUrl": ""
+    },
+    {
+      "id": 4,
+      "projectName": "Elite Premium",
+      "type": "Company Website",
+      "imgUrl": ""
+    },
+    {
+      "id": 5,
+      "projectName": "Soul Pure Beauty",
+      "type": "E-commerce",
+      "imgUrl": ""
+    },
+    {
+      "id": 6,
+      "projectName": "Immortality Aquaponics",
+      "type": "Company Website",
+      "imgUrl": ""
+    },
+    {
+      "id": 7,
+      "projectName": "Initial Engineering",
+      "type": "Company Website",
+      "imgUrl": ""
+    },
+    {
+      "id": 8,
+      "projectName": "Catstelecom",
+      "type": "E-Commerce",
+      "imgUrl": ""
+    }
+  ]
+}

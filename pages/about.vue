@@ -75,6 +75,8 @@
       :bottomContent="bottomMarqueeText"
     >
     </MarqueeSection>
+
+    <NextSection title="Contact" url="contact" type="chapter"> </NextSection>
   </div>
 </template>
 
@@ -83,6 +85,7 @@ import PageTitleSection from "~/components/PageTitleSection.vue";
 import FullWidthImageSection from "~/components/FullWidthImageSection.vue";
 import FullWidthContentSection from "~/components/FullWidthContentSection.vue";
 import MarqueeSection from "~/components/MarqueeSection.vue";
+import NextSection from "~/components/NextSection.vue";
 
 export default {
   data() {
@@ -96,6 +99,7 @@ export default {
     FullWidthImageSection,
     FullWidthContentSection,
     MarqueeSection,
+    NextSection,
   },
 };
 </script>
