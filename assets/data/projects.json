@@ -4,49 +4,49 @@
       "id": 1,
       "projectName": "Ayes",
       "meta": "Clothing Store\nWeb Development",
-      "imgUrl": "cat-dark.jpg"
+      "imgUrl": "ayes/ayes-hoodie.jpg"
     },
     {
       "id": 2,
       "projectName": "KingFook",
       "meta": "Jewellery Store\nWeb Development",
-      "imgUrl": ""
+      "imgUrl": "kingfook/kf-earrings.png"
     },
     {
       "id": 3,
       "projectName": "BM Pack",
       "meta": "Packaging Manufacturer\nWeb Development",
-      "imgUrl": ""
+      "imgUrl": "bmpack/bmpack-package.jpg"
     },
     {
       "id": 4,
       "projectName": "Elite Premium",
       "meta": "Tin Manufacturer\nWeb Development",
-      "imgUrl": ""
+      "imgUrl": "elite/elite-square.png"
     },
     {
       "id": 5,
       "projectName": "Soul Pure Beauty",
       "meta": "Beauty Salon\nWeb Development",
-      "imgUrl": ""
+      "imgUrl": "soulpure/soulpure.jpg"
     },
     {
       "id": 6,
       "projectName": "Immortality Aquaponics",
       "meta": "Eco-product Store\nWeb Design & Development",
-      "imgUrl": ""
+      "imgUrl": "ia/ia-img.jpg"
     },
     {
       "id": 7,
       "projectName": "Initial Engineering",
       "meta": "Engineering Company\nWeb Design & Development",
-      "imgUrl": ""
+      "imgUrl": "initial/initial-cover.jpg"
     },
     {
       "id": 8,
       "projectName": "Catstelecom",
       "meta": "Electronic Store\nWeb Design & Development",
-      "imgUrl": ""
+      "imgUrl": "catstelecom/mewo-cover.jpg"
     }
   ]
 }

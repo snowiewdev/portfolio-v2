@@ -2,7 +2,7 @@
   <div class="project-list-section">
     <div class="hover-img-wrapper">
       <div class="hover-img-placeholder">
-        <img src="~/assets/image/ayes/ayes-hoodie.jpg" alt="ayes" />
+        <img :src="require(`~/assets/image/${defaultImage}`)" alt="ayes" />
       </div>
     </div>
 
@@ -10,11 +10,14 @@
       v-for="project in projects"
       :key="project.id"
       class="project-list-item"
+      :data-src="project.imgUrl"
+      @mouseenter="updateHoverImageWrapper"
+      @mouseleave="updateHoverImageWrapper"
+      @mousemove="moveHoverImageWrapper"
     >
       <a
         class="img-hover-effect-link project-list-item__link"
         :href="'projects/' + project.id"
-        :data-src="project.imgUrl"
         @click.prevent="goToUrl('projects/' + project.id)"
       >
         <h4 class="project-list-item__index">
@@ -31,10 +34,10 @@
         </div>
         <img
           class="project-list-item__image"
-          src="~/assets/image/ayes/ayes-hoodie.jpg"
+          :src="require(`~/assets/image/${project.imgUrl}`)"
           :alt="project.projectName"
         />
-        <!-- {{ require(`~/assets/image/${project.imgUrl}`) }} -->
+        <!-- {{ ~/assets/image/ayes/ayes-hoodie.jpg }} -->
       </a>
       <PrimaryDivider></PrimaryDivider>
     </div>
@@ -44,6 +47,7 @@
 <script>
 import utils from "~/utils/utils.js";
 import PrimaryDivider from "~/components/PrimaryDivider.vue";
+import { gsap } from "gsap";
 
 export default {
   name: "ProjectListSection",
@@ -61,6 +65,11 @@ export default {
       return this.projects[0];
     },
   },
+  data() {
+    return {
+      defaultImage: "ayes/ayes-hoodie.jpg",
+    };
+  },
   methods: {
     getRomanNumber(num) {
       return utils.getRomanNumber(num) + ".";
@@ -71,6 +80,42 @@ export default {
     getImgUrl(img) {
       return require(`${img}`);
     },
+    moveHoverImageWrapper(e) {
+      let mouseX = e.clientX;
+      let mouseY = e.clientY;
+      let tl = gsap.timeline();
+
+      tl.to(".hover-img-wrapper", {
+        x: mouseX,
+        y: mouseY,
+        duration: 1,
+        ease: "power1.inOut",
+        // ease: Expo.ease,
+      });
+    },
+    updateHoverImageWrapper(e) {
+      if (e.type == "mouseenter") {
+        console.log("mouseenter", e.target);
+        console.log(e.target.dataset.src);
+        let imgSrc = `/_nuxt/assets/image/${e.target.dataset.src}`;
+        let tl = gsap.timeline();
+
+        tl.set(".hover-img-placeholder img", {
+          attr: { src: imgSrc },
+        }).to(".hover-img-wrapper", {
+          autoAlpha: 1,
+          scale: 1,
+        });
+      }
+
+      if (e.type == "mouseleave") {
+        let tl = gsap.timeline();
+        tl.to(".hover-img-wrapper", {
+          autoAlpha: 0,
+          scale: 0.3,
+        });
+      }
+    },
   },
 };
 </script>
@@ -80,23 +125,27 @@ export default {
   @apply lg:container lg:mx-auto;
   width: 100%;
   max-width: 1440px;
+  // max-width: 1280px;
   margin: 0 auto;
-  position: relative;
+  // position: relative;
   padding-left: 0;
   padding-right: 0;
+  overflow: hidden;
 }
 
 .hover-img-wrapper {
+  display: none;
   position: absolute;
-  right: 150px;
-  top: -100px;
-  width: 250px;
-  height: 250px;
-  // border-radius: 50%;
+  // left: 300px;
+  // top: -100px;
+  width: 300px;
+  height: 300px;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
   overflow: hidden;
   pointer-events: none;
   z-index: 10;
-  // mix-blend-mode: difference;
+  mix-blend-mode: difference;
   visibility: hidden;
   // transform: scale(0.3);
 }
@@ -231,5 +280,25 @@ export default {
   .project-list-item__meta {
     font-size: 1rem;
   }
+
+  .hover-img-wrapper {
+    display: block;
+  }
+
+  // .project-list-item__link {
+  //   grid-template-columns: 50px repeat(7, 1fr);
+  // }
+
+  // .project-list-item__index {
+  //   grid-column: 1;
+  // }
+
+  // .project-list-item__title {
+  //   grid-column: span 5;
+  // }
+
+  // .project-list-item__desc {
+  //   grid-column: span 2;
+  // }
 }
 </style>
