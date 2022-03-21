@@ -18,7 +18,7 @@ export default {
   height: 100vh;
   background-image: url(./assets/gif/noise.gif);
   opacity: 0.06;
-  z-index: 999;
+  z-index: 1000;
   pointer-events: none;
 }
 

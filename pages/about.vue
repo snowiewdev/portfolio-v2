@@ -25,7 +25,7 @@
         <p class="pb-6">
           <span class="highlight-green">VUE.JS</span> // NUXT.JS // JAVASCRIPT
           // SCSS // CSS // GSAP // TAILWINDCSS // BOOTSTRAP // PHP // MYSQL //
-          HTML // WORDPRESS // ELEMENTOR // WOOCOMMERCE
+          HTML // GIT // WORDPRESS // ELEMENTOR // WOOCOMMERCE
         </p>
       </div>
       <div
@@ -48,8 +48,8 @@
       <div
         class="about-content-section__text-container md:text-right pl-0 md:pl-8"
       >
-        <p class="pb-6">
-          Aprat from <span class="highlight-yellow">coding</span>, I love cats
+        <p class="pt-4 md:pt-0 pb-6">
+          Apart from <span class="highlight-yellow">coding</span>, I love cats
           and other animals. I enjoy listening to music with heavy beats like
           EDM and Heavy Metal. You may spot me
           <span class="highlight-pink">watching gigs</span> and
@@ -67,7 +67,7 @@
         Thanks for viewing my portfolio, and all the libraries and resources I
         used within the open source community. Without them, this cannot happen.
       </p>
-      <nuxt-link to="/" class="inline-block"> View Credits </nuxt-link>
+      <!-- <nuxt-link to="/" class="inline-block"> View Credits </nuxt-link> -->
     </FullWidthContentSection>
 
     <MarqueeSection

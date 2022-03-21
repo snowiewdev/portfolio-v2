@@ -86,13 +86,15 @@ body {
   transform: translate3d(-50%, -50%, 0) scale(1);
   pointer-events: none;
   border-radius: 50%;
-  z-index: 1000;
+  z-index: 999;
+  // mix-blend-mode: difference;
 }
 
 .cursor {
   width: 10px;
   height: 10px;
-  background: $black;
+  // background: $light-primary;
+  background: $dark-primary;
   transition-duration: 0ms;
   transition-timing-function: ease-out;
 }
@@ -100,7 +102,8 @@ body {
 .cursor-lazy {
   width: 45px;
   height: 45px;
-  border: 2px solid $black;
+  // border: 2px solid $light-primary;
+  border: 2px solid $dark-primary;
   transition-duration: 200ms;
   transition-timing-function: ease-out;
   opacity: 1;
@@ -108,11 +111,11 @@ body {
 
 .dark {
   .cursor {
-    background: $white;
+    background: $light-primary;
   }
 
   .cursor-lazy {
-    border-color: $white;
+    border-color: $light-primary;
   }
 }
 

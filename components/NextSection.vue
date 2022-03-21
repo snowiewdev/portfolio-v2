@@ -1,7 +1,7 @@
 <template>
   <div class="next-section">
     <h4 class="next-section__subtitle">{{ subtitle }}</h4>
-    <h2 class="next-section__title">{{ title }}</h2>
+    <h2 class="next-section__title" @click="goToUrl(url)">{{ title }}</h2>
     <img src="" alt="" />
   </div>
 </template>
@@ -35,6 +35,11 @@ export default {
       }
     },
   },
+  methods: {
+    goToUrl(url) {
+      this.$router.push(url);
+    },
+  },
 };
 </script>
 
@@ -51,7 +56,7 @@ export default {
 }
 
 .next-section__subtitle {
-  font-size: 2rem;
+  font-size: 1.25rem;
   text-transform: uppercase;
   font-family: $body-font;
   display: flex;
@@ -60,7 +65,7 @@ export default {
   &::after {
     content: "";
     display: block;
-    width: 100px;
+    width: 75px;
     height: 1.5px;
     background-color: $dark-primary;
     margin-left: 1rem;
@@ -77,6 +82,16 @@ export default {
   .next-section__subtitle {
     &::after {
       background-color: $light-primary;
+    }
+  }
+}
+
+@screen md {
+  .next-section__subtitle {
+    font-size: 2rem;
+
+    &::after {
+      width: 100px;
     }
   }
 }
