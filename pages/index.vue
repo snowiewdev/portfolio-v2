@@ -23,6 +23,16 @@ import RotatingCircle from "~/components/RotatingCircle.vue";
 
 export default {
   name: "IndexPage",
+  head: {
+    title: "Snowie Wong Portfolio",
+    meta: [
+      {
+        hid: "description",
+        name: "description",
+        content: "Snowie Wong - A Web Developer based in Hong Kong",
+      },
+    ],
+  },
   components: {
     Eye,
     RotatingCircle,

@@ -21,6 +21,11 @@ import NextSection from "~/components/NextSection.vue";
 import data from "~/assets/data/projects.json";
 
 export default {
+  head() {
+    return {
+      title: "Projects | Snowie Wong",
+    };
+  },
   data() {
     return {
       projects: data.projects,

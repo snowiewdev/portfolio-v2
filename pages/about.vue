@@ -88,6 +88,11 @@ import MarqueeSection from "~/components/MarqueeSection.vue";
 import NextSection from "~/components/NextSection.vue";
 
 export default {
+  head() {
+    return {
+      title: "About | Snowie Wong",
+    };
+  },
   data() {
     return {
       topMarqueeText: "Design & Develop & Debug & Deliver & ",

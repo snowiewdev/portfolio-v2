@@ -44,6 +44,11 @@ import SocialLinkSection from "~/components/SocialLinkSection.vue";
 import RotatingCircle from "~/components/RotatingCircle.vue";
 
 export default {
+  head() {
+    return {
+      title: "Contact | Snowie Wong",
+    };
+  },
   data() {
     return {
       socialLinks: [

@@ -145,7 +145,7 @@ export default {
   overflow: hidden;
   pointer-events: none;
   z-index: 10;
-  mix-blend-mode: difference;
+  // mix-blend-mode: difference;
   visibility: hidden;
   // transform: scale(0.3);
 }

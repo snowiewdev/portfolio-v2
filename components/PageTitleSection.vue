@@ -64,7 +64,7 @@ export default {
           break;
         }
       }
-      return romanNumber;
+      return romanNumber + ".";
     },
   },
 };
