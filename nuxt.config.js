@@ -5,16 +5,56 @@ export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     title: "Snowie Wong Portfolio",
+    titleTemplate: "Snowie Wong | %s",
     htmlAttrs: {
       lang: "en",
     },
     meta: [
       { charset: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { hid: "description", name: "description", content: "" },
+      {
+        hid: "description",
+        name: "description",
+        content: "A Web Developer based in Hong Kong",
+      },
       { name: "format-detection", content: "telephone=no" },
     ],
-    link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }],
+    link: [
+      { hid: "canonical", rel: "canonical", href: "https://snowiewongdev.com" },
+      { rel: "icon", type: "image/x-icon", href: "/favicon.ico" },
+      // Open Graph
+      {
+        hid: "og:site_name",
+        property: "og:site_name",
+        content: "Snowie Wong Portfolio",
+      },
+      { hid: "og:type", property: "og:type", content: "website" },
+      {
+        hid: "og:url",
+        property: "og:url",
+        content: "https://snowiewongdev.com",
+      },
+      {
+        hid: "og:title",
+        property: "og:title",
+        content: "Snowie Wong Portfolio",
+      },
+      {
+        hid: "og:description",
+        property: "og:description",
+        content: "A Web Developer Based in Hong Kong",
+      },
+      {
+        hid: "og:image",
+        property: "og:image",
+        content: "",
+      },
+      {
+        hid: "og:image:alt",
+        property: "og:image:alt",
+        content: "Snowie Wong Logo",
+      },
+    ],
     // gsap cdn functionality to be tested
     // script: [
     //   { src: "https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js" },

@@ -86,7 +86,7 @@ body {
   transform: translate3d(-50%, -50%, 0) scale(1);
   pointer-events: none;
   border-radius: 50%;
-  z-index: 999;
+  z-index: 998;
   // mix-blend-mode: difference;
 }
 

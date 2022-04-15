@@ -46,7 +46,7 @@ import RotatingCircle from "~/components/RotatingCircle.vue";
 export default {
   head() {
     return {
-      title: "Contact | Snowie Wong",
+      title: "Contact",
     };
   },
   data() {

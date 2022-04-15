@@ -90,7 +90,7 @@ import NextSection from "~/components/NextSection.vue";
 export default {
   head() {
     return {
-      title: "About | Snowie Wong",
+      title: "About",
     };
   },
   data() {

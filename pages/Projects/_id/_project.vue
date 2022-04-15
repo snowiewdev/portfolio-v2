@@ -25,7 +25,14 @@ import projects from "~/assets/data/projectDetail.json";
 export default {
   head() {
     return {
-      title: "Project | Snowie Wong",
+      title: "Projects",
+      link: [
+        {
+          hid: "canonical",
+          rel: "canonical",
+          href: "https://snowiewongdev.com/projects/${this.$route.params.slug}",
+        },
+      ],
     };
   },
   data() {
@@ -58,7 +65,7 @@ export default {
       let nextDataKey = Number(this.$route.params.id) + 1;
       let nextProject = projects[nextDataKey];
       let aboutSection = {
-        url: "about",
+        url: "/about",
         projectName: "About",
         type: "chapter",
       };

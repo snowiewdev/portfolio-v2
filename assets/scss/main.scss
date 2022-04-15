@@ -1,4 +1,4 @@
-/* font styles */
+/* ========== font styles ======== */
 * {
   text-transform: uppercase;
 }
@@ -85,7 +85,7 @@ h4 {
   text-transform: uppercase;
 }
 
-/* transition / animation */
+/* ======== transition / animation  ========*/
 .transition-style-1 {
   transition: $transition-1;
 }
@@ -99,7 +99,7 @@ h4 {
   }
 }
 
-/* dark & light mode */
+/* ======== dark & light mode ============ */
 body {
   background: $light-primary;
   @extend .transition-style-1;
@@ -135,7 +135,7 @@ $header-height: 50px;
   }
 }
 
-/* custom container size*/
+/* ======== custom container size ========= */
 .box-spacing {
   @apply lg:container lg:mx-auto px-2;
 }
@@ -168,7 +168,7 @@ $header-height: 50px;
   text-align: center;
 }
 
-/* Highlight styles */
+/* ========== Highlight styles ============ */
 @mixin highlight($color) {
   padding-right: 4px;
   background: linear-gradient(to bottom, transparent 40%, $color 40%);
@@ -208,3 +208,8 @@ $header-height: 50px;
     @include highlight($dark-highlight-4);
   }
 }
+
+/* ============ Page Transition =========== */
+/* .intro-enter-active,
+.intro-leave-active{
+} */

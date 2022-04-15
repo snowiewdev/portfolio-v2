@@ -23,7 +23,7 @@ import data from "~/assets/data/projects.json";
 export default {
   head() {
     return {
-      title: "Projects | Snowie Wong",
+      title: "Projects",
     };
   },
   data() {

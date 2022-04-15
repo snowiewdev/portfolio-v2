@@ -1,5 +1,6 @@
 <template>
   <div class="layout-container">
+    <Loader />
     <CustomCursor />
     <NoiseBackground />
     <Header />
@@ -9,6 +10,7 @@
 </template>
 
 <script>
+import Loader from "@/components/Loader.vue";
 import Header from "@/components/Header.vue";
 import Footer from "@/components/Footer.vue";
 import NoiseBackground from "@/components/NoiseBackground.vue";
@@ -16,6 +18,7 @@ import CustomCursor from "@/components/CustomCursor.vue";
 
 export default {
   components: {
+    Loader,
     Header,
     Footer,
     NoiseBackground,
