@@ -3,18 +3,31 @@
     class="dark-light-mode-toggle-btn text-black dark:text-white"
     @click.prevent="toggleDarkMode"
   >
-    <template v-if="isDarkMode"> LIGHT MODE </template>
-    <template v-else> DARK MODE </template>
+    <roll-up-text
+      v-if="isDarkMode"
+      text="LIGHT MODE"
+      hover-show-text="LIGHT MODE"
+    ></roll-up-text>
+    <roll-up-text
+      v-else
+      text="DARK MODE"
+      hover-show-text="DARK MODE"
+    ></roll-up-text>
   </div>
 </template>
 
 <script>
+import RollUpText from "~/components/RollUpText.vue";
+
 export default {
   name: "DarkLightModeToggleBtn",
   data() {
     return {
       isDarkMode: false,
     };
+  },
+  components: {
+    RollUpText,
   },
   methods: {
     toggleDarkMode(e) {
@@ -33,5 +46,6 @@ export default {
 <style lang="scss" scoped>
 .dark-light-mode-toggle-btn {
   font-family: $header-font;
+  overflow: hidden;
 }
 </style>

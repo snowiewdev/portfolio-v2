@@ -6,7 +6,7 @@
       </div>
     </div>
 
-    <div
+    <!-- <div
       v-for="project in projects"
       :key="project.id"
       class="project-list-item"
@@ -14,6 +14,13 @@
       @mouseenter="updateHoverImageWrapper"
       @mouseleave="updateHoverImageWrapper"
       @mousemove="moveHoverImageWrapper"
+    > -->
+
+    <div
+      v-for="project in projects"
+      :key="project.id"
+      class="project-list-item"
+      :data-src="project.imgUrl"
     >
       <a
         class="img-hover-effect-link project-list-item__link"

@@ -101,12 +101,20 @@ export default {
   build: {
     postcss: {
       plugins: {
-        tailwindcss: {},
+        tailwindcss: {
+          // content: [
+          //   "./src/app.html",
+          //   "./src/components/**/*.{js,ts,vue}",
+          //   "./src/layouts/**/*.{js,ts,vue}",
+          //   "./src/pages/**/*.{js,ts,vue}",
+          // ],
+        },
         autoprefixer: {},
       },
     },
     transpile: ["gsap"],
   },
 
+  loading: false, // hide default progress bar
   // generate: { fallback: "404.html" },
 };

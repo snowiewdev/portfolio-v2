@@ -5,7 +5,7 @@
         <template v-if="currentPage == 'index'">
           <h4 class="uppercase">Snowie Wong Portfolio</h4>
           <h1 id="percent">{{ percent }}%</h1>
-          <h4 class="uppercase">Explore My Journey</h4>
+          <h4 class="uppercase explore-line">Explore My Journey</h4>
         </template>
       </div>
     </div>
@@ -42,15 +42,15 @@ export default {
         ".page-transition",
         {
           height: 0,
-          ease: "Power4.out",
+          ease: "Power3.inOut",
           duration: 0.3,
         },
         "+=0.2"
       );
     },
     loading() {
-      this.loader = setInterval(this.frame, 30);
-      setTimeout(this.animation, 3000);
+      this.loader = setInterval(this.frame, 15);
+      setTimeout(this.animation, 1800);
     },
     frame() {
       if (this.percent >= 100) {
@@ -87,6 +87,10 @@ export default {
   h1,
   h4 {
     @apply text-white dark:text-black text-center;
+  }
+
+  .explore-line {
+    font-family: $body-font;
   }
 }
 

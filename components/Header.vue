@@ -1,9 +1,12 @@
 <template>
   <div class="header">
     <nav class="grid grid-cols-3 py-2 box-spacing">
-      <nuxt-link to="/projects" class="justify-self-start">
-        Projects
-      </nuxt-link>
+      <roll-up-link
+        link="/projects"
+        class="justify-self-start"
+        text="Projects"
+      ></roll-up-link>
+      <!-- <roll-up-link link="/" class="justify-self-center" text="Snowie Wong"></roll-up-link> -->
       <nuxt-link to="/" class="justify-self-center"> Snowie Wong </nuxt-link>
       <DarkLightModeToggleBtn class="justify-self-end" />
     </nav>
@@ -14,12 +17,14 @@
 <script>
 import PrimaryDivider from "~/components/PrimaryDivider.vue";
 import DarkLightModeToggleBtn from "~/components/DarkLightModeToggleBtn.vue";
+import RollUpLink from "~/components/RollUpLink.vue";
 
 export default {
   name: "Header",
   components: {
     PrimaryDivider,
     DarkLightModeToggleBtn,
+    RollUpLink,
   },
 };
 </script>
