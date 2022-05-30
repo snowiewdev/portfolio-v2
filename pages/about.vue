@@ -56,8 +56,9 @@
           <span class="highlight-mint">feeding stray cats</span> sometimes.
         </p>
         <p class="py-6">
-          I also enjoy <span class="highlight-green">travelling</span> a lot and
-          am opened to worldwide job opportunities.
+          I also enjoy <span class="highlight-green">travelling</span> a lot. I
+          have recently relocated to Vancouver with my work permit and hopefully
+          I could get a job as web developer there soon.
         </p>
       </div>
     </div>
