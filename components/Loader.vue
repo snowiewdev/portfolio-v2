@@ -24,7 +24,8 @@ export default {
     };
   },
   mounted() {
-    this.loading();
+    // uncomment for loading event
+    // this.loading();
   },
   computed: {
     currentPage() {
@@ -71,7 +72,7 @@ export default {
   left: 0;
   pointer-events: none;
   width: 100%;
-  height: 100vh;
+  // height: 100vh;
   z-index: 999;
 }
 
