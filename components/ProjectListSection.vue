@@ -1,21 +1,5 @@
 <template>
   <div class="project-list-section">
-    <!-- <div class="hover-img-wrapper">
-      <div class="hover-img-placeholder">
-        <img :src="require(`~/assets/image/${defaultImage}`)" alt="ayes" />
-      </div>
-    </div> -->
-
-    <!-- <div
-      v-for="project in projects"
-      :key="project.id"
-      :id="'project-list-item-' + project.id"
-      class="project-list-item"
-      :data-src="project.imgUrl"
-      @mouseenter="updateHoverImageWrapper"
-      @mouseleave="updateHoverImageWrapper"
-      @mousemove="moveHoverImageWrapper"
-    > -->
     <div
       v-for="project in projects"
       :key="project.id"
@@ -34,15 +18,18 @@
         :href="'projects/' + project.id"
         @click.prevent="goToUrl('projects/' + project.id)"
       >
-        <h4 class="project-list-item__index">
+        <h4 class="project-list-item__index projest-list-text">
           {{ getRomanNumber(project.id) }}
         </h4>
-        <h2 class="project-list-item__title mb-2 md:mb-0">
+        <h2 class="project-list-item__title projest-list-text mb-2 md:mb-0">
           {{ project.projectName }}
         </h2>
         <div class="project-list-item__desc">
-          <p class="project-list-item__meta" v-html="project.meta"></p>
-          <p class="view-project-link">
+          <p
+            class="project-list-item__meta projest-list-text"
+            v-html="project.meta"
+          ></p>
+          <p class="view-project-link projest-list-text">
             View Project <img src="~/assets/image/arrow.svg" alt="link arrow" />
           </p>
         </div>
@@ -67,7 +54,6 @@
             ></div>
           </div>
         </div>
-        <!-- {{ ~/assets/image/ayes/ayes-hoodie.jpg }} -->
       </a>
       <PrimaryDivider></PrimaryDivider>
     </div>
@@ -100,9 +86,7 @@ export default {
       defaultImage: "ayes/ayes-hoodie.jpg",
     };
   },
-  mounted() {
-    // this.initHoverRevealImageEffect();
-  },
+  mounted() {},
   methods: {
     getRomanNumber(num) {
       return utils.getRomanNumber(num) + ".";
@@ -122,77 +106,40 @@ export default {
       let hoverRevealContainer = document.querySelector(
         `${currentItem} .hover-reveal`
       );
-      let currentItemText = document.querySelector(
-        `${currentItem} .project-list-item__title`
+      let currentItemText = document.querySelectorAll(
+        `${currentItem} .projest-list-text`
       );
       let hoverRevealImage = document.querySelector(
         `${currentItem} .hover-reveal__img`
       );
 
-      hoverRevealContainer.style.opacity = 1;
-      currentItemText.style.zIndex = 3;
+      currentItemText.forEach((text) => {
+        text.style.zIndex = 3;
+      });
       hoverRevealContainer.style.transform = `translate(${
         e.clientX - 300
       }px, -${e.clientY / 3}px) rotate(${e.clientX / 120}deg)`;
-      // hoverRevealImage.style.transform = "scale(1, 1)";
+      hoverRevealContainer.style.zIndex = 2;
       hoverRevealImage.style.clipPath = "inset(0 0 0 0)";
-      // currentItemLink.style.zIndex = 2;
     },
     fadeOutHoverRevealImage(e, itemID) {
       let currentItem = `#${itemID}`;
-      let currentItemLink = document.querySelector(
-        `${currentItem}  .project-list-item__link`
-      );
       let hoverRevealContainer = document.querySelector(
         `${currentItem} .hover-reveal`
+      );
+      let currentItemText = document.querySelectorAll(
+        `${currentItem} .projest-list-text`
       );
       let hoverRevealImage = document.querySelector(
         `${currentItem} .hover-reveal__img`
       );
 
-      hoverRevealContainer.style.opacity = 0;
-      // hoverRevealContainer.style.transform = `translate(${-e.clientX}px, -300px)`;
+      hoverRevealContainer.style.zIndex = 0;
+      currentItemText.forEach((text) => {
+        text.style.zIndex = 0;
+      });
       hoverRevealImage.style.clipPath = "inset(100% 0 0 0)";
-      hoverRevealContainer.style.transform = `translate(${-e.clientX}px, 0px)`;
-      // hoverRevealImage.style.transform = "scale(0.8, 0.8)";
-      // currentItemLink.style.zIndex = 0;
     },
-    // moveHoverImageWrapper(e) {
-    //   let mouseX = e.clientX;
-    //   let mouseY = e.clientY;
-    //   let tl = gsap.timeline();
-
-    //   tl.to(".hover-img-wrapper", {
-    //     x: mouseX,
-    //     y: mouseY,
-    //     duration: 1,
-    //     ease: "power1.inOut",
-    //     // ease: Expo.ease,
-    //   });
-    // },
-    // updateHoverImageWrapper(e) {
-    //   if (e.type == "mouseenter") {
-    //     console.log("mouseenter", e.target);
-    //     console.log(e.target.dataset.src);
-    //     let imgSrc = `/_nuxt/assets/image/${e.target.dataset.src}`;
-    //     let tl = gsap.timeline();
-
-    //     tl.set(".hover-img-placeholder img", {
-    //       attr: { src: imgSrc },
-    //     }).to(".hover-img-wrapper", {
-    //       autoAlpha: 1,
-    //       scale: 1,
-    //     });
-    //   }
-
-    //   if (e.type == "mouseleave") {
-    //     let tl = gsap.timeline();
-    //     tl.to(".hover-img-wrapper", {
-    //       autoAlpha: 0,
-    //       scale: 0.3,
-    //     });
-    //   }
-    // },
   },
 };
 </script>
@@ -204,45 +151,15 @@ export default {
   max-width: 1440px;
   // max-width: 1280px;
   margin: 0 auto;
-  // position: relative;
   padding-left: 0;
   padding-right: 0;
   // overflow: hidden;
 }
 
-// .hover-img-wrapper {
-//   display: none;
-//   position: absolute;
-//   // left: 300px;
-//   // top: -100px;
-//   width: 300px;
-//   height: 300px;
-//   transform: translate(-50%, -50%);
-//   border-radius: 50%;
-//   overflow: hidden;
-//   pointer-events: none;
-//   z-index: 10;
-//   // mix-blend-mode: difference;
-//   visibility: hidden;
-//   // transform: scale(0.3);
-// }
-
-// .hover-img-placeholder,
-// .hover-img-placeholder img {
-//   height: 100%;
-//   width: 100%;
-// }
-
-// .img-placeholder img {
-//   object-fit: cover;
-//   display: block;
-// }
-
 .project-list-item {
   display: flex;
   flex-direction: column;
   position: relative;
-  // border-bottom: 1px solid currentColor;
 }
 
 .project-list-item__link {
@@ -271,13 +188,18 @@ export default {
   min-height: 70px;
   display: flex;
   align-items: center;
+}
+
+.projest-list-text {
   mix-blend-mode: difference;
   filter: invert(1);
+  color: $black;
 }
 
 .dark {
-  .project-list-item__title {
+  .projest-list-text {
     filter: none;
+    color: $absWhite;
   }
 }
 
@@ -321,10 +243,9 @@ export default {
   left: 0;
   width: 300px;
   height: 400px;
-  opacity: 0;
+  // opacity: 0;
   pointer-events: none;
   transform: translate(0, -300px);
-  // transition: 0.3s ease-out;
 }
 
 .hover-reveal__inner {
@@ -342,9 +263,8 @@ export default {
   width: 100%;
   height: 100%;
   will-change: clip-path;
-  // transform: scale(0.8, 0.8);
   clip-path: inset(100% 0 0 0);
-  transition: clip-path 0.5s cubic-bezier(0.79, 0.14, 0.15, 0.86);
+  transition: clip-path 0.4s cubic-bezier(0.79, 0.14, 0.15, 0.86);
 }
 
 // responsive
