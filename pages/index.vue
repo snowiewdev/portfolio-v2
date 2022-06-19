@@ -14,12 +14,14 @@
     </div>
     <rotating-circle class="rotating-circle-1"> </rotating-circle>
     <rotating-circle class="rotating-circle-2"> </rotating-circle>
+    <Footer />
   </div>
 </template>
 
 <script>
 import Eye from "~/components/Eye.vue";
 import RotatingCircle from "~/components/RotatingCircle.vue";
+import Footer from "@/components/Footer.vue";
 
 export default {
   name: "IndexPage",
@@ -37,6 +39,7 @@ export default {
   components: {
     Eye,
     RotatingCircle,
+    Footer,
   },
   methods: {},
 };

@@ -60,8 +60,16 @@ a {
 }
 
 .footer {
+  width: 100%;
   position: absolute;
   bottom: 0;
-  width: 100%;
 }
+
+// .home-page-container,
+// .contact-container {
+//   .footer {
+//     position: absolute;
+//     bottom: 0;
+//   }
+// }
 </style>

@@ -11,39 +11,69 @@ export default {
   mounted() {
     this.setUpCursor();
   },
+  beforeDestroy() {
+    this.unmountCursor();
+  },
   methods: {
+    editCursor(event, target) {
+      target.style.top = event.clientY + "px";
+      target.style.left = event.clientX + "px";
+    },
+    addCursorActiveStyle(trigger, cursor, cursorLazy) {
+      cursor.classList.add("grow");
+      cursorLazy.classList.add("border-hide");
+
+      if (trigger.classList.contains("small")) {
+        cursor.classList.remove("grow");
+        cursor.classList.add("grow-small");
+      }
+    },
+    removeCursorActiveStyle(cursor, cursorLazy) {
+      cursor.classList.remove("grow");
+      cursorLazy.classList.remove("border-hide");
+
+      cursor.classList.remove("grow-small");
+    },
     setUpCursor() {
       let cursor = document.querySelector(".cursor");
       let cursorLazy = document.querySelector(".cursor-lazy");
       let cursorScale = document.querySelectorAll("a, .cursor-scale");
 
-      const editCursor = (event, target) => {
-        target.style.top = event.clientY + "px";
-        target.style.left = event.clientX + "px";
-      };
-
       window.addEventListener("mousemove", (event) => {
-        editCursor(event, cursor);
-        editCursor(event, cursorLazy);
+        this.editCursor(event, cursor);
+        this.editCursor(event, cursorLazy);
       });
 
       cursorScale.forEach((link) => {
-        link.addEventListener("mousemove", () => {
-          cursor.classList.add("grow");
-          cursorLazy.classList.add("border-hide");
+        link.addEventListener(
+          "mousemove",
+          this.addCursorActiveStyle(link, cursor, cursorLazy)
+        );
+        link.addEventListener(
+          "mouseleave",
+          this.removeCursorActiveStyle(cursor, cursorLazy)
+        );
+      });
+    },
+    unmountCursor() {
+      let cursor = document.querySelector(".cursor");
+      let cursorLazy = document.querySelector(".cursor-lazy");
+      let cursorScale = document.querySelectorAll("a, .cursor-scale");
 
-          if (link.classList.contains("small")) {
-            cursor.classList.remove("grow");
-            cursor.classList.add("grow-small");
-          }
-        });
+      window.removeEventListener("mousemove", (event) => {
+        this.editCursor(event, cursor);
+        this.editCursor(event, cursorLazy);
+      });
 
-        link.addEventListener("mouseleave", () => {
-          cursor.classList.remove("grow");
-          cursorLazy.classList.remove("border-hide");
-
-          cursor.classList.remove("grow-small");
-        });
+      cursorScale.forEach((link) => {
+        link.removeEventListener(
+          "mousemove",
+          this.addCursorActiveStyle(link, cursor, cursorLazy)
+        );
+        link.removeEventListener(
+          "mouseleave",
+          this.removeCursorActiveStyle(cursor, cursorLazy)
+        );
       });
     },
   },

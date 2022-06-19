@@ -98,7 +98,7 @@ export default {
       return require(`${img}`);
     },
     moveHoverRevealImage(e, itemID) {
-      console.log("itemID", itemID);
+      // console.log("itemID", itemID);
       let currentItem = `#${itemID}`;
       let currentItemLink = document.querySelector(
         `${currentItem}  .project-list-item__link`
@@ -154,6 +154,8 @@ export default {
   padding-left: 0;
   padding-right: 0;
   // overflow: hidden;
+  background: $light-primary;
+  transition: $transition-1;
 }
 
 .project-list-item {
@@ -197,6 +199,10 @@ export default {
 }
 
 .dark {
+  .project-list-section {
+    background: $dark-primary;
+  }
+
   .projest-list-text {
     filter: none;
     color: $absWhite;

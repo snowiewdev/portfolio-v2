@@ -12,14 +12,14 @@
       "url": "kingfook",
       "projectName": "KingFook",
       "meta": "Jewellery Store\nWeb Development",
-      "imgUrl": "kingfook/kf-earrings.png"
+      "imgUrl": "kingfook/kf-necklace.jpg"
     },
     {
       "id": 3,
       "url": "bmpack",
       "projectName": "BM Pack",
       "meta": "Packaging Manufacturer\nWeb Development",
-      "imgUrl": "bmpack/bmpack-package.jpg"
+      "imgUrl": "bmpack/bmpack-focus.jpg"
     },
     {
       "id": 4,
@@ -40,7 +40,7 @@
       "url": "immortality-aquaponics",
       "projectName": "Immortality Aquaponics",
       "meta": "Eco-product Store\nWeb Design & Development",
-      "imgUrl": "ia/ia-img.jpg"
+      "imgUrl": "ia/ia-eco-friendly.jpg"
     },
     {
       "id": 7,

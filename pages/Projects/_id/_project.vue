@@ -1,26 +1,38 @@
 <!-- Project Details -->
 <template>
-  <div class="project-detail-container">
-    <PageTitleSection
-      :section-number="project.id"
-      :title="project.projectName"
-      index-style="romans"
-    >
-    </PageTitleSection>
+  <SmoothScroll>
+    <div class="project-detail-container relative">
+      <PageTitleSection
+        :section-number="project.id"
+        :title="project.projectName"
+        index-style="romans"
+      >
+      </PageTitleSection>
 
-    <NextSection
-      :title="nextProject.projectName"
-      :url="nextProject.url"
-      :type="nextProject.type"
-    >
-    </NextSection>
-  </div>
+      <div class="project-detail-cover-image">
+        {{ project }}
+      </div>
+
+      <NextSection
+        :title="nextProject.projectName"
+        :url="nextProject.url"
+        :type="nextProject.type"
+      >
+      </NextSection>
+
+      <Footer />
+    </div>
+  </SmoothScroll>
 </template>
 
 <script>
+import SmoothScroll from "~/components/SmoothScroll.vue";
 import PageTitleSection from "~/components/PageTitleSection.vue";
 import NextSection from "~/components/NextSection.vue";
 import projects from "~/assets/data/projectDetail.json";
+import Footer from "@/components/Footer.vue";
+
+import imagesLoaded from "imagesloaded";
 
 export default {
   head() {
@@ -39,6 +51,7 @@ export default {
     return {
       project: {},
       nextProject: {},
+      scroll: null,
     };
   },
   created() {
@@ -46,8 +59,16 @@ export default {
     this.getNextProject();
   },
   components: {
+    SmoothScroll,
     PageTitleSection,
     NextSection,
+    Footer,
+  },
+  mounted() {
+    this.locomotiveScrollInit();
+  },
+  beforeDestroy() {
+    this.scroll.destroy();
   },
   methods: {
     getCurrentProject() {
@@ -79,6 +100,20 @@ export default {
       nextProject.type = "project";
       nextProject.url = `/projects/${nextProject.id}`;
       this.nextProject = nextProject;
+    },
+    locomotiveScrollInit() {
+      let scrollContainer = document.querySelector("[data-scroll-container]");
+
+      this.scroll = new this.$LocomotiveScroll({
+        el: scrollContainer,
+        smooth: true,
+        getDirection: true,
+      });
+
+      // to fix locomotive bug on setting up too early (img not yet loaded)
+      imagesLoaded(scrollContainer, { background: true }, () => {
+        this.scroll.update();
+      });
     },
   },
 };

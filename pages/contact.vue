@@ -33,6 +33,8 @@
     </rotating-circle>
     <rotating-circle class="rotating-circle-2" location="contact">
     </rotating-circle>
+
+    <Footer />
   </div>
 </template>
 
@@ -42,6 +44,7 @@ import FullWidthContentSection from "~/components/FullWidthContentSection.vue";
 import RotatingTitleLink from "~/components/RotatingTitleLink.vue";
 import SocialLinkSection from "~/components/SocialLinkSection.vue";
 import RotatingCircle from "~/components/RotatingCircle.vue";
+import Footer from "@/components/Footer.vue";
 
 export default {
   head() {
@@ -81,6 +84,7 @@ export default {
     RotatingTitleLink,
     SocialLinkSection,
     RotatingCircle,
+    Footer,
   },
 };
 </script>

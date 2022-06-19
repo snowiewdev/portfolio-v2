@@ -5,7 +5,6 @@
     <NoiseBackground />
     <Header />
     <Nuxt />
-    <Footer />
   </div>
 </template>
 
@@ -23,6 +22,9 @@ export default {
     Footer,
     NoiseBackground,
     CustomCursor,
+  },
+  data() {
+    return {};
   },
 };
 </script>
