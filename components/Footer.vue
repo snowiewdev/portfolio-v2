@@ -18,12 +18,6 @@
           class="justify-self-end"
           text="Contact"
         ></roll-up-link>
-
-        <!-- <nuxt-link to="/about" class="justify-self-start"> About </nuxt-link>
-        <nuxt-link to="/" class="justify-self-center">
-          Web Portfolio
-        </nuxt-link>
-        <nuxt-link to="/contact" class="justify-self-end"> Contact </nuxt-link> -->
       </nav>
     </div>
     <div v-if="needSpacer" class="footer-spacer"></div>

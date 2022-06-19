@@ -32,16 +32,17 @@ html.has-scroll-dragging {
 }
 
 .c-scrollbar {
+  display: none;
   position: absolute;
   right: 0;
   top: 0;
-  width: 11px;
+  width: 7px;
   height: 100%;
   transform-origin: center right;
   transition: transform 0.3s, opacity 0.3s;
   opacity: 0;
 }
-.c-scrollbar:hover {
+/* .c-scrollbar:hover {
   transform: scaleX(1.45);
 }
 .c-scrollbar:hover,
@@ -79,4 +80,4 @@ html.has-scroll-dragging {
 [data-scroll-direction="horizontal"] .c-scrollbar_thumb {
   right: auto;
   bottom: 0;
-}
+} */

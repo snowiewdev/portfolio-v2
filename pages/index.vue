@@ -41,6 +41,9 @@ export default {
     RotatingCircle,
     Footer,
   },
+  mounted() {
+    this.$root.$refs.customCursor.initActiveCursorDetection();
+  },
   methods: {},
 };
 </script>

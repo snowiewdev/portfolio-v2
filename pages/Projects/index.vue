@@ -49,6 +49,7 @@ export default {
   },
   mounted() {
     this.locomotiveScrollInit();
+    this.$root.$refs.customCursor.initActiveCursorDetection();
   },
   beforeDestroy() {
     this.scroll.destroy();

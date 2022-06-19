@@ -8,72 +8,75 @@
 <script>
 export default {
   name: "CustomCursor",
+  data() {
+    return {
+      cursor: null,
+      cursorLazy: null,
+      cursorScale: null,
+    };
+  },
+  created() {
+    this.$root.$refs.customCursor = this;
+  },
   mounted() {
     this.setUpCursor();
+    this.initActiveCursorDetection();
   },
-  beforeDestroy() {
-    this.unmountCursor();
+  watch: {
+    $route(to, from) {
+      // console.log("before change route");
+      this.removeCursorActiveStyle();
+      this.removeActiveCursorDetection();
+    },
   },
   methods: {
     editCursor(event, target) {
       target.style.top = event.clientY + "px";
       target.style.left = event.clientX + "px";
     },
-    addCursorActiveStyle(trigger, cursor, cursorLazy) {
-      cursor.classList.add("grow");
-      cursorLazy.classList.add("border-hide");
+    addCursorActiveStyle(trigger) {
+      this.cursor.classList.add("grow");
+      this.cursorLazy.classList.add("border-hide");
 
       if (trigger.classList.contains("small")) {
-        cursor.classList.remove("grow");
-        cursor.classList.add("grow-small");
+        this.cursor.classList.remove("grow");
+        this.cursor.classList.add("grow-small");
       }
     },
-    removeCursorActiveStyle(cursor, cursorLazy) {
-      cursor.classList.remove("grow");
-      cursorLazy.classList.remove("border-hide");
-
-      cursor.classList.remove("grow-small");
+    removeCursorActiveStyle() {
+      this.cursor.classList.remove("grow");
+      this.cursorLazy.classList.remove("border-hide");
+      this.cursor.classList.remove("grow-small");
     },
     setUpCursor() {
-      let cursor = document.querySelector(".cursor");
-      let cursorLazy = document.querySelector(".cursor-lazy");
-      let cursorScale = document.querySelectorAll("a, .cursor-scale");
+      this.cursor = document.querySelector(".cursor");
+      this.cursorLazy = document.querySelector(".cursor-lazy");
 
       window.addEventListener("mousemove", (event) => {
-        this.editCursor(event, cursor);
-        this.editCursor(event, cursorLazy);
-      });
-
-      cursorScale.forEach((link) => {
-        link.addEventListener(
-          "mousemove",
-          this.addCursorActiveStyle(link, cursor, cursorLazy)
-        );
-        link.addEventListener(
-          "mouseleave",
-          this.removeCursorActiveStyle(cursor, cursorLazy)
-        );
+        this.editCursor(event, this.cursor);
+        this.editCursor(event, this.cursorLazy);
       });
     },
-    unmountCursor() {
-      let cursor = document.querySelector(".cursor");
-      let cursorLazy = document.querySelector(".cursor-lazy");
-      let cursorScale = document.querySelectorAll("a, .cursor-scale");
+    initActiveCursorDetection() {
+      this.cursorScale = document.querySelectorAll("a, .cursor-scale");
 
-      window.removeEventListener("mousemove", (event) => {
-        this.editCursor(event, cursor);
-        this.editCursor(event, cursorLazy);
+      this.cursorScale.forEach((link) => {
+        link.addEventListener("mousemove", () => {
+          this.addCursorActiveStyle(link);
+        });
+        link.addEventListener("mouseleave", () => {
+          this.removeCursorActiveStyle();
+        });
       });
-
-      cursorScale.forEach((link) => {
-        link.removeEventListener(
-          "mousemove",
-          this.addCursorActiveStyle(link, cursor, cursorLazy)
-        );
-        link.removeEventListener(
-          "mouseleave",
-          this.removeCursorActiveStyle(cursor, cursorLazy)
-        );
+    },
+    removeActiveCursorDetection() {
+      this.cursorScale.forEach((link) => {
+        link.removeEventListener("mousemove", () => {
+          this.addCursorActiveStyle(link);
+        });
+        link.removeEventListener("mouseleave", () => {
+          this.removeCursorActiveStyle();
+        });
       });
     },
   },
