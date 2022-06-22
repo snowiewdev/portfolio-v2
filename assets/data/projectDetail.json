@@ -3,16 +3,18 @@
     "id": 1,
     "projectName": "Ayes",
     "coverImage": {
-      "url": "ayes/ayes-cover-2.jpg",
-      "alt": ""
+      "desktopUrl": "ayes/ayes-cover.jpg",
+      "mobileUrl": "ayes/ayes-cover-mobile.jpg",
+      "alt": "Ayes Hoodie - Dancing With Shadow"
     },
-    "role": "",
-    "description": "",
+    "role": "Frontend & Backend Web Development",
+    "description": "Ayes is a clothing online store that supports Hong Kong local culture and arts. It operates with an unique “Design, Vote, Shop” concept, where visitors can submit their own designs based on the monthly event topic, vote for their favorite designs, and shop for products with the winning designs online. With the customed CMS, Ayes can update their website content and products as they want.",
     "website": {
-      "url": "https://www.ayeshk.com/ayes/home",
+      "url": "https://www.ayeshk.com/ayes/",
       "isLive": true
     },
-    "technology": "Vue // JavaScript // GSAP // Bootstrap // SCSS // PHP // MySQL // AWS // Git",
+    "technology": "Vue.js // JavaScript // GSAP // Bootstrap // SCSS // Glide.js // PHP // MySQL // CodeIgniter // AWS // Git",
+    "year": "2021-2022",
     "desktopImage": [],
     "highlightSection": [],
     "tabletImage": [],
@@ -31,44 +33,127 @@
   },
   "2": {
     "id": 2,
-    "projectName": "KingFook",
+    "projectName": "KingFook Eshop",
     "type": "E-commerce",
-    "imgUrl": ""
+    "coverImage": {
+      "desktopUrl": "kingfook/kf-cover.jpg",
+      "mobileUrl": "kingfook/kf-necklace.jpg",
+      "alt": "Kingfook Eshop Necklace"
+    },
+    "role": "Frontend & Backend Web Development",
+    "description": "KingFook Jewellery is a well-established jewellery store since 1949. It has maintained a reputation for its jewellery craftmanship, unsurpassed quality and professional services. The EShop developed features a variety of jewellery and gold products, such as necklaces, earrings, rings and bracelets. With the tailor-made CMS, the shop can also manage their website easily.",
+    "website": {
+      "url": "https://eshop.kingfook.com/kf/",
+      "isLive": true
+    },
+    "technology": "Vue.js // JavaScript // Bootstrap // SCSS // Glide.js // PHP // MySQL // CodeIgniter // AWS // Git",
+    "year": "2021"
   },
   "3": {
     "id": 3,
     "projectName": "BM Pack",
     "type": "E-commerce",
-    "imgUrl": ""
+    "coverImage": {
+      "desktopUrl": "bmpack/bmpack-cover-2.jpg",
+      "mobileUrl": "bmpack/bmpack-home-square.jpg",
+      "alt": "BM Pack Home Banner"
+    },
+    "role": "Frontend & Backend Web Development",
+    "description": "BM Pack is a Packaging Manufacturer that has served different local brands over the years. The website developed features online shop, where users can choose their desired packaging type, upload their custom design and order products in samples or in bulks. The site also includes articles for inspiration and case sharing. With email subscription function, visitors can also subscribe to BM Pack for the latest update and promotion. Custom CMS is also available for managing website content and products.",
+    "website": {
+      "url": "https://bmpack.com/",
+      "isLive": true
+    },
+    "technology": "Vue.js // JavaScript // Bootstrap // SCSS // AOS.js // Glide.js // PHP // MySQL // CodeIgniter // AWS // Git",
+    "year": "2022"
   },
   "4": {
     "id": 4,
     "projectName": "Elite Premium",
     "type": "Company Website",
-    "imgUrl": ""
+    "coverImage": {
+      "desktopUrl": "elite/elite-cover.png",
+      "mobileUrl": "elite/elite-square.png",
+      "alt": "Elite Premium Tins"
+    },
+    "role": "Web Development",
+    "description": "Elite Premium Limited is a Tin and Paper Packaging Manufacturer with over 20 years of experience. It has served many famous brands like Godiva, Walmart and Fedora. The website developed mainly introduces their professional services and and showcases their wide range of products in different shapes and sizes, from round to square, irregular shape, and small to large.",
+    "website": {
+      "url": "https://elitepremium.cn/",
+      "isLive": true
+    },
+    "technology": "WordPress // Elementor // WooCommerce // CSS // PHP // Yoast // STMP // Cloudways",
+    "year": "2021"
   },
   "5": {
     "id": 5,
     "projectName": "Soul Pure Beauty",
     "type": "E-commerce",
-    "imgUrl": ""
+    "coverImage": {
+      "desktopUrl": "soulpure/soulpure-cover.jpg",
+      "mobileUrl": "soulpure/soulpure.jpg",
+      "alt": "Soul Pure Facial Treatment"
+    },
+    "role": "Web Development",
+    "description": "Soul Pure Beauty is a Hong Kong Beauty Salon opened in 2017. It provides different kinds of facial and body treatments. The website developed mainly introduces the company, allows customers to purchase treatments online, and provides blog and promotion pages for the update of website content when needed.",
+    "website": {
+      "url": "https://soulpure.hk/",
+      "isLive": true
+    },
+    "technology": "WordPress // Elementor // WooCommerce // CSS // PHP // Yoast // SMTP // Cloudways",
+    "year": "2021"
   },
   "6": {
     "id": 6,
     "projectName": "Immortality Aquaponics",
-    "type": "Company Website",
-    "imgUrl": ""
+    "coverImage": {
+      "desktopUrl": "ia/ia-cover-3.jpg",
+      "mobileUrl": "ia/ia-eco-friendly.jpg",
+      "alt": "Immortality Aquaponics Eco-friendly Technology"
+    },
+    "role": "Web Design & Development",
+    "description": "Immortality Aquaponics is an eco-friendly store. It combines traditional aquaculture with its innovative bio-technology into modern sustainable aquaculture system, producing sustainable aquatic products, fruits and herbs. The company also provides ecological education to raise public awareness on sustainability in Hong Kong. The website developed serves as a landing page that introduces the company and its services.",
+    "website": {
+      "url": "https://wordpress-629555-2512724.cloudwaysapps.com/",
+      "isLive": false
+    },
+    "technology": "WordPress // Elementor // SMTP // CSS // Yoast // Cloudways",
+    "year": "2021"
   },
   "7": {
     "id": 7,
     "projectName": "Initial Engineering",
     "type": "Company Website",
-    "imgUrl": ""
+    "coverImage": {
+      "desktopUrl": "initial/initial-cover-2.jpg",
+      "mobileUrl": "initial/initial-cover.jpg",
+      "alt": "Initial Engineering Residence Renovation"
+    },
+    "role": "Web Design & Development",
+    "description": "Initial Engineering Limited is an engineering company specialized in interior design and construction with consultation services. It has years of professional experience in interior renovation and construction projects across different areas, including restaurants, residence and retail stores. The website developed allows them to showcase their works with VR tour and promote their services.",
+    "website": {
+      "url": "https://wordpress-629555-2489608.cloudwaysapps.com/",
+      "isLive": false
+    },
+    "technology": "WordPress // Elementor // ACF // CPT UI // PHP // CSS // TranslatePress // Yoast // SMTP // Cloudways",
+    "year": "2021"
   },
   "8": {
     "id": 8,
     "projectName": "Catstelecom",
     "type": "E-Commerce",
-    "imgUrl": ""
+    "coverImage": {
+      "desktopUrl": "catstelecom/mewo-banner-cover.jpg",
+      "mobileUrl": "catstelecom/mewo-cover.jpg",
+      "alt": "Catstelecom Home Banner with Lovely Cat"
+    },
+    "role": "Web Design & Development",
+    "description": "Catstelecom is a Hong Kong local electronic store that mainly sells smartphones and eletronic products like batteries. The website developed mainly introduces the company and provides online shopping service for customers.",
+    "website": {
+      "url": "https://catstelecom.com.hk/",
+      "isLive": true
+    },
+    "technology": "WordPress // Elementor // WooCommerce // CSS // Yoast // SMTP // Cloudways",
+    "year": "2021"
   }
 }

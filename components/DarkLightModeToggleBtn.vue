@@ -1,6 +1,6 @@
 <template>
   <div
-    class="dark-light-mode-toggle-btn text-black dark:text-white"
+    class="dark-light-mode-toggle-btn text-black dark:text-white cursor-scale"
     @click.prevent="toggleDarkMode"
   >
     <roll-up-text

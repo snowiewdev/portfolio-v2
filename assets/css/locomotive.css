@@ -18,6 +18,10 @@ html.has-scroll-dragging {
   min-height: 100vh;
 }
 
+[data-scroll-container] {
+  perspective: 1px;
+}
+
 [data-scroll-direction="horizontal"] [data-scroll-container] {
   height: 100vh;
   display: inline-block;

@@ -1,9 +1,6 @@
 <template>
   <div class="social-link-section pb-8">
     <div v-for="link in socialLinks" :key="link.name" class="social-link-item">
-      <!-- <a :href="link.url" target="_blank" class="social-link">
-        {{ link.name }}
-      </a> -->
       <RotatingLink
         :id="link.name"
         :text="link.name"

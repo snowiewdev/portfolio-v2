@@ -9,8 +9,21 @@
       >
       </PageTitleSection>
 
-      <div class="project-detail-cover-image">
+      <FullWidthImageSection
+        :desktop-src="project.coverImage.desktopUrl"
+        :mobile-src="project.coverImage.mobileUrl"
+        :alt="project.coverImage.alt"
+      ></FullWidthImageSection>
+
+      <ProjectDetailMeta :project="project"></ProjectDetailMeta>
+
+      <div class="project-detail__cover-image-container">
         {{ project }}
+        <!-- <img
+          class="project-detail__cover-image"
+          :src="require(`~/assets/image/${project.coverImage.url}`)"
+          :alt="project.coverImage.alt"
+        /> -->
       </div>
 
       <NextSection
@@ -28,6 +41,8 @@
 <script>
 import SmoothScroll from "~/components/SmoothScroll.vue";
 import PageTitleSection from "~/components/PageTitleSection.vue";
+import FullWidthImageSection from "~/components/FullWidthImageSection.vue";
+import ProjectDetailMeta from "~/components/ProjectDetailMeta.vue";
 import NextSection from "~/components/NextSection.vue";
 import projects from "~/assets/data/projectDetail.json";
 import Footer from "@/components/Footer.vue";
@@ -61,11 +76,14 @@ export default {
   components: {
     SmoothScroll,
     PageTitleSection,
+    FullWidthImageSection,
+    ProjectDetailMeta,
     NextSection,
     Footer,
   },
   mounted() {
     this.locomotiveScrollInit();
+    this.$root.$refs.customCursor.removeCursorActiveStyle();
     this.$root.$refs.customCursor.initActiveCursorDetection();
   },
   beforeDestroy() {
@@ -109,6 +127,14 @@ export default {
         el: scrollContainer,
         smooth: true,
         getDirection: true,
+        mobile: {
+          smooth: true,
+          breakpoint: 0,
+        },
+        tablet: {
+          smooth: true,
+          breakpoint: 0,
+        },
       });
 
       // to fix locomotive bug on setting up too early (img not yet loaded)

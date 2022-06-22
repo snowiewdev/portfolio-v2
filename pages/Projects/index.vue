@@ -62,6 +62,12 @@ export default {
         el: scrollContainer,
         smooth: true,
         getDirection: true,
+        mobile: {
+          smooth: true,
+        },
+        tablet: {
+          smooth: true,
+        },
       });
 
       // to fix locomotive bug on setting up too early (img not yet loaded)

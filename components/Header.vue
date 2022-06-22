@@ -38,7 +38,6 @@ export default {
   z-index: 100;
   user-select: none;
   // backdrop-filter: blur(15px); // may lead to flickering
-  // mix-blend-mode: exclusion;
 }
 
 a {

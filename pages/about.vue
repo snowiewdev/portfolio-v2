@@ -6,14 +6,14 @@
       </PageTitleSection>
 
       <!-- <FullWidthImageSection
-        src="about-cover-image.jpg"
-        alt="about cover image"
+        desktop-src="about-me-in-kolwoon.jpg"
+        mobile-src="about-cover-square.jpg"
+        alt="about me cover photo"
+        class="mb-8"
       ></FullWidthImageSection> -->
 
-      <div
-        class="box-spacing content-section about-content-section about-content-section--one pb-12"
-      >
-        <div class="about-content-section__text-container pr-0 md:pr-8">
+      <AboutImageContentSection img="me-light.jpg" img-class="md:object-right">
+        <template v-slot:content>
           <p class="pb-6">
             Hi, my name is Snowie Wong. I started my web development journey
             from learning on freeCodeCamp and Youtube. Then I worked as a
@@ -26,30 +26,14 @@
           <h4 class="body-font-title mt-4 mb-6">Skills</h4>
           <p class="pb-6">
             <span class="highlight-green">VUE.JS</span> // NUXT.JS // JAVASCRIPT
-            // SCSS // CSS // GSAP // TAILWINDCSS // BOOTSTRAP // PHP // MYSQL
-            // HTML // GIT // WORDPRESS // ELEMENTOR // WOOCOMMERCE
+            // SCSS // CSS // GSAP // TAILWINDCSS // BOOTSTRAP // LOCOMOTIVE //
+            PHP // MYSQL // HTML // GIT // WORDPRESS // ELEMENTOR // WOOCOMMERCE
           </p>
-        </div>
-        <div
-          class="about-content-section__image-container flex justify-center md:justify-end"
-        >
-          <img
-            class="about-content-section__image"
-            src="~/assets/image/me-light.jpg"
-            alt="me"
-          />
-        </div>
-      </div>
+        </template>
+      </AboutImageContentSection>
 
-      <div
-        class="box-spacing content-section about-content-section about-content-section--two pb-12"
-      >
-        <div class="about-content-section__image-container">
-          <img class="" src="~/assets/image/cat-light.jpg" alt="me" />
-        </div>
-        <div
-          class="about-content-section__text-container md:text-right pl-0 md:pl-8"
-        >
+      <AboutImageContentSection img="cat-is-cute.jpg" type="image-first">
+        <template v-slot:content>
           <p class="pt-4 md:pt-0 pb-6">
             Apart from <span class="highlight-yellow">coding</span>, I love cats
             and other animals. I enjoy listening to music with heavy beats like
@@ -62,8 +46,8 @@
             I have recently relocated to Vancouver with my work permit and
             hopefully I could get a job as web developer there soon.
           </p>
-        </div>
-      </div>
+        </template>
+      </AboutImageContentSection>
 
       <FullWidthContentSection>
         <p class="">
@@ -90,6 +74,7 @@
 <script>
 import SmoothScroll from "~/components/SmoothScroll.vue";
 import PageTitleSection from "~/components/PageTitleSection.vue";
+import AboutImageContentSection from "~/components/AboutImageContentSection.vue";
 import FullWidthImageSection from "~/components/FullWidthImageSection.vue";
 import FullWidthContentSection from "~/components/FullWidthContentSection.vue";
 import MarqueeSection from "~/components/MarqueeSection.vue";
@@ -114,6 +99,7 @@ export default {
   components: {
     SmoothScroll,
     PageTitleSection,
+    AboutImageContentSection,
     FullWidthImageSection,
     FullWidthContentSection,
     MarqueeSection,
@@ -122,6 +108,7 @@ export default {
   },
   mounted() {
     this.locomotiveScrollInit();
+    this.$root.$refs.customCursor.removeCursorActiveStyle();
     this.$root.$refs.customCursor.initActiveCursorDetection();
   },
   beforeDestroy() {
@@ -135,6 +122,12 @@ export default {
         el: scrollContainer,
         smooth: true,
         getDirection: true,
+        mobile: {
+          smooth: true,
+        },
+        tablet: {
+          smooth: true,
+        },
       });
 
       // to fix locomotive bug on setting up too early (img not yet loaded)
@@ -146,28 +139,4 @@ export default {
 };
 </script>
 
-<style style="scss" scoped>
-.about-content-section {
-  display: grid;
-  grid-template-columns: 1fr;
-}
-
-.about-content-section__text-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.about-content-section__image {
-  width: 100%;
-  height: auto;
-  object-fit: cover;
-}
-
-@screen md {
-  .about-content-section {
-    display: grid;
-    grid-template-columns: 3fr 2fr;
-  }
-}
-</style>
+<style></style>

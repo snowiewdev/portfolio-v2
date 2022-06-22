@@ -1,5 +1,5 @@
 <template>
-  <div class="marquee-container my-8">
+  <div class="marquee-container my-8 mx-auto">
     <PrimaryDivider border-style="medium"></PrimaryDivider>
     <Marquee :content="topContent" type="top"> </Marquee>
 
@@ -31,6 +31,8 @@ export default {
 };
 </script>
 
-<style style="scss" scoped>
-/*  */
+<style style="scss">
+.marquee-container {
+  max-width: 1440px;
+}
 </style>

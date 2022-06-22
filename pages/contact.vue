@@ -1,50 +1,56 @@
 <!-- Contact -->
 <template>
-  <div class="contact-container relative">
-    <PageTitleSection
-      :section-number="4"
-      title="Contact"
-      index-style="chapter"
-      section-style="half"
-    >
-    </PageTitleSection>
+  <SmoothScroll>
+    <div class="contact-container relative">
+      <PageTitleSection
+        :section-number="4"
+        title="Contact"
+        index-style="chapter"
+        section-style="half"
+      >
+      </PageTitleSection>
 
-    <FullWidthContentSection>
-      <p>
-        I am open to freelance projects and collaboration. I'm not good at
-        urgent work but I will try my best.
-      </p>
-      <p>
-        Or we can just be friends.
-        <br class="block sm:hidden" />
-        <span class="highlight-mint">Come and say hi</span> :)
-      </p>
-    </FullWidthContentSection>
+      <FullWidthContentSection>
+        <p>
+          I am open to freelance projects and collaboration. I'm not good at
+          urgent work but I will try my best.
+        </p>
+        <p>
+          Or we can just be friends.
+          <br class="block sm:hidden" />
+          <span class="highlight-mint">Come and say hi</span> :)
+        </p>
+      </FullWidthContentSection>
 
-    <RotatingTitleLink
-      text="Drop-Me-An-Email"
-      link="mailto:snowiewongdev@gmail.com"
-    >
-    </RotatingTitleLink>
+      <RotatingTitleLink
+        text="Drop-Me-An-Email"
+        link="mailto:snowiewongdev@gmail.com"
+        class="mb-4"
+      >
+      </RotatingTitleLink>
 
-    <SocialLinkSection :social-links="socialLinks"> </SocialLinkSection>
+      <SocialLinkSection :social-links="socialLinks"> </SocialLinkSection>
 
-    <rotating-circle class="rotating-circle-1" location="contact">
-    </rotating-circle>
-    <rotating-circle class="rotating-circle-2" location="contact">
-    </rotating-circle>
+      <rotating-circle class="rotating-circle-1" location="contact">
+      </rotating-circle>
+      <rotating-circle class="rotating-circle-2" location="contact">
+      </rotating-circle>
 
-    <Footer />
-  </div>
+      <Footer />
+    </div>
+  </SmoothScroll>
 </template>
 
 <script>
+import SmoothScroll from "~/components/SmoothScroll.vue";
 import PageTitleSection from "~/components/PageTitleSection.vue";
 import FullWidthContentSection from "~/components/FullWidthContentSection.vue";
 import RotatingTitleLink from "~/components/RotatingTitleLink.vue";
 import SocialLinkSection from "~/components/SocialLinkSection.vue";
 import RotatingCircle from "~/components/RotatingCircle.vue";
 import Footer from "@/components/Footer.vue";
+
+import imagesLoaded from "imagesloaded";
 
 export default {
   head() {
@@ -79,6 +85,7 @@ export default {
     };
   },
   components: {
+    // SmoothScroll,
     PageTitleSection,
     FullWidthContentSection,
     RotatingTitleLink,
@@ -87,16 +94,44 @@ export default {
     Footer,
   },
   mounted() {
+    this.locomotiveScrollInit();
     this.$root.$refs.customCursor.initActiveCursorDetection();
+  },
+  methods: {
+    locomotiveScrollInit() {
+      let scrollContainer = document.querySelector("[data-scroll-container]");
+
+      this.scroll = new this.$LocomotiveScroll({
+        el: scrollContainer,
+        smooth: true,
+        getDirection: true,
+        mobile: {
+          smooth: true,
+        },
+        tablet: {
+          smooth: true,
+        },
+      });
+
+      // to fix locomotive bug on setting up too early (img not yet loaded)
+      imagesLoaded(scrollContainer, { background: true }, () => {
+        this.scroll.update();
+      });
+    },
   },
 };
 </script>
 
 <style lang="scss" scoped>
+[data-scroll-container] {
+  perspective: none;
+}
+
 .contact-container {
   width: 100%;
   max-width: 100vw;
-  min-height: calc(100vh - 50px);
+  // min-height: calc(100vh - 50px);
+  min-height: 100vh;
   padding-bottom: 100px;
   overflow: hidden;
 }
