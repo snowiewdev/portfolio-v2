@@ -42,6 +42,7 @@ export default {
     Footer,
   },
   mounted() {
+    this.$root.$refs.customCursor.removeCursorActiveStyle();
     this.$root.$refs.customCursor.initActiveCursorDetection();
   },
   methods: {},

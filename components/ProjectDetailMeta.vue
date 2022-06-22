@@ -1,5 +1,5 @@
 <template>
-  <div class="project-detail__meta-container py-8">
+  <div class="project-detail__meta-container py-8 sm:py-10">
     <div class="project-detail__meta project-detail-role">
       <div class="project-detail__meta-item project-detail-about">
         <h4 class="project-detail__meta-label">About</h4>
@@ -67,7 +67,7 @@ export default {
 }
 
 .project-detail__meta-label {
-  font-size: 1.2rem;
+  font-size: 1.25rem;
   text-transform: uppercase;
   @apply mb-4;
 }

@@ -81,8 +81,6 @@ import MarqueeSection from "~/components/MarqueeSection.vue";
 import NextSection from "~/components/NextSection.vue";
 import Footer from "@/components/Footer.vue";
 
-import imagesLoaded from "imagesloaded";
-
 export default {
   head() {
     return {
@@ -93,7 +91,6 @@ export default {
     return {
       topMarqueeText: "Design & Develop & Debug & Deliver & ",
       bottomMarqueeText: "Coffee & Coding & Tea & Coding & Cats & ",
-      scroll: null,
     };
   },
   components: {
@@ -107,35 +104,10 @@ export default {
     Footer,
   },
   mounted() {
-    this.locomotiveScrollInit();
     this.$root.$refs.customCursor.removeCursorActiveStyle();
     this.$root.$refs.customCursor.initActiveCursorDetection();
   },
-  beforeDestroy() {
-    this.scroll.destroy();
-  },
-  methods: {
-    locomotiveScrollInit() {
-      let scrollContainer = document.querySelector("[data-scroll-container]");
-
-      this.scroll = new this.$LocomotiveScroll({
-        el: scrollContainer,
-        smooth: true,
-        getDirection: true,
-        mobile: {
-          smooth: true,
-        },
-        tablet: {
-          smooth: true,
-        },
-      });
-
-      // to fix locomotive bug on setting up too early (img not yet loaded)
-      imagesLoaded(scrollContainer, { background: true }, () => {
-        this.scroll.update();
-      });
-    },
-  },
+  methods: {},
 };
 </script>
 

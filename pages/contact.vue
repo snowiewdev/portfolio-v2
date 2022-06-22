@@ -50,8 +50,6 @@ import SocialLinkSection from "~/components/SocialLinkSection.vue";
 import RotatingCircle from "~/components/RotatingCircle.vue";
 import Footer from "@/components/Footer.vue";
 
-import imagesLoaded from "imagesloaded";
-
 export default {
   head() {
     return {
@@ -85,7 +83,7 @@ export default {
     };
   },
   components: {
-    // SmoothScroll,
+    SmoothScroll,
     PageTitleSection,
     FullWidthContentSection,
     RotatingTitleLink,
@@ -94,31 +92,10 @@ export default {
     Footer,
   },
   mounted() {
-    this.locomotiveScrollInit();
+    this.$root.$refs.customCursor.removeCursorActiveStyle();
     this.$root.$refs.customCursor.initActiveCursorDetection();
   },
-  methods: {
-    locomotiveScrollInit() {
-      let scrollContainer = document.querySelector("[data-scroll-container]");
-
-      this.scroll = new this.$LocomotiveScroll({
-        el: scrollContainer,
-        smooth: true,
-        getDirection: true,
-        mobile: {
-          smooth: true,
-        },
-        tablet: {
-          smooth: true,
-        },
-      });
-
-      // to fix locomotive bug on setting up too early (img not yet loaded)
-      imagesLoaded(scrollContainer, { background: true }, () => {
-        this.scroll.update();
-      });
-    },
-  },
+  methods: {},
 };
 </script>
 

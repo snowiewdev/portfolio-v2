@@ -47,8 +47,6 @@ import NextSection from "~/components/NextSection.vue";
 import projects from "~/assets/data/projectDetail.json";
 import Footer from "@/components/Footer.vue";
 
-import imagesLoaded from "imagesloaded";
-
 export default {
   head() {
     return {
@@ -66,7 +64,6 @@ export default {
     return {
       project: {},
       nextProject: {},
-      scroll: null,
     };
   },
   created() {
@@ -82,12 +79,8 @@ export default {
     Footer,
   },
   mounted() {
-    this.locomotiveScrollInit();
     this.$root.$refs.customCursor.removeCursorActiveStyle();
     this.$root.$refs.customCursor.initActiveCursorDetection();
-  },
-  beforeDestroy() {
-    this.scroll.destroy();
   },
   methods: {
     getCurrentProject() {
@@ -119,28 +112,6 @@ export default {
       nextProject.type = "project";
       nextProject.url = `/projects/${nextProject.id}`;
       this.nextProject = nextProject;
-    },
-    locomotiveScrollInit() {
-      let scrollContainer = document.querySelector("[data-scroll-container]");
-
-      this.scroll = new this.$LocomotiveScroll({
-        el: scrollContainer,
-        smooth: true,
-        getDirection: true,
-        mobile: {
-          smooth: true,
-          breakpoint: 0,
-        },
-        tablet: {
-          smooth: true,
-          breakpoint: 0,
-        },
-      });
-
-      // to fix locomotive bug on setting up too early (img not yet loaded)
-      imagesLoaded(scrollContainer, { background: true }, () => {
-        this.scroll.update();
-      });
     },
   },
 };
