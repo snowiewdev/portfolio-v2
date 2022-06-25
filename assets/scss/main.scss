@@ -211,6 +211,39 @@ $header-height: 50px;
   }
 }
 
+/* ============ Animation =========== */
+
+/* --- underline effect class --- */
+.underline-effect {
+  position: relative;
+  display: inline-block;
+}
+
+.underline-effect:after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  height: 1px;
+  width: 100%;
+  background-color: $dark-primary;
+  transform: scaleX(0);
+  transform-origin: bottom right;
+  transition: transform 0.3s cubic-bezier(0.86, 0, 0.07, 1);
+}
+
+.underline-effect:hover:after {
+  height: 1px;
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+.dark {
+  .underline-effect:after {
+    background-color: $light-primary;
+  }
+}
+
 /* ============ Page Transition =========== */
 /* .intro-enter-active,
 .intro-leave-active{

@@ -2,6 +2,9 @@ export default {
   // Target: https://go.nuxtjs.dev/config-target
   target: "static",
 
+  // testing
+  ssr: false,
+
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     title: "Snowie Wong Portfolio",
@@ -105,18 +108,12 @@ export default {
   build: {
     postcss: {
       plugins: {
-        tailwindcss: {
-          // content: [
-          //   "./src/app.html",
-          //   "./src/components/**/*.{js,ts,vue}",
-          //   "./src/layouts/**/*.{js,ts,vue}",
-          //   "./src/pages/**/*.{js,ts,vue}",
-          // ],
-        },
+        tailwindcss: {},
         autoprefixer: {},
       },
     },
     transpile: ["gsap"],
+    standalone: true,
   },
 
   loading: false, // hide default progress bar

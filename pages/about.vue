@@ -1,7 +1,7 @@
 <!-- About -->
 <template>
   <SmoothScroll>
-    <div class="about-container">
+    <div class="about-container" data-scroll-section>
       <PageTitleSection :section-number="3" title="About" index-style="chapter">
       </PageTitleSection>
 

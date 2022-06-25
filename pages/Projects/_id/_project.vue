@@ -17,6 +17,23 @@
 
       <ProjectDetailMeta :project="project"></ProjectDetailMeta>
 
+      <ProjectDetailVideoSection
+        v-if="project.video.videoUrl"
+        :video-url="project.video.videoUrl"
+      ></ProjectDetailVideoSection>
+
+      <HoverAndSeeMore></HoverAndSeeMore>
+
+      <ProjectDetailImageHoverSection
+        :project-images="project.projectImages"
+      ></ProjectDetailImageHoverSection>
+
+      <MarqueeSection
+        :topContent="topMarqueeText"
+        :bottomContent="bottomMarqueeText"
+      >
+      </MarqueeSection>
+
       <div class="project-detail__cover-image-container">
         {{ project }}
         <!-- <img
@@ -43,6 +60,10 @@ import SmoothScroll from "~/components/SmoothScroll.vue";
 import PageTitleSection from "~/components/PageTitleSection.vue";
 import FullWidthImageSection from "~/components/FullWidthImageSection.vue";
 import ProjectDetailMeta from "~/components/ProjectDetailMeta.vue";
+import ProjectDetailVideoSection from "~/components/ProjectDetailVideoSection.vue";
+import HoverAndSeeMore from "~/components/HoverAndSeeMore.vue";
+import ProjectDetailImageHoverSection from "~/components/ProjectDetailImageHoverSection.vue";
+import MarqueeSection from "~/components/MarqueeSection.vue";
 import NextSection from "~/components/NextSection.vue";
 import projects from "~/assets/data/projectDetail.json";
 import Footer from "@/components/Footer.vue";
@@ -64,6 +85,8 @@ export default {
     return {
       project: {},
       nextProject: {},
+      topMarqueeText: "Responsive Design & Responsive Design & ",
+      bottomMarqueeText: "Web Development & Web Development & ",
     };
   },
   created() {
@@ -75,6 +98,9 @@ export default {
     PageTitleSection,
     FullWidthImageSection,
     ProjectDetailMeta,
+    ProjectDetailVideoSection,
+    HoverAndSeeMore,
+    ProjectDetailImageHoverSection,
     NextSection,
     Footer,
   },

@@ -7,17 +7,59 @@
       "mobileUrl": "ayes/ayes-cover-mobile.jpg",
       "alt": "Ayes Hoodie - Dancing With Shadow"
     },
-    "role": "Frontend & Backend Web Development",
+    "role": "Web Development",
     "description": "Ayes is a clothing online store that supports Hong Kong local culture and arts. It operates with an unique “Design, Vote, Shop” concept, where visitors can submit their own designs based on the monthly event topic, vote for their favorite designs, and shop for products with the winning designs online. With the customed CMS, Ayes can update their website content and products as they want.",
     "website": {
       "url": "https://www.ayeshk.com/ayes/",
       "isLive": true
     },
-    "technology": "Vue.js // JavaScript // GSAP // Bootstrap // SCSS // Glide.js // PHP // MySQL // CodeIgniter // AWS // Git",
+    "technology": "Vue.js // JavaScript // GSAP // Bootstrap // SCSS // AOS.js // Glide.js // PHP // MySQL // CodeIgniter // AWS // Git",
     "year": "2021-2022",
-    "desktopImage": [],
-    "highlightSection": [],
-    "tabletImage": [],
+    "video": {
+      "videoUrl": "ayes/ayes-home-page.mp4",
+      "imgUrl": ""
+    },
+    "projectImages": [
+      {
+        "before": {
+          "text": "DESIGN",
+          "url": "ayes/ayes-submit-design.jpg",
+          "alt": "Submit design to event"
+        },
+        "after": {
+          "text": "EVENT",
+          "url": "ayes/ayes-submit-design-3.jpg",
+          "alt": "Event Detail"
+        },
+        "position": "left"
+      },
+      {
+        "before": {
+          "text": "VOTE",
+          "url": "ayes/ayes-vote-1.jpg",
+          "alt": "Vote for design"
+        },
+        "after": {
+          "text": "VOTE",
+          "url": "ayes/ayes-vote-2.jpg",
+          "alt": "Vote for design"
+        },
+        "position": "right"
+      },
+      {
+        "before": {
+          "text": "SHOP",
+          "url": "ayes/ayes-shop-2.jpg",
+          "alt": "Submit design to event"
+        },
+        "after": {
+          "text": "SHOP",
+          "url": "ayes/ayes-shop-4.jpg",
+          "alt": "Event Detail"
+        },
+        "position": "left"
+      }
+    ],
     "mobileImages": [
       {
         "before": {
@@ -40,14 +82,18 @@
       "mobileUrl": "kingfook/kf-necklace.jpg",
       "alt": "Kingfook Eshop Necklace"
     },
-    "role": "Frontend & Backend Web Development",
+    "role": "Web Development",
     "description": "KingFook Jewellery is a well-established jewellery store since 1949. It has maintained a reputation for its jewellery craftmanship, unsurpassed quality and professional services. The EShop developed features a variety of jewellery and gold products, such as necklaces, earrings, rings and bracelets. With the tailor-made CMS, the shop can also manage their website easily.",
     "website": {
       "url": "https://eshop.kingfook.com/kf/",
       "isLive": true
     },
     "technology": "Vue.js // JavaScript // Bootstrap // SCSS // Glide.js // PHP // MySQL // CodeIgniter // AWS // Git",
-    "year": "2021"
+    "year": "2021",
+    "video": {
+      "videoUrl": "ayes/ayes-home-page.mp4",
+      "imgUrl": ""
+    }
   },
   "3": {
     "id": 3,
@@ -58,14 +104,18 @@
       "mobileUrl": "bmpack/bmpack-home-square.jpg",
       "alt": "BM Pack Home Banner"
     },
-    "role": "Frontend & Backend Web Development",
+    "role": "Web Development",
     "description": "BM Pack is a Packaging Manufacturer that has served different local brands over the years. The website developed features online shop, where users can choose their desired packaging type, upload their custom design and order products in samples or in bulks. The site also includes articles for inspiration and case sharing. With email subscription function, visitors can also subscribe to BM Pack for the latest update and promotion. Custom CMS is also available for managing website content and products.",
     "website": {
       "url": "https://bmpack.com/",
       "isLive": true
     },
     "technology": "Vue.js // JavaScript // Bootstrap // SCSS // AOS.js // Glide.js // PHP // MySQL // CodeIgniter // AWS // Git",
-    "year": "2022"
+    "year": "2022",
+    "video": {
+      "videoUrl": "ayes/ayes-home-page.mp4",
+      "imgUrl": ""
+    }
   },
   "4": {
     "id": 4,
@@ -83,7 +133,11 @@
       "isLive": true
     },
     "technology": "WordPress // Elementor // WooCommerce // CSS // PHP // Yoast // STMP // Cloudways",
-    "year": "2021"
+    "year": "2021",
+    "video": {
+      "videoUrl": "ayes/ayes-home-page.mp4",
+      "imgUrl": ""
+    }
   },
   "5": {
     "id": 5,
@@ -101,7 +155,11 @@
       "isLive": true
     },
     "technology": "WordPress // Elementor // WooCommerce // CSS // PHP // Yoast // SMTP // Cloudways",
-    "year": "2021"
+    "year": "2021",
+    "video": {
+      "videoUrl": "ayes/ayes-home-page.mp4",
+      "imgUrl": ""
+    }
   },
   "6": {
     "id": 6,
@@ -118,7 +176,11 @@
       "isLive": false
     },
     "technology": "WordPress // Elementor // SMTP // CSS // Yoast // Cloudways",
-    "year": "2021"
+    "year": "2021",
+    "video": {
+      "videoUrl": "ayes/ayes-home-page.mp4",
+      "imgUrl": ""
+    }
   },
   "7": {
     "id": 7,
@@ -136,7 +198,11 @@
       "isLive": false
     },
     "technology": "WordPress // Elementor // ACF // CPT UI // PHP // CSS // TranslatePress // Yoast // SMTP // Cloudways",
-    "year": "2021"
+    "year": "2021",
+    "video": {
+      "videoUrl": "initial/initial-home-page.mp4",
+      "imgUrl": ""
+    }
   },
   "8": {
     "id": 8,
@@ -154,6 +220,10 @@
       "isLive": true
     },
     "technology": "WordPress // Elementor // WooCommerce // CSS // Yoast // SMTP // Cloudways",
-    "year": "2021"
+    "year": "2021",
+    "video": {
+      "videoUrl": "ayes/ayes-home-page.mp4",
+      "imgUrl": ""
+    }
   }
 }

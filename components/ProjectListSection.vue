@@ -63,7 +63,6 @@
 <script>
 import utils from "~/utils/utils.js";
 import PrimaryDivider from "~/components/PrimaryDivider.vue";
-import { gsap } from "gsap";
 
 export default {
   name: "ProjectListSection",

@@ -9,6 +9,13 @@
       >
       </PageTitleSection>
 
+      <!-- <FullWidthImageSection
+        desktop-src="project-list-showcase.png"
+        mobile-src="project-list-showcase-square.png"
+        class="mb-10"
+        alt="Project Showcase"
+      ></FullWidthImageSection> -->
+
       <ProjectListSection :projects="projects"> </ProjectListSection>
 
       <NextSection title="About" url="about" type="chapter"> </NextSection>
@@ -21,6 +28,7 @@
 <script>
 import SmoothScroll from "~/components/SmoothScroll.vue";
 import PageTitleSection from "~/components/PageTitleSection.vue";
+import FullWidthImageSection from "~/components/FullWidthImageSection.vue";
 import ProjectListSection from "~/components/ProjectListSection.vue";
 import NextSection from "~/components/NextSection.vue";
 import Footer from "@/components/Footer.vue";
@@ -40,11 +48,13 @@ export default {
   components: {
     SmoothScroll,
     PageTitleSection,
+    FullWidthImageSection,
     ProjectListSection,
     NextSection,
     Footer,
   },
   mounted() {
+    this.$root.$refs.customCursor.removeCursorActiveStyle();
     this.$root.$refs.customCursor.initActiveCursorDetection();
   },
   methods: {},

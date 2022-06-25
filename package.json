@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "dev": "node --max-old-space-size=4096 node_modules/nuxt/bin/nuxt.js",
+    "dev": "nuxt --port 5050",
     "build": "node --max-old-space-size=4096 node_modules/nuxt/bin/nuxt.js build",
     "start": "node --max-old-space-size=4096 node_modules/nuxt/bin/nuxt.js start",
     "generate": "nuxt generate"
@@ -11,6 +11,7 @@
   "dependencies": {
     "core-js": "^3.19.3",
     "gsap": "^3.9.1",
+    "hover-effect": "^1.1.0",
     "imagesloaded": "^5.0.0",
     "locomotive-scroll": "^4.1.4",
     "nuxt": "^2.15.8",

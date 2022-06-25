@@ -17,7 +17,7 @@
         <h4 class="project-detail__meta-label">Website</h4>
         <p class="project-detail__meta-value">
           <a
-            class="project-detail__link"
+            class="project-detail__link underline-effect"
             :href="project.website.url"
             target="_blank"
           >

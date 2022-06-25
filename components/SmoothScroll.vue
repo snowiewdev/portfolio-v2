@@ -12,16 +12,19 @@ export default {
   data() {
     return {
       scroll: null,
+      resizeObserver: null,
     };
   },
   created() {
-    // this.$root.$refs.smoothScroll = this;
+    this.$root.$refs.smoothScroll = this;
   },
   mounted() {
+    // console.log("smoothScroll setup");
     this.locomotiveScrollInit();
   },
   beforeDestroy() {
     this.scroll.destroy();
+    this.resizeObserver.disconnect();
   },
   methods: {
     locomotiveScrollInit() {
@@ -45,9 +48,13 @@ export default {
       imagesLoaded(scrollContainer, { background: true }, () => {
         this.scroll.update();
       });
-      new ResizeObserver(() => this.scroll.update()).observe(
-        document.querySelector("[data-scroll-container]")
-      );
+
+      // to fix locomotive resize calculate page height wrongly
+      this.resizeObserver = new ResizeObserver(() => {
+        this.scroll.update();
+      });
+
+      this.resizeObserver.observe(scrollContainer);
     },
   },
 };
