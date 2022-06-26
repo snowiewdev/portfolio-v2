@@ -71,7 +71,8 @@ export default {
   css: [
     "@/assets/css/locomotive.css",
     "@/assets/css/style.css",
-    // "./assets/scss/main.scss"
+    "./assets/scss/variables.scss",
+    "./assets/scss/main.scss",
   ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins

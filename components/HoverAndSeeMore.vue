@@ -17,7 +17,7 @@ export default {
 };
 </script>
 
-<style type="scss">
+<style lang="scss">
 .hover-and-see-more {
   width: 100%;
   max-width: 1440px;

@@ -42,7 +42,7 @@ export default {
 };
 </script>
 
-<style style="scss">
+<style lang="scss">
 .marquee {
   -webkit-touch-callout: none;
   -webkit-user-select: none;

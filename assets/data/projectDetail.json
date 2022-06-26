@@ -63,11 +63,31 @@
     "mobileImages": [
       {
         "before": {
-          "url": "",
+          "url": "ayes/ayes-mobile-designer.jpg",
           "alt": ""
         },
         "after": {
-          "url": "",
+          "url": "ayes/ayes-mobile-shop-1.jpg",
+          "alt": ""
+        }
+      },
+      {
+        "before": {
+          "url": "ayes/ayes-mobile-home-1.jpg",
+          "alt": ""
+        },
+        "after": {
+          "url": "ayes/ayes-mobile-how-we-work.jpg",
+          "alt": ""
+        }
+      },
+      {
+        "before": {
+          "url": "ayes/ayes-mobile-shop-2.jpg",
+          "alt": ""
+        },
+        "after": {
+          "url": "ayes/ayes-mobile-ranking.jpg",
           "alt": ""
         }
       }

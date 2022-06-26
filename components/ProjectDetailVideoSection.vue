@@ -28,7 +28,7 @@ export default {
 };
 </script>
 
-<style type="scss">
+<style lang="scss">
 .project-detail__video-container {
   width: 98vw;
   max-width: 1400px;

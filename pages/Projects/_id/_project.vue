@@ -34,14 +34,8 @@
       >
       </MarqueeSection>
 
-      <div class="project-detail__cover-image-container">
-        {{ project }}
-        <!-- <img
-          class="project-detail__cover-image"
-          :src="require(`~/assets/image/${project.coverImage.url}`)"
-          :alt="project.coverImage.alt"
-        /> -->
-      </div>
+      <ProjectDetailMobileImageSection :project-images="project.mobileImages">
+      </ProjectDetailMobileImageSection>
 
       <NextSection
         :title="nextProject.projectName"
@@ -49,6 +43,8 @@
         :type="nextProject.type"
       >
       </NextSection>
+
+      <!-- <pre> {{ project }} </pre> -->
 
       <Footer />
     </div>
@@ -101,6 +97,7 @@ export default {
     ProjectDetailVideoSection,
     HoverAndSeeMore,
     ProjectDetailImageHoverSection,
+    MarqueeSection,
     NextSection,
     Footer,
   },

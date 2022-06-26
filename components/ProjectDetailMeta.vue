@@ -44,7 +44,7 @@ export default {
 };
 </script>
 
-<style type="scss">
+<style lang="scss">
 .project-detail__meta-container {
   display: flex;
   flex-direction: column;

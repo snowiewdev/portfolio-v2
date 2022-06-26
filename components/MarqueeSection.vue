@@ -31,7 +31,7 @@ export default {
 };
 </script>
 
-<style style="scss">
+<style lang="scss">
 .marquee-container {
   max-width: 1440px;
 }

@@ -1,13 +1,5 @@
 <template>
   <div class="project-detail__image-hover-section">
-    <!-- <div
-      class="project-detail__image-hover-item"
-      v-for="(projectImage, index) in projectImages"
-      :key="'project-image-item-' + index"
-    >
-      {{ projectImage }}
-    </div> -->
-
     <ProjectDetailImageHoverItem
       v-for="(projectImage, index) in projectImages"
       :key="'project-image-item-' + index"

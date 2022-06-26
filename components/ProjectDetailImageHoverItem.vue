@@ -3,16 +3,22 @@
     class="project-detail__image-hover-item-container flex mx-auto"
     :class="classObject"
   >
+    <!-- @mouseover="afterTextAnimateIn"
+      @mouseleave="beforeTextAnimateIn" -->
     <div :id="id" class="project-detail__image-hover-item">
-      <h2 class="project-detail__image-hover-overlay-text">
+      <h2 class="project-detail__image-hover-overlay-text overlay-text-before">
         {{ images.before.text }}
       </h2>
+      <!-- <h2 class="project-detail__image-hover-overlay-text overlay-text-after">
+        {{ images.after.text }}
+      </h2> -->
     </div>
   </div>
 </template>
 
 <script>
 import hoverEffect from "hover-effect";
+// import gsap from "gsap";
 
 export default {
   name: "ProjectDetailImageHoverItem",
@@ -39,6 +45,7 @@ export default {
   },
   mounted() {
     this.initHoverEffect();
+    // this.initTextAnimationSetup();
   },
   beforeDestroy() {
     this.hoverEffect = null;
@@ -66,11 +73,70 @@ export default {
       });
       this.resizeObserver.observe(hoverImage);
     },
+    //   splitText(target) {
+    //     let textAnimate = document.querySelector(target);
+    //     textAnimate.innerHTML = textAnimate.textContent.replace(
+    //       /\S/g,
+    //       "<span class='letter'>$&</span>"
+    //     );
+    //   },
+    //   animateText(targetClass, mode) {
+    //     let target = document.querySelector(targetClass);
+    //     let char = target.querySelectorAll("span");
+    //     var tl = gsap.timeline();
+
+    //     if (mode == "in") {
+    //       tl.set(char, {
+    //         xPercent: 80,
+    //       });
+    //       tl.set(target, {
+    //         autoAlpha: 1,
+    //       });
+    //       // move in
+    //       tl.to(char, {
+    //         duration: 1,
+    //         opacity: 1,
+    //         xPercent: 0,
+    //         stagger: 0.04,
+    //         ease: "expo.out",
+    //       });
+    //     }
+
+    //     // move out
+    //     if (mode == "out") {
+    //       tl.to(char, {
+    //         duration: 0.8,
+    //         opacity: 0,
+    //         xPercent: -80,
+    //         stagger: 0.04,
+    //         ease: "expo.in",
+    //       });
+    //     }
+    //   },
+    //   initTextAnimationSetup() {
+    //     let target1 = `#${this.id} .overlay-text-before`;
+    //     let target2 = `#${this.id} .overlay-text-after`;
+
+    //     this.splitText(target1);
+    //     this.splitText(target2);
+    //   },
+    //   afterTextAnimateIn() {
+    //     let beforeText = `#${this.id} .overlay-text-before`;
+    //     let afterText = `#${this.id} .overlay-text-after`;
+    //     // this.animateText(beforeText, "out");
+    //     this.animateText(afterText, "in");
+    //   },
+    //   beforeTextAnimateIn() {
+    //     let beforeText = `#${this.id} .overlay-text-before`;
+    //     let afterText = `#${this.id} .overlay-text-after`;
+    //     this.animateText(afterText, "out");
+    //     // this.animateText(beforeText, "in");
+    //   },
   },
 };
 </script>
 
-<style style="scss">
+<style lang="scss">
 .project-detail__image-hover-item-container {
   width: 100%;
   max-width: 1440px;
@@ -103,6 +169,7 @@ export default {
   font-size: 1.5rem;
   position: absolute;
   mix-blend-mode: difference;
+  filter: invert(1);
   top: 50%;
   right: 0px;
   transform: translate(55%, -50%);
@@ -115,8 +182,13 @@ export default {
   transform: translate(-55%, -50%);
 }
 
-.dark .project-detail__image-hover-item-container {
-  background: $dark-primary;
+.dark {
+  .project-detail__image-hover-item-container {
+    background: $dark-primary;
+  }
+  .project-detail__image-hover-overlay-text {
+    filter: none;
+  }
 }
 
 @screen md {
@@ -146,4 +218,27 @@ export default {
     font-size: 5rem;
   }
 }
+
+// text animation related
+// .overlay-text-before,
+// .overlay-text-after {
+//   display: flex;
+//   overflow: hidden;
+//   visibility: hidden;
+
+//   .letter {
+//     display: iniline-block;
+//     position: relative;
+//     overflow: hidden;
+//     font-family: $body-font;
+//   }
+// }
+
+// .overlay-text-before span {
+//   opacity: 1;
+// }
+
+// .overlay-text-after span {
+//   opacity: 0;
+// }
 </style>

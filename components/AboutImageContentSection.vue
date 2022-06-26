@@ -45,7 +45,7 @@ export default {
 };
 </script>
 
-<style style="scss">
+<style lang="scss">
 $text-padding: 0rem;
 
 .about-content-section__text-container {
