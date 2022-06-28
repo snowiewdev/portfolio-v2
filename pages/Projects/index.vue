@@ -9,16 +9,15 @@
       >
       </PageTitleSection>
 
-      <!-- <FullWidthImageSection
-        desktop-src="project-list-showcase.png"
-        mobile-src="project-list-showcase-square.png"
-        class="mb-10"
-        alt="Project Showcase"
-      ></FullWidthImageSection> -->
-
       <ProjectListSection :projects="projects"> </ProjectListSection>
 
-      <NextSection title="About" url="about" type="chapter"> </NextSection>
+      <NextSection
+        title="About"
+        url="about"
+        type="chapter"
+        img-url="about-cover-2.jpg"
+      >
+      </NextSection>
 
       <Footer />
     </div>
@@ -61,6 +60,4 @@ export default {
 };
 </script>
 
-<style>
-/*  */
-</style>
+<style></style>

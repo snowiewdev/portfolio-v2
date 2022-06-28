@@ -1,5 +1,5 @@
 <template>
-  <div class="project-list-section">
+  <div class="project-list-section mx-auto">
     <div
       v-for="project in projects"
       :key="project.id"
@@ -149,7 +149,8 @@ export default {
   width: 100%;
   max-width: 1440px;
   // max-width: 1280px;
-  margin: 0 auto;
+  margin-top: 0;
+  margin-bottom: 2rem;
   padding-left: 0;
   padding-right: 0;
   // overflow: hidden;

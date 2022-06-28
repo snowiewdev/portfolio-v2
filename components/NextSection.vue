@@ -1,8 +1,20 @@
 <template>
-  <div class="next-section">
-    <h4 class="next-section__subtitle">{{ subtitle }}</h4>
-    <h2 class="next-section__title" @click="goToUrl(url)">{{ title }}</h2>
-    <img src="" alt="" />
+  <div class="next-section" :class="type">
+    <h4 class="next-section__subtitle cursor-scale" @click="goToUrl(url)">
+      {{ subtitle }}
+    </h4>
+    <h2 class="next-section__title cursor-scale" @click="goToUrl(url)">
+      {{ title }}
+    </h2>
+    <img
+      data-scroll
+      data-scroll-repeat
+      data-scroll-offset="50%, 50%"
+      v-if="imgUrl.length > 0"
+      class="next-section__img"
+      :src="getImgUrl(imgUrl)"
+      :alt="title"
+    />
   </div>
 </template>
 
@@ -11,6 +23,10 @@ export default {
   name: "NextSection",
   props: {
     url: {
+      type: String,
+      default: "",
+    },
+    imgUrl: {
       type: String,
       default: "",
     },
@@ -39,6 +55,9 @@ export default {
     goToUrl(url) {
       this.$router.push(url);
     },
+    getImgUrl(img) {
+      return require(`~/assets/image/${img}`);
+    },
   },
 };
 </script>
@@ -53,6 +72,7 @@ export default {
   width: 85vw;
   max-width: 768px;
   margin: 0 auto;
+  position: relative;
 }
 
 .next-section__subtitle {
@@ -77,6 +97,27 @@ export default {
   text-align: right;
 }
 
+.next-section__img {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 80%;
+  aspect-ratio: 3 / 4;
+  max-width: 300px;
+  object-fit: cover;
+  opacity: 0.4;
+  z-index: -1;
+  transform: translateX(-50%);
+  transform-origin: 50% 100%;
+  will-change: clip-path;
+  clip-path: inset(0 0 100% 0);
+  transition: clip-path 0.6s cubic-bezier(0.79, 0.14, 0.15, 0.86);
+}
+
+.is-inview.next-section__img {
+  clip-path: inset(0 0 0 0);
+}
+
 // dark mode
 .dark {
   .next-section__subtitle {
@@ -87,11 +128,25 @@ export default {
 }
 
 @screen md {
+  .next-section__img {
+    left: 10%;
+    height: 90%;
+    transform: none;
+  }
+
   .next-section__subtitle {
     font-size: 2rem;
 
     &::after {
       width: 100px;
+    }
+  }
+
+  .projects-container,
+  .chapter {
+    .next-section__img {
+      left: 50%;
+      transform: translateX(-50%);
     }
   }
 }

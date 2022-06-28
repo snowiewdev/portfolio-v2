@@ -17,10 +17,10 @@
 
       <ProjectDetailMeta :project="project"></ProjectDetailMeta>
 
-      <ProjectDetailVideoSection
-        v-if="project.video.videoUrl"
+      <ProjectDetailHighlightSection
         :video-url="project.video.videoUrl"
-      ></ProjectDetailVideoSection>
+        :img-url="project.video.imgUrl"
+      ></ProjectDetailHighlightSection>
 
       <HoverAndSeeMore></HoverAndSeeMore>
 
@@ -39,6 +39,7 @@
 
       <NextSection
         :title="nextProject.projectName"
+        :img-url="nextProject.imgUrl"
         :url="nextProject.url"
         :type="nextProject.type"
       >
@@ -56,12 +57,13 @@ import SmoothScroll from "~/components/SmoothScroll.vue";
 import PageTitleSection from "~/components/PageTitleSection.vue";
 import FullWidthImageSection from "~/components/FullWidthImageSection.vue";
 import ProjectDetailMeta from "~/components/ProjectDetailMeta.vue";
-import ProjectDetailVideoSection from "~/components/ProjectDetailVideoSection.vue";
+import ProjectDetailHighlightSection from "~/components/ProjectDetailHighlightSection.vue";
 import HoverAndSeeMore from "~/components/HoverAndSeeMore.vue";
 import ProjectDetailImageHoverSection from "~/components/ProjectDetailImageHoverSection.vue";
 import MarqueeSection from "~/components/MarqueeSection.vue";
 import NextSection from "~/components/NextSection.vue";
 import projects from "~/assets/data/projectDetail.json";
+import projectSummary from "~/assets/data/projects.json";
 import Footer from "@/components/Footer.vue";
 
 export default {
@@ -94,7 +96,7 @@ export default {
     PageTitleSection,
     FullWidthImageSection,
     ProjectDetailMeta,
-    ProjectDetailVideoSection,
+    ProjectDetailHighlightSection,
     HoverAndSeeMore,
     ProjectDetailImageHoverSection,
     MarqueeSection,
@@ -118,12 +120,13 @@ export default {
       this.project = currentProject;
     },
     getNextProject() {
-      let nextDataKey = Number(this.$route.params.id) + 1;
-      let nextProject = projects[nextDataKey];
+      let nextDataKey = Number(this.$route.params.id);
+      let nextProject = projectSummary["projects"][nextDataKey];
       let aboutSection = {
         url: "/about",
         projectName: "About",
         type: "chapter",
+        imgUrl: "about-cover-2.jpg",
       };
 
       // console.log(nextDataKey);

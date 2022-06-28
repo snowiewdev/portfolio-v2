@@ -17,15 +17,14 @@
         <h4 class="project-detail__meta-label">Website</h4>
         <p class="project-detail__meta-value">
           <a
+            v-if="project.website.isLive"
             class="project-detail__link underline-effect"
             :href="project.website.url"
             target="_blank"
           >
-            <template v-if="project.website.isLive">
-              View Live website
-            </template>
-            <template v-else> View Past website </template>
+            View Live website
           </a>
+          <template v-else> {{ project.website.text }} </template>
         </p>
       </div>
     </div>

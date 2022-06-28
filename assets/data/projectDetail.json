@@ -50,12 +50,12 @@
         "before": {
           "text": "SHOP",
           "url": "ayes/ayes-shop-2.jpg",
-          "alt": "Submit design to event"
+          "alt": "Ayes Shop"
         },
         "after": {
           "text": "SHOP",
           "url": "ayes/ayes-shop-4.jpg",
-          "alt": "Event Detail"
+          "alt": "Ayes Product Detail"
         },
         "position": "left"
       }
@@ -111,9 +111,82 @@
     "technology": "Vue.js // JavaScript // Bootstrap // SCSS // Glide.js // PHP // MySQL // CodeIgniter // AWS // Git",
     "year": "2021",
     "video": {
-      "videoUrl": "ayes/ayes-home-page.mp4",
-      "imgUrl": ""
-    }
+      "videoUrl": "",
+      "imgUrl": "kingfook/kf-desktop-home.jpg"
+    },
+    "projectImages": [
+      {
+        "before": {
+          "text": "SHOP",
+          "url": "kingfook/kf-shop-1.png",
+          "alt": "KF Shop"
+        },
+        "after": {
+          "text": "SHOP",
+          "url": "kingfook/kf-shop-detail.jpg",
+          "alt": "KF Product Detail"
+        },
+        "position": "left"
+      },
+      {
+        "before": {
+          "text": "CART",
+          "url": "kingfook/kf-cart.jpg",
+          "alt": "KF Cart Page"
+        },
+        "after": {
+          "text": "CART",
+          "url": "kingfook/kf-delivery.jpg",
+          "alt": "KF Delivery & Billing info"
+        },
+        "position": "right"
+      },
+      {
+        "before": {
+          "text": "CONTACT",
+          "url": "kingfook/kf-contact-2.jpg",
+          "alt": "KF Shop Location"
+        },
+        "after": {
+          "text": "CONTACT",
+          "url": "kingfook/kf-contact-3.jpg",
+          "alt": "KF Contact Form"
+        },
+        "position": "left"
+      }
+    ],
+    "mobileImages": [
+      {
+        "before": {
+          "url": "kingfook/kf-mobile-cart.jpg",
+          "alt": ""
+        },
+        "after": {
+          "url": "kingfook/kf-mobile-cart-2.jpg",
+          "alt": ""
+        }
+      },
+      {
+        "before": {
+          "url": "kingfook/kf-mobile-home-1.jpg",
+          "alt": ""
+        },
+        "after": {
+          "url": "kingfook/kf-mobile-menu.jpg",
+          "alt": ""
+        }
+      },
+      {
+        "before": {
+          "url": "kingfook/kf-mobile-product-1.jpg",
+          "alt": ""
+        },
+        "after": {
+          "url": "kingfook/kf-mobile-shop.jpg",
+          "alt": ""
+        }
+      }
+    ]
   },
   "3": {
     "id": 3,
@@ -133,9 +206,82 @@
     "technology": "Vue.js // JavaScript // Bootstrap // SCSS // AOS.js // Glide.js // PHP // MySQL // CodeIgniter // AWS // Git",
     "year": "2022",
     "video": {
-      "videoUrl": "ayes/ayes-home-page.mp4",
+      "videoUrl": "bmpack/bmpack-home.mp4",
       "imgUrl": ""
-    }
+    },
+    "projectImages": [
+      {
+        "before": {
+          "text": "SHOP",
+          "url": "bmpack/bmpack-shop.png",
+          "alt": "BMPack Shop"
+        },
+        "after": {
+          "text": "SHOP",
+          "url": "bmpack/bmpack-product-1.png",
+          "alt": "BMPack Product Detail"
+        },
+        "position": "left"
+      },
+      {
+        "before": {
+          "text": "CASES",
+          "url": "bmpack/bmpack-cases.jpg",
+          "alt": "BMPack Case Sharing"
+        },
+        "after": {
+          "text": "CASES",
+          "url": "bmpack/bmpack-case-1.png",
+          "alt": "BMPack Case Sharing"
+        },
+        "position": "right"
+      },
+      {
+        "before": {
+          "text": "IDEAS",
+          "url": "bmpack/bmpack-ideas-1.jpg",
+          "alt": "BMPack Ideas Articles"
+        },
+        "after": {
+          "text": "IDEAS",
+          "url": "bmpack/bmpack-idea-1.png",
+          "alt": "BMPack Ideas Articles"
+        },
+        "position": "left"
+      }
+    ],
+    "mobileImages": [
+      {
+        "before": {
+          "url": "bmpack/bmpack-mobile-case-1.png",
+          "alt": ""
+        },
+        "after": {
+          "url": "bmpack/bmpack-mobile-case-3.png",
+          "alt": ""
+        }
+      },
+      {
+        "before": {
+          "url": "bmpack/bmpack-mobile-home-2.jpg",
+          "alt": ""
+        },
+        "after": {
+          "url": "bmpack/bmpack-mobile-home-1.jpg",
+          "alt": ""
+        }
+      },
+      {
+        "before": {
+          "url": "bmpack/bmpack-mobile-product-1.png",
+          "alt": ""
+        },
+        "after": {
+          "url": "bmpack/bmpack-mobile-shop-1.png",
+          "alt": ""
+        }
+      }
+    ]
   },
   "4": {
     "id": 4,
@@ -155,9 +301,82 @@
     "technology": "WordPress // Elementor // WooCommerce // CSS // PHP // Yoast // STMP // Cloudways",
     "year": "2021",
     "video": {
-      "videoUrl": "ayes/ayes-home-page.mp4",
-      "imgUrl": ""
-    }
+      "videoUrl": "",
+      "imgUrl": "elite/elite-home.png"
+    },
+    "projectImages": [
+      {
+        "before": {
+          "text": "PRODUCT",
+          "url": "elite/elite-products-3.jpg",
+          "alt": "Elite Products"
+        },
+        "after": {
+          "text": "PRODUCT",
+          "url": "elite/elite-product-3.jpg",
+          "alt": "Elite Product Detail"
+        },
+        "position": "left"
+      },
+      {
+        "before": {
+          "text": "ABOUT",
+          "url": "elite/elite-about-2.jpg",
+          "alt": "Elite Served Brands"
+        },
+        "after": {
+          "text": "ABOUT",
+          "url": "elite/elite-about-4.jpg",
+          "alt": "Elite About Us"
+        },
+        "position": "right"
+      },
+      {
+        "before": {
+          "text": "FACTORY",
+          "url": "elite/elite-factory-1.jpg",
+          "alt": "Elite Factory"
+        },
+        "after": {
+          "text": "FACTORY",
+          "url": "elite/elite-factory-2.jpg",
+          "alt": "Elite Factory Certificates"
+        },
+        "position": "left"
+      }
+    ],
+    "mobileImages": [
+      {
+        "before": {
+          "url": "elite/elite-mobile-products.jpg",
+          "alt": ""
+        },
+        "after": {
+          "url": "elite/elite-mobile-products-2.jpg",
+          "alt": ""
+        }
+      },
+      {
+        "before": {
+          "url": "elite/elite-mobile-home.jpg",
+          "alt": ""
+        },
+        "after": {
+          "url": "elite/elite-mobile-contact.jpg",
+          "alt": ""
+        }
+      },
+      {
+        "before": {
+          "url": "elite/elite-mobile-product-1.jpg",
+          "alt": ""
+        },
+        "after": {
+          "url": "elite/elite-mobile-product-4.jpg",
+          "alt": ""
+        }
+      }
+    ]
   },
   "5": {
     "id": 5,
@@ -177,9 +396,82 @@
     "technology": "WordPress // Elementor // WooCommerce // CSS // PHP // Yoast // SMTP // Cloudways",
     "year": "2021",
     "video": {
-      "videoUrl": "ayes/ayes-home-page.mp4",
-      "imgUrl": ""
-    }
+      "videoUrl": "",
+      "imgUrl": "soulpure/soulpure-home.jpg"
+    },
+    "projectImages": [
+      {
+        "before": {
+          "text": "SHOP",
+          "url": "soulpure/soulpure-shop.jpg",
+          "alt": "Soulpure Shop"
+        },
+        "after": {
+          "text": "SHOP",
+          "url": "soulpure/soulpure-shop-1.jpg",
+          "alt": "Soulpure product detail"
+        },
+        "position": "left"
+      },
+      {
+        "before": {
+          "text": "BLOG",
+          "url": "soulpure/soulpure-blog-1.jpg",
+          "alt": "Soulpure Blogs"
+        },
+        "after": {
+          "text": "BLOG",
+          "url": "soulpure/soulpure-blog-3.jpg",
+          "alt": "Soulpure Blog Detail"
+        },
+        "position": "right"
+      },
+      {
+        "before": {
+          "text": "ABOUT",
+          "url": "soulpure/soulpure-about-1.jpg",
+          "alt": "Soulpure Shop Location"
+        },
+        "after": {
+          "text": "ABOUT",
+          "url": "soulpure/soulpure-about-2.jpg",
+          "alt": "Soulpure About"
+        },
+        "position": "left"
+      }
+    ],
+    "mobileImages": [
+      {
+        "before": {
+          "url": "soulpure/soulpure-client-2.jpg",
+          "alt": ""
+        },
+        "after": {
+          "url": "soulpure/soulpure-client-1.jpg",
+          "alt": ""
+        }
+      },
+      {
+        "before": {
+          "url": "soulpure/soulpure-mobile-home.jpg",
+          "alt": ""
+        },
+        "after": {
+          "url": "soulpure/soulpure-mobile-about.jpg",
+          "alt": ""
+        }
+      },
+      {
+        "before": {
+          "url": "soulpure/soulpure-mobile-product-2.jpg",
+          "alt": ""
+        },
+        "after": {
+          "url": "soulpure/soulpure-mobile-shop-3.jpg",
+          "alt": ""
+        }
+      }
+    ]
   },
   "6": {
     "id": 6,
@@ -192,15 +484,89 @@
     "role": "Web Design & Development",
     "description": "Immortality Aquaponics is an eco-friendly store. It combines traditional aquaculture with its innovative bio-technology into modern sustainable aquaculture system, producing sustainable aquatic products, fruits and herbs. The company also provides ecological education to raise public awareness on sustainability in Hong Kong. The website developed serves as a landing page that introduces the company and its services.",
     "website": {
-      "url": "https://wordpress-629555-2512724.cloudwaysapps.com/",
-      "isLive": false
+      "url": "",
+      "isLive": false,
+      "text": "ENDED IN Mar-2022"
     },
     "technology": "WordPress // Elementor // SMTP // CSS // Yoast // Cloudways",
     "year": "2021",
     "video": {
-      "videoUrl": "ayes/ayes-home-page.mp4",
+      "videoUrl": "ia/ia-home.mp4",
       "imgUrl": ""
-    }
+    },
+    "projectImages": [
+      {
+        "before": {
+          "text": "ABOUT",
+          "url": "ia/ia-about-2.jpg",
+          "alt": ""
+        },
+        "after": {
+          "text": "ABOUT",
+          "url": "ia/ia-about-1.jpg",
+          "alt": ""
+        },
+        "position": "left"
+      },
+      {
+        "before": {
+          "text": "SERVICE",
+          "url": "ia/ia-service-1.jpg",
+          "alt": ""
+        },
+        "after": {
+          "text": "SERVICE",
+          "url": "ia/ia-service-3.jpg",
+          "alt": ""
+        },
+        "position": "right"
+      },
+      {
+        "before": {
+          "text": "CONTACT",
+          "url": "ia/ia-contact-1.jpg",
+          "alt": ""
+        },
+        "after": {
+          "text": "CONTACT",
+          "url": "ia/ia-contact-2.jpg",
+          "alt": ""
+        },
+        "position": "left"
+      }
+    ],
+    "mobileImages": [
+      {
+        "before": {
+          "url": "ia/ia-mobile-service-cover.jpg",
+          "alt": ""
+        },
+        "after": {
+          "url": "ia/ia-mobile-service.jpg",
+          "alt": ""
+        }
+      },
+      {
+        "before": {
+          "url": "ia/ia-mobile-home.jpg",
+          "alt": ""
+        },
+        "after": {
+          "url": "ia/ia-mobile-client.jpg",
+          "alt": ""
+        }
+      },
+      {
+        "before": {
+          "url": "ia/ia-mobile-contact-1.jpg",
+          "alt": ""
+        },
+        "after": {
+          "url": "ia/ia-mobile-contact.jpg",
+          "alt": ""
+        }
+      }
+    ]
   },
   "7": {
     "id": 7,
@@ -214,15 +580,89 @@
     "role": "Web Design & Development",
     "description": "Initial Engineering Limited is an engineering company specialized in interior design and construction with consultation services. It has years of professional experience in interior renovation and construction projects across different areas, including restaurants, residence and retail stores. The website developed allows them to showcase their works with VR tour and promote their services.",
     "website": {
-      "url": "https://wordpress-629555-2489608.cloudwaysapps.com/",
-      "isLive": false
+      "url": "",
+      "isLive": false,
+      "text": "ENDED IN Apr-2022"
     },
     "technology": "WordPress // Elementor // ACF // CPT UI // PHP // CSS // TranslatePress // Yoast // SMTP // Cloudways",
     "year": "2021",
     "video": {
       "videoUrl": "initial/initial-home-page.mp4",
       "imgUrl": ""
-    }
+    },
+    "projectImages": [
+      {
+        "before": {
+          "text": "PROFILE",
+          "url": "initial/initial-profile.jpg",
+          "alt": ""
+        },
+        "after": {
+          "text": "PROFILE",
+          "url": "initial/initial-profile-1.jpg",
+          "alt": ""
+        },
+        "position": "left"
+      },
+      {
+        "before": {
+          "text": "SERVICE",
+          "url": "initial/initial-service-2.jpg",
+          "alt": ""
+        },
+        "after": {
+          "text": "SERVICE",
+          "url": "initial/initial-service.jpg",
+          "alt": ""
+        },
+        "position": "right"
+      },
+      {
+        "before": {
+          "text": "ABOUT",
+          "url": "initial/initial-about-1.jpg",
+          "alt": ""
+        },
+        "after": {
+          "text": "ABOUT",
+          "url": "initial/initial-contact-1.jpg",
+          "alt": ""
+        },
+        "position": "left"
+      }
+    ],
+    "mobileImages": [
+      {
+        "before": {
+          "url": "initial/initial-mobile-about.jpg",
+          "alt": ""
+        },
+        "after": {
+          "url": "initial/initial-mobile-profile-3.jpg",
+          "alt": ""
+        }
+      },
+      {
+        "before": {
+          "url": "initial/initial-mobile-home.jpg",
+          "alt": ""
+        },
+        "after": {
+          "url": "initial/initial-mobile-service-1.jpg",
+          "alt": ""
+        }
+      },
+      {
+        "before": {
+          "url": "initial/initial-mobile-profile-2.jpg",
+          "alt": ""
+        },
+        "after": {
+          "url": "initial/initial-mobile-profile-1.jpg",
+          "alt": ""
+        }
+      }
+    ]
   },
   "8": {
     "id": 8,
@@ -242,8 +682,81 @@
     "technology": "WordPress // Elementor // WooCommerce // CSS // Yoast // SMTP // Cloudways",
     "year": "2021",
     "video": {
-      "videoUrl": "ayes/ayes-home-page.mp4",
-      "imgUrl": ""
-    }
+      "videoUrl": "",
+      "imgUrl": "catstelecom/mewo-home.png"
+    },
+    "projectImages": [
+      {
+        "before": {
+          "text": "SHOP",
+          "url": "catstelecom/mewo-shop-3.jpg",
+          "alt": ""
+        },
+        "after": {
+          "text": "SHOP",
+          "url": "catstelecom/mewo-product-detail.jpg",
+          "alt": ""
+        },
+        "position": "left"
+      },
+      {
+        "before": {
+          "text": "ABOUT",
+          "url": "catstelecom/mewo-about-1.jpg",
+          "alt": ""
+        },
+        "after": {
+          "text": "FAQ",
+          "url": "catstelecom/mewo-about-2.jpg",
+          "alt": "Vote for design"
+        },
+        "position": "right"
+      },
+      {
+        "before": {
+          "text": "CONTACT",
+          "url": "catstelecom/mewo-contact.jpg",
+          "alt": ""
+        },
+        "after": {
+          "text": "SHOP",
+          "url": "catstelecom/mewo-faq.jpg",
+          "alt": ""
+        },
+        "position": "left"
+      }
+    ],
+    "mobileImages": [
+      {
+        "before": {
+          "url": "catstelecom/mewo-mobile-shop.jpg",
+          "alt": ""
+        },
+        "after": {
+          "url": "catstelecom/mewo-product-2.jpg",
+          "alt": ""
+        }
+      },
+      {
+        "before": {
+          "url": "catstelecom/mewo-mobile-about.jpg",
+          "alt": ""
+        },
+        "after": {
+          "url": "catstelecom/mewo-mobile-home.jpg",
+          "alt": ""
+        }
+      },
+      {
+        "before": {
+          "url": "catstelecom/mewo-product-1.jpg",
+          "alt": ""
+        },
+        "after": {
+          "url": "catstelecom/mewo-mobile-cart.jpg",
+          "alt": ""
+        }
+      }
+    ]
   }
 }

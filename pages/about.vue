@@ -5,13 +5,6 @@
       <PageTitleSection :section-number="3" title="About" index-style="chapter">
       </PageTitleSection>
 
-      <!-- <FullWidthImageSection
-        desktop-src="about-me-in-kolwoon.jpg"
-        mobile-src="about-cover-square.jpg"
-        alt="about me cover photo"
-        class="mb-8"
-      ></FullWidthImageSection> -->
-
       <AboutImageContentSection img="me-light.jpg" img-class="md:object-right">
         <template v-slot:content>
           <p class="pb-6">
@@ -20,8 +13,8 @@
             <span class="highlight-yellow"> web developer</span> for a year at a
             digital agency based in Hong Kong. I am really into
             <span class="highlight-mint">front-end development</span> and
-            animations. I love CSS, You can find me on
-            <span class="highlight-pink">CSS Battle</span> sometimes.
+            animations. I love CSS, You may find me on
+            <span class="highlight-pink">CSS Battle</span> sometimes lol.
           </p>
           <h4 class="body-font-title mt-4 mb-6">Skills</h4>
           <p class="pb-6">
@@ -64,7 +57,14 @@
       >
       </MarqueeSection>
 
-      <NextSection title="Contact" url="contact" type="chapter"> </NextSection>
+      <!-- img-url="contact-cover.jpg" -->
+      <NextSection
+        title="Contact"
+        url="contact"
+        type="chapter"
+        img-url="contact-hand.jpg"
+      >
+      </NextSection>
 
       <Footer />
     </div>
@@ -75,7 +75,6 @@
 import SmoothScroll from "~/components/SmoothScroll.vue";
 import PageTitleSection from "~/components/PageTitleSection.vue";
 import AboutImageContentSection from "~/components/AboutImageContentSection.vue";
-import FullWidthImageSection from "~/components/FullWidthImageSection.vue";
 import FullWidthContentSection from "~/components/FullWidthContentSection.vue";
 import MarqueeSection from "~/components/MarqueeSection.vue";
 import NextSection from "~/components/NextSection.vue";
@@ -97,7 +96,6 @@ export default {
     SmoothScroll,
     PageTitleSection,
     AboutImageContentSection,
-    FullWidthImageSection,
     FullWidthContentSection,
     MarqueeSection,
     NextSection,
