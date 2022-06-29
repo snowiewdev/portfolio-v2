@@ -49,7 +49,7 @@ export default {
 };
 </script>
 
-<style scoped lang="scss">
+<style scoped>
 body {
   overflow: hidden;
 }

@@ -70,7 +70,7 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
+<style scoped>
 .page-title-section {
   height: 70vh;
   max-height: 600px;

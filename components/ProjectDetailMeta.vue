@@ -43,7 +43,7 @@ export default {
 };
 </script>
 
-<style lang="scss">
+<style scoped>
 .project-detail__meta-container {
   display: flex;
   flex-direction: column;

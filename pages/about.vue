@@ -10,17 +10,26 @@
           <p class="pb-6">
             Hi, my name is Snowie Wong. I started my web development journey
             from learning on freeCodeCamp and Youtube. Then I worked as a
-            <span class="highlight-yellow"> web developer</span> for a year at a
-            digital agency based in Hong Kong. I am really into
-            <span class="highlight-mint">front-end development</span> and
-            animations. I love CSS, You may find me on
-            <span class="highlight-pink">CSS Battle</span> sometimes lol.
+            <HighlightSpan style-class="highlight-yellow"
+              >web developer
+            </HighlightSpan>
+            for a year at a digital agency based in Hong Kong. I am really into
+            <HighlightSpan style-class="highlight-mint"
+              >front-end development</HighlightSpan
+            >
+            and animations. I love CSS, You may find me on
+            <HighlightSpan style-class="highlight-pink"
+              >CSS Battle</HighlightSpan
+            >
+            sometimes lol.
           </p>
           <h4 class="body-font-title mt-4 mb-6">Skills</h4>
           <p class="pb-6">
-            <span class="highlight-green">VUE.JS</span> // NUXT.JS // JAVASCRIPT
-            // SCSS // CSS // GSAP // TAILWINDCSS // BOOTSTRAP // LOCOMOTIVE //
-            PHP // MYSQL // HTML // GIT // WORDPRESS // ELEMENTOR // WOOCOMMERCE
+            <HighlightSpan style-class="highlight-green">VUE.JS</HighlightSpan>
+            <!-- <span class="highlight-green">VUE.JS</span>  -->
+            // NUXT.JS // JAVASCRIPT // SCSS // CSS // GSAP // TAILWINDCSS //
+            BOOTSTRAP // LOCOMOTIVE // PHP // MYSQL // HTML // GIT // WORDPRESS
+            // ELEMENTOR // WOOCOMMERCE
           </p>
         </template>
       </AboutImageContentSection>
@@ -28,16 +37,27 @@
       <AboutImageContentSection img="cat-is-cute.jpg" type="image-first">
         <template v-slot:content>
           <p class="pt-4 md:pt-0 pb-6">
-            Apart from <span class="highlight-yellow">coding</span>, I love cats
-            and other animals. I enjoy listening to music with heavy beats like
-            EDM and Heavy Metal. You may spot me
-            <span class="highlight-pink">watching gigs</span> and
-            <span class="highlight-mint">feeding stray cats</span> sometimes.
+            Apart from
+            <HighlightSpan style-class="highlight-yellow">
+              coding </HighlightSpan
+            >, I love cats and other animals. I enjoy listening to music with
+            heavy beats like EDM and Heavy Metal. You may spot me
+            <HighlightSpan style-class="highlight-pink"
+              >watching gigs</HighlightSpan
+            >
+            and
+            <HighlightSpan style-class="highlight-mint"
+              >feeding stray cats</HighlightSpan
+            >
+            sometimes.
           </p>
           <p class="py-6">
-            I also enjoy <span class="highlight-green">travelling</span> a lot.
-            I have recently relocated to Vancouver with my work permit and
-            hopefully I could get a job as web developer there soon.
+            I also enjoy
+            <HighlightSpan style-class="highlight-green"
+              >travelling</HighlightSpan
+            >
+            a lot. I have recently relocated to Vancouver with my work permit
+            and hopefully I could get a job as web developer there soon.
           </p>
         </template>
       </AboutImageContentSection>
@@ -75,6 +95,7 @@
 import SmoothScroll from "~/components/SmoothScroll.vue";
 import PageTitleSection from "~/components/PageTitleSection.vue";
 import AboutImageContentSection from "~/components/AboutImageContentSection.vue";
+import HighlightSpan from "~/components/HighlightSpan.vue";
 import FullWidthContentSection from "~/components/FullWidthContentSection.vue";
 import MarqueeSection from "~/components/MarqueeSection.vue";
 import NextSection from "~/components/NextSection.vue";
@@ -96,6 +117,7 @@ export default {
     SmoothScroll,
     PageTitleSection,
     AboutImageContentSection,
+    HighlightSpan,
     FullWidthContentSection,
     MarqueeSection,
     NextSection,
@@ -108,5 +130,3 @@ export default {
   methods: {},
 };
 </script>
-
-<style></style>

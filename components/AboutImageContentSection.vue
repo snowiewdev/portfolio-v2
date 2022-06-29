@@ -7,7 +7,6 @@
       <slot name="content"></slot>
     </div>
     <div class="about-content-section__image-container overflow-hidden">
-      <!-- <slot name="image"></slot> -->
       <img
         data-scroll
         data-scroll-speed="-0.6"
@@ -45,7 +44,7 @@ export default {
 };
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 $text-padding: 0rem;
 
 .about-content-section__text-container {

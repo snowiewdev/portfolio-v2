@@ -43,7 +43,7 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 a {
   font-family: $header-font;
   @apply text-black dark:text-white;

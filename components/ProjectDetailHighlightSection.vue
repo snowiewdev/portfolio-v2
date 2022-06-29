@@ -35,7 +35,7 @@ export default {
 };
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .project-detail__highlight-container {
   width: 98vw;
   max-width: 1400px;

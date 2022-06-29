@@ -14,7 +14,7 @@
       "
     >
       <a
-        class="img-hover-effect-link project-list-item__link"
+        class="img-hover-effect-link project-list-item__link small"
         :href="'projects/' + project.id"
         @click.prevent="goToUrl('projects/' + project.id)"
       >
@@ -143,7 +143,7 @@ export default {
 };
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .project-list-section {
   @apply lg:container lg:mx-auto;
   width: 100%;

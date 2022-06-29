@@ -1,6 +1,5 @@
 <template>
   <div class="project-detail__mobile-image-section mx-auto">
-    <!-- {{ projectImages }} -->
     <ProjectDetailMobileImageItem
       v-for="(projectImage, index) in projectImages"
       :key="'project-mobile-image-item-' + index"
@@ -38,7 +37,7 @@ export default {
 };
 </script>
 
-<style lang="scss">
+<style>
 .project-detail__mobile-image-section {
   width: 100%;
   max-width: 1280px;

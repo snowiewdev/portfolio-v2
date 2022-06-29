@@ -35,12 +35,12 @@ export default {
         smooth: true,
         getDirection: true,
         mobile: {
-          smooth: true,
           breakpoint: 0,
+          smooth: true,
         },
         tablet: {
-          smooth: true,
           breakpoint: 0,
+          smooth: true,
         },
       });
 
@@ -59,5 +59,3 @@ export default {
   },
 };
 </script>
-
-<style></style>

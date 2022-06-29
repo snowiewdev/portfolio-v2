@@ -2,7 +2,7 @@ export default {
   // Target: https://go.nuxtjs.dev/config-target
   target: "static",
 
-  // testing
+  // for SPA
   ssr: false,
 
   // Global page headers: https://go.nuxtjs.dev/config-head
@@ -58,21 +58,14 @@ export default {
         content: "Snowie Wong Logo",
       },
     ],
-    // gsap cdn functionality to be tested
-    // script: [
-    //   { src: "https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js" },
-    //   {
-    //     src: "https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js",
-    //   },
-    // ],
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
+  // place for global styles except variables/mixins
   css: [
     "@/assets/css/locomotive.css",
     "@/assets/css/style.css",
-    "./assets/scss/variables.scss",
-    "./assets/scss/main.scss",
+    "@/assets/scss/main.scss",
   ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
@@ -90,8 +83,9 @@ export default {
     "@nuxt/postcss8",
   ],
 
+  // used for shared variables and mixins only
   styleResources: {
-    scss: ["./assets/scss/variables.scss", "./assets/scss/main.scss"],
+    scss: ["./assets/scss/variables.scss"],
   },
 
   googleFonts: {

@@ -1,6 +1,9 @@
 <template>
   <div class="project-detail__mobile-image-item-container">
-    <div :id="id" class="project-detail__mobile-image-item"></div>
+    <div
+      :id="id"
+      class="project-detail__mobile-image-item cursor-scale small"
+    ></div>
   </div>
 </template>
 
@@ -34,7 +37,7 @@ export default {
     this.initHoverEffect();
   },
   beforeDestroy() {
-    this.hoverEffect = null;
+    // this.hoverEffect = null;
     this.resizeObserver.disconnect();
   },
   methods: {

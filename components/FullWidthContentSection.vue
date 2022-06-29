@@ -10,10 +10,8 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
-.content-section--full-width {
-  p {
-    @apply pb-6;
-  }
+<style scoped>
+.content-section--full-width p {
+  @apply pb-6;
 }
 </style>

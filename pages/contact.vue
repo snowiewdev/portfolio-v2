@@ -18,7 +18,10 @@
         <p>
           Or we can just be friends.
           <br class="block sm:hidden" />
-          <span class="highlight-mint">Come and say hi</span> :)
+          <HighlightSpan style-class="highlight-mint">
+            Come and say hi
+          </HighlightSpan>
+          :)
         </p>
       </FullWidthContentSection>
 
@@ -45,6 +48,7 @@
 import SmoothScroll from "~/components/SmoothScroll.vue";
 import PageTitleSection from "~/components/PageTitleSection.vue";
 import FullWidthContentSection from "~/components/FullWidthContentSection.vue";
+import HighlightSpan from "~/components/HighlightSpan.vue";
 import RotatingTitleLink from "~/components/RotatingTitleLink.vue";
 import SocialLinkSection from "~/components/SocialLinkSection.vue";
 import RotatingCircle from "~/components/RotatingCircle.vue";
@@ -86,6 +90,7 @@ export default {
     SmoothScroll,
     PageTitleSection,
     FullWidthContentSection,
+    HighlightSpan,
     RotatingTitleLink,
     SocialLinkSection,
     RotatingCircle,

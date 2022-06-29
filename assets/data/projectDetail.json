@@ -288,8 +288,8 @@
     "projectName": "Elite Premium",
     "type": "Company Website",
     "coverImage": {
-      "desktopUrl": "elite/elite-cover.png",
-      "mobileUrl": "elite/elite-square.png",
+      "desktopUrl": "elite/elite-cover.jpg",
+      "mobileUrl": "elite/elite-square.jpg",
       "alt": "Elite Premium Tins"
     },
     "role": "Web Development",
@@ -302,7 +302,7 @@
     "year": "2021",
     "video": {
       "videoUrl": "",
-      "imgUrl": "elite/elite-home.png"
+      "imgUrl": "elite/elite-home.jpg"
     },
     "projectImages": [
       {
@@ -683,7 +683,7 @@
     "year": "2021",
     "video": {
       "videoUrl": "",
-      "imgUrl": "catstelecom/mewo-home.png"
+      "imgUrl": "catstelecom/mewo-home.jpg"
     },
     "projectImages": [
       {

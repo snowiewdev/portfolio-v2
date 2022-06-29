@@ -1,6 +1,6 @@
 <template>
   <div class="layout-container">
-    <Loader />
+    <!-- <Loader /> -->
     <CustomCursor />
     <NoiseBackground />
     <Header />

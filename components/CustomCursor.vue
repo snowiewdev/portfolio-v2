@@ -86,9 +86,7 @@ export default {
 <style lang="scss">
 // hide default cursor
 body {
-  // cursor: none;
-  // cursor: url("https://ia601409.us.archive.org/7/items/minikoo/minikoo.svg"),
-  // pointer;
+  cursor: none;
   position: relative;
   max-width: 100vw;
   height: 100%;
@@ -107,7 +105,6 @@ body {
   z-index: 998;
   mix-blend-mode: difference;
   filter: invert(1);
-  // mix-blend-mode: difference;
 }
 
 .cursor {
@@ -117,6 +114,7 @@ body {
   background: $dark-primary;
   transition-duration: 0ms;
   transition-timing-function: ease-out;
+  clip-path: circle(50% at 50% 50%);
 }
 
 .cursor-lazy {
@@ -152,8 +150,41 @@ body {
   border: none;
 }
 
+.grow-small {
+  transform: translate3d(-50%, -50%, 0) scale(2);
+  background: white;
+  mix-blend-mode: difference;
+  filter: none;
+  border: none;
+  // star shape clip-path
+  clip-path: polygon(
+    50% 0%,
+    61% 35%,
+    98% 35%,
+    68% 57%,
+    79% 91%,
+    50% 70%,
+    21% 91%,
+    32% 57%,
+    2% 35%,
+    39% 35%
+  );
+}
+
 .border-hide {
   opacity: 0;
   transform: translate3d(-50%, -50%, 0) scale(0);
+}
+
+// hide cursor on tap device (hover: none)
+@media (pointer: coarse) {
+  .cursor,
+  .cursor-lazy {
+    opacity: 0;
+  }
+
+  body {
+    cursor: auto;
+  }
 }
 </style>

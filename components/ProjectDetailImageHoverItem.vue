@@ -5,7 +5,7 @@
   >
     <!-- @mouseover="afterTextAnimateIn"
       @mouseleave="beforeTextAnimateIn" -->
-    <div :id="id" class="project-detail__image-hover-item">
+    <div :id="id" class="project-detail__image-hover-item cursor-scale small">
       <h2 class="project-detail__image-hover-overlay-text overlay-text-before">
         {{ images.before.text }}
       </h2>
