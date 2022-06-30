@@ -2,8 +2,8 @@ export default {
   // Target: https://go.nuxtjs.dev/config-target
   target: "static",
 
-  // for SPA
-  ssr: false,
+  // SPA
+  // ssr: false,
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
@@ -111,6 +111,6 @@ export default {
     standalone: true,
   },
 
-  loading: false, // hide default progress bar
+  // loading: "~/components/Loader.vue",
   // generate: { fallback: "404.html" },
 };

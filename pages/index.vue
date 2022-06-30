@@ -22,6 +22,7 @@
 import Eye from "~/components/Eye.vue";
 import RotatingCircle from "~/components/RotatingCircle.vue";
 import Footer from "@/components/Footer.vue";
+import gsap from "gsap";
 
 export default {
   name: "IndexPage",
@@ -45,7 +46,6 @@ export default {
     this.$root.$refs.customCursor.removeCursorActiveStyle();
     this.$root.$refs.customCursor.initActiveCursorDetection();
   },
-  methods: {},
 };
 </script>
 

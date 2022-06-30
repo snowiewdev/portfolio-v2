@@ -10,7 +10,7 @@
     "role": "Web Development",
     "description": "Ayes is a clothing online store that supports Hong Kong local culture and arts. It operates with an unique “Design, Vote, Shop” concept, where visitors can submit their own designs based on the monthly event topic, vote for their favorite designs, and shop for products with the winning designs online. With the customed CMS, Ayes can update their website content and products as they want.",
     "website": {
-      "url": "https://www.ayeshk.com/ayes/",
+      "url": "https://www.ayeshk.com/product",
       "isLive": true
     },
     "technology": "Vue.js // JavaScript // GSAP // Bootstrap // SCSS // AOS.js // Glide.js // PHP // MySQL // CodeIgniter // AWS // Git",

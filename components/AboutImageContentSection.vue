@@ -13,7 +13,16 @@
         class="about-content-section__image"
         :class="imgClass"
         :src="getImgUrl(img)"
-        alt="me"
+        alt="about me image"
+      />
+      <img
+        v-if="topImg.length > 0"
+        data-scroll
+        data-scroll-speed="-0.6"
+        class="about-content-section__image top-image"
+        :class="imgClass"
+        :src="getImgUrl(topImg)"
+        alt="about me image"
       />
     </div>
   </div>
@@ -24,6 +33,10 @@ export default {
   name: "AboutImageContentSection",
   props: {
     img: {
+      type: String,
+      default: "",
+    },
+    topImg: {
       type: String,
       default: "",
     },
@@ -53,6 +66,7 @@ $text-padding: 0rem;
 
 .about-content-section__image-container {
   grid-area: image;
+  position: relative;
 }
 
 .about-content-section {
@@ -68,6 +82,30 @@ $text-padding: 0rem;
   height: auto;
   object-fit: cover;
   margin-top: 1rem;
+}
+
+.top-image {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
+  will-change: clip-path;
+  clip-path: inset(0 0 0 100%);
+  transition: clip-path 0.4s cubic-bezier(0.79, 0.14, 0.15, 0.86);
+}
+
+.image-first {
+  .top-image {
+    clip-path: inset(0 100% 0 0);
+  }
+}
+
+.about-content-section__image-container:hover {
+  .top-image {
+    clip-path: inset(0 0 0 0);
+  }
 }
 
 @screen md {

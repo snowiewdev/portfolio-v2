@@ -28,10 +28,12 @@ export default {
   },
   methods: {
     staggerSpeed(index) {
-      if (document.body.clientWidth < 540) {
-        return 0;
+      if (typeof window !== "undefined") {
+        if (document.body.clientWidth < 540) {
+          return 0;
+        }
+        return -0.2 * (index + 1);
       }
-      return -0.2 * (index + 1);
     },
   },
 };

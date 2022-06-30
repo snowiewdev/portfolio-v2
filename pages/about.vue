@@ -5,7 +5,11 @@
       <PageTitleSection :section-number="3" title="About" index-style="chapter">
       </PageTitleSection>
 
-      <AboutImageContentSection img="me-light.jpg" img-class="md:object-right">
+      <AboutImageContentSection
+        img="me-light.jpg"
+        top-img="about-cover.jpg"
+        img-class="md:object-right"
+      >
         <template v-slot:content>
           <p class="pb-6">
             Hi, my name is Snowie Wong. I started my web development journey
@@ -34,7 +38,11 @@
         </template>
       </AboutImageContentSection>
 
-      <AboutImageContentSection img="cat-is-cute.jpg" type="image-first">
+      <AboutImageContentSection
+        img="cat-is-cute.jpg"
+        top-img="wss.jpg"
+        type="image-first"
+      >
         <template v-slot:content>
           <p class="pt-4 md:pt-0 pb-6">
             Apart from

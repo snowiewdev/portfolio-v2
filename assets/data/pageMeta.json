@@ -1,0 +1,50 @@
+{
+  "/": {
+    "name": "Home",
+    "tag": ""
+  },
+  "/about": {
+    "name": "About",
+    "hashtag": "#webDeveloper #vue #hongKong #catLover"
+  },
+  "/contact": {
+    "name": "Contact",
+    "hashtag": "#jobSearching #sayHi"
+  },
+  "/projects": {
+    "name": "Projects",
+    "hashtag": "#webDevelopment #fruitfulYear #growth #2021-2022"
+  },
+  "/projects/1": {
+    "name": "Ayes",
+    "hashtag": "#eShop #design #vote #shop"
+  },
+  "/projects/2": {
+    "name": "Kingfook Eshop",
+    "hashtag": "#eShop #beautifulJewellery"
+  },
+  "/projects/3": {
+    "name": "BM Pack",
+    "hashtag": "#eShop #manyBoxManyGrids"
+  },
+  "/projects/4": {
+    "name": "Elite Premium",
+    "hashtag": "#brochureWebsite #soManyDiffTins"
+  },
+  "/projects/5": {
+    "name": "Soul Pure Beauty",
+    "hashtag": "#eShop #treatmentSeemsSoRelaxing"
+  },
+  "/projects/6": {
+    "name": "Immortality Aquaponics",
+    "hashtag": "#landingPage #ecoFriendly"
+  },
+  "/projects/7": {
+    "name": "Initial Engineering",
+    "hashtag": "#brochureWebsite #interiorDesignAndConstruction"
+  },
+  "/projects/8": {
+    "name": "Catstelecom",
+    "hashtag": "#eShop #catIsCute #wantCatMoreThanPhone"
+  }
+}

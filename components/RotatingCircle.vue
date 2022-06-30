@@ -1,5 +1,4 @@
 <template>
-  <!-- src="~/assets/image/explore-circle-black.svg" -->
   <div
     class="rotating-circle absolute transition-style-1"
     :class="location"

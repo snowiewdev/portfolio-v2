@@ -1,6 +1,6 @@
 <template>
   <div class="layout-container">
-    <!-- <Loader /> -->
+    <Loader />
     <CustomCursor />
     <NoiseBackground />
     <Header />
@@ -32,5 +32,18 @@ export default {
   width: 100%;
   max-width: 100vw;
   margin: 0 auto;
+}
+
+/* default page transition needed -> stop nuxt jumping in too fast & showing next section, lol */
+.page-enter-active,
+.page-leave-active {
+  transition-property: opacity;
+  transition-timing-function: ease-in-out;
+  transition-duration: 500ms;
+}
+
+.page-enter,
+.page-leave-to {
+  opacity: 0;
 }
 </style>

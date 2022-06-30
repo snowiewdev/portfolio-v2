@@ -174,47 +174,6 @@ body {
   text-align: center;
 }
 
-/* ========== Highlight styles ============ */
-/* @mixin highlight($color) {
-  padding-right: 4px;
-  background: linear-gradient(to bottom, transparent 40%, $color 40%);
-  transition: $transition-1;
-}
-
-.highlight-mint {
-  @include highlight($highlight-1);
-}
-
-.highlight-pink {
-  @include highlight($highlight-2);
-}
-
-.highlight-yellow {
-  @include highlight($highlight-3);
-}
-
-.highlight-green {
-  @include highlight($highlight-4);
-}
-
-.dark {
-  .highlight-mint {
-    @include highlight($dark-highlight-1);
-  }
-
-  .highlight-pink {
-    @include highlight($dark-highlight-2);
-  }
-
-  .highlight-yellow {
-    @include highlight($dark-highlight-3);
-  }
-
-  .highlight-green {
-    @include highlight($dark-highlight-4);
-  }
-} */
-
 /* ============ Animation =========== */
 
 /* --- underline effect class --- */
@@ -247,8 +206,3 @@ body {
     background-color: $light-primary;
   }
 }
-
-/* ============ Page Transition =========== */
-/* .intro-enter-active,
-.intro-leave-active{
-} */
