@@ -95,29 +95,29 @@ export default {
   position: absolute;
 }
 
-@screen xs {
-  $stairSpace: 50px;
-  $doubleStairSpace: 100px;
+// @screen xs {
+$stairSpace: 50px;
+$doubleStairSpace: 100px;
 
-  .project-detail__mobile-image-item-container:nth-child(1) {
-    .project-detail__mobile-image-item {
-      margin-bottom: $doubleStairSpace;
-    }
-  }
-
-  .project-detail__mobile-image-item-container:nth-child(2) {
-    .project-detail__mobile-image-item {
-      margin-top: $stairSpace;
-      margin-bottom: $stairSpace;
-    }
-  }
-
-  .project-detail__mobile-image-item-container:nth-child(3) {
-    .project-detail__mobile-image-item {
-      margin-top: $doubleStairSpace;
-    }
+.project-detail__mobile-image-item-container:nth-child(1) {
+  .project-detail__mobile-image-item {
+    margin-bottom: $doubleStairSpace;
   }
 }
+
+.project-detail__mobile-image-item-container:nth-child(2) {
+  .project-detail__mobile-image-item {
+    margin-top: $stairSpace;
+    margin-bottom: $stairSpace;
+  }
+}
+
+.project-detail__mobile-image-item-container:nth-child(3) {
+  .project-detail__mobile-image-item {
+    margin-top: $doubleStairSpace;
+  }
+}
+// }
 
 @screen md {
   $stairSpace: 75px;

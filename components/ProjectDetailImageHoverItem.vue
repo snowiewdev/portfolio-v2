@@ -87,7 +87,8 @@ export default {
 }
 
 .project-detail__image-hover-item {
-  width: 85vw;
+  // width: 85vw;
+  width: 97vw;
   aspect-ratio: 16 / 9;
   max-width: 1080px;
   position: relative;
@@ -111,14 +112,16 @@ export default {
   filter: invert(1);
   top: 50%;
   right: 0px;
-  transform: translate(55%, -50%);
+  // transform: translate(55%, -50%);
+  transform: translate(50%, -50%) rotate(90deg);
   z-index: 10;
 }
 
 .image-right .project-detail__image-hover-overlay-text {
   left: 0px;
   right: auto;
-  transform: translate(-55%, -50%);
+  // transform: translate(-55%, -50%);
+  transform: translate(-50%, -50%) rotate(-90deg);
 }
 
 .dark {

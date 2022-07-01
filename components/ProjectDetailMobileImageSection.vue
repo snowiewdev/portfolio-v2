@@ -49,14 +49,14 @@ export default {
   width: 100%;
   max-width: 1280px;
   display: flex;
-  flex-direction: column;
-  padding: 30px 1rem;
+  flex-direction: row;
+  /* flex-direction: column;  // 1rem */
+  padding: 30px 0px;
   gap: 1rem;
 }
 
 @screen xs {
   .project-detail__mobile-image-section {
-    flex-direction: row;
     padding: 60px 1.5rem;
     gap: 1.5rem;
   }

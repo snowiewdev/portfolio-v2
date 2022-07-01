@@ -14,7 +14,7 @@
     </div>
     <rotating-circle class="rotating-circle-1"> </rotating-circle>
     <rotating-circle class="rotating-circle-2"> </rotating-circle>
-    <!-- <HomeBackground></HomeBackground> -->
+    <HomeBackground></HomeBackground>
     <Footer />
   </div>
 </template>
