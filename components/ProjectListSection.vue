@@ -176,6 +176,7 @@ export default {
   justify-content: center;
   align-self: center;
   height: 100%;
+  max-height: 200px;
   object-fit: cover;
 }
 

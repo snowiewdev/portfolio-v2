@@ -28,6 +28,12 @@ export default {
 </script>
 
 <style>
+html,
+body {
+  height: 100%;
+  overflow: hidden;
+}
+
 .layout-container {
   width: 100%;
   max-width: 100vw;
