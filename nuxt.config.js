@@ -109,8 +109,15 @@ export default {
     },
     transpile: ["gsap"],
     standalone: true,
+    terser: {
+      // https://github.com/terser/terser#compress-options
+      terserOptions: {
+        compress: {
+          drop_console: true,
+        },
+      },
+    },
   },
 
-  // loading: "~/components/Loader.vue",
   // generate: { fallback: "404.html" },
 };
