@@ -28,11 +28,11 @@ export default {
 </script>
 
 <style>
-html,
+/* html,
 body {
   height: 100%;
   overflow: hidden;
-}
+} */
 
 .layout-container {
   width: 100%;

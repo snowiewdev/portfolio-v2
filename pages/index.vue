@@ -24,7 +24,7 @@ import Eye from "~/components/Eye.vue";
 import RotatingCircle from "~/components/RotatingCircle.vue";
 import Footer from "@/components/Footer.vue";
 import HomeBackground from "@/components/HomeBackground.vue";
-import gsap from "gsap";
+// import gsap from "gsap";
 
 export default {
   name: "IndexPage",
