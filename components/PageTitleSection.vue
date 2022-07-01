@@ -1,7 +1,11 @@
 <template>
   <div class="page-title-section" :class="sectionStyleClass">
-    <h4 class="mb-4">{{ sectionNumberText }}</h4>
-    <h1 class="page-title">{{ title }}</h1>
+    <h4 class="mb-4">
+      {{ sectionNumberText }}
+    </h4>
+    <h1 class="page-title">
+      {{ title }}
+    </h1>
   </div>
 </template>
 

@@ -24,7 +24,6 @@ export default {
   },
   watch: {
     $route(to, from) {
-      // console.log("before change route");
       this.removeCursorActiveStyle();
       this.removeActiveCursorDetection();
     },

@@ -31,8 +31,10 @@ export default {
 
 .highlight {
   position: relative;
+  // display: inline;
   display: inline-block;
   padding-right: 4px;
+  text-decoration: none;
 
   &::before {
     position: absolute;
@@ -40,6 +42,7 @@ export default {
     right: 0;
     left: 0;
     top: 40%;
+    // bottom: -5%;
     height: 40%;
     transform-origin: 0 0;
     transition: transform 0.6s ease-in-out;

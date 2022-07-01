@@ -1,15 +1,15 @@
 <template>
   <div
-    class="project-detail__image-hover-item-container flex mx-auto"
+    class="project-detail__image-hover-item-container flex mx-auto fade-in"
     :class="classObject"
+    data-scroll
+    data-scroll-class="reveal"
+    data-scroll-offset="35%"
   >
     <div :id="id" class="project-detail__image-hover-item cursor-scale small">
       <h2 class="project-detail__image-hover-overlay-text overlay-text-before">
         {{ images.before.text }}
       </h2>
-      <!-- <h2 class="project-detail__image-hover-overlay-text overlay-text-after">
-        {{ images.after.text }}
-      </h2> -->
     </div>
   </div>
 </template>

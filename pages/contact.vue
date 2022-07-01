@@ -12,12 +12,13 @@
 
       <FullWidthContentSection>
         <p>
-          I am open to freelance projects and collaboration. I'm not good at
-          urgent work but I will try my best.
+          I'm currently looking for a full-time web developer job in Canada. I'm
+          also open to freelance projects and collaboration. Feel free to
+          contact me :)
         </p>
         <p>
           Or we can just be friends.
-          <br class="block sm:hidden" />
+          <br class="inline sm:hidden" />
           <HighlightSpan style-class="highlight-mint">
             Come and say hi
           </HighlightSpan>

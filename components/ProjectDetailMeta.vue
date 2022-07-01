@@ -1,5 +1,10 @@
 <template>
-  <div class="project-detail__meta-container py-8 sm:py-10">
+  <div
+    data-scroll
+    data-scroll-class="reveal"
+    data-scroll-offset="40%"
+    class="project-detail__meta-container py-8 sm:py-10 fade-in"
+  >
     <div class="project-detail__meta project-detail-role">
       <div class="project-detail__meta-item project-detail-about">
         <h4 class="project-detail__meta-label">About</h4>

@@ -1,5 +1,10 @@
 <template>
-  <div class="hover-and-see-more flex justify-center aligh-center">
+  <div
+    data-scroll
+    data-scroll-direction="horizontal"
+    data-scroll-speed="0.6"
+    class="hover-and-see-more flex justify-center aligh-center"
+  >
     <h2 class="inline hover-and-see-more_text">Hover & See More</h2>
     <Eye />
     <h2 class="hidden md:inline hover-and-see-more_text">Hover & See More</h2>

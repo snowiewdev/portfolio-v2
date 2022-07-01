@@ -14,6 +14,7 @@
     </div>
     <rotating-circle class="rotating-circle-1"> </rotating-circle>
     <rotating-circle class="rotating-circle-2"> </rotating-circle>
+    <!-- <HomeBackground></HomeBackground> -->
     <Footer />
   </div>
 </template>
@@ -22,6 +23,7 @@
 import Eye from "~/components/Eye.vue";
 import RotatingCircle from "~/components/RotatingCircle.vue";
 import Footer from "@/components/Footer.vue";
+import HomeBackground from "@/components/HomeBackground.vue";
 import gsap from "gsap";
 
 export default {
@@ -41,6 +43,7 @@ export default {
     Eye,
     RotatingCircle,
     Footer,
+    HomeBackground,
   },
   mounted() {
     this.$root.$refs.customCursor.removeCursorActiveStyle();

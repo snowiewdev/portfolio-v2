@@ -14,7 +14,8 @@
         </template>
         <template v-else>
           <h2 class="mb-8">{{ target.name }}</h2>
-          <h4 clsss="mx-4">{{ target.hashtag }}</h4>
+          <div class="star mx-auto mb-8"></div>
+          <h4 clsss="mx-4 hashtag">{{ target.hashtag }}</h4>
         </template>
       </div>
     </div>
@@ -50,9 +51,6 @@ export default {
         this.startLeave();
       }, 1800);
     },
-  },
-  created() {
-    this.$root.$refs.loader = this;
   },
   mounted() {
     this.firstEntryLoading();
@@ -164,25 +162,13 @@ body {
   }
 
   h4 {
-    font-size: 1rem;
+    font-size: 1.1rem;
   }
 
   .explore-line {
     font-family: $body-font;
   }
 }
-
-// .page-transition.anim-in {
-//   animation: 0.4s cubic-bezier(0.535, 0, 0, 1) heightUp;
-//   animation-fill-mode: forwards;
-// }
-
-// .page-transition.anim-out {
-//   top: 0;
-//   bottom: auto;
-//   animation: 0.4s cubic-bezier(0.535, 0, 0, 1) heightDown;
-//   // animation-fill-mode: forwards;
-// }
 
 .page-transition-content {
   width: 100%;
@@ -194,59 +180,36 @@ body {
   padding: 2rem;
 }
 
-// .page-transition-content.anim-in {
-//   animation-delay: 0.3s;
-//   animation: 0.3s cubic-bezier(0.535, 0, 0, 1) fadeInUp;
-//   animation-fill-mode: forwards;
-// }
-
-// .page-transition-content.anim-out {
-//   animation: 0.3s cubic-bezier(0.535, 0, 0, 1) fadeOutUp;
-// }
-
 .dark {
   .page-transition {
+    // background-color: $brown;
     background-color: $light-primary;
+    filter: brightness(0.95);
   }
 }
 
-// @keyframes heightUp {
-//   from {
-//     height: 0;
-//   }
-//   to {
-//     height: 100%;
-//   }
-// }
+.star {
+  width: 20px;
+  height: 20px;
+  background: $light-primary;
+  clip-path: polygon(
+    50% 0%,
+    61% 35%,
+    98% 35%,
+    68% 57%,
+    79% 91%,
+    50% 70%,
+    21% 91%,
+    32% 57%,
+    2% 35%,
+    39% 35%
+  );
+  animation: 3s linear infinite rotation;
+}
 
-// @keyframes heightDown {
-//   from {
-//     height: 100%;
-//   }
-//   to {
-//     height: 0;
-//   }
-// }
-
-// @keyframes fadeInUp {
-//   from {
-//     opacity: 0;
-//     transform: translateY(200px);
-//   }
-//   to {
-//     opacity: 1;
-//     transform: translateY(0);
-//   }
-// }
-
-// @keyframes fadeOutUp {
-//   from {
-//     opacity: 1;
-//     transform: translateY(0);
-//   }
-//   to {
-//     opacity: 0;
-//     transform: translateY(-200px);
-//   }
-// }
+.dark {
+  .star {
+    background: $dark-primary;
+  }
+}
 </style>

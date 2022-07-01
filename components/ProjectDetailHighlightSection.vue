@@ -1,5 +1,10 @@
 <template>
-  <div class="project-detail__highlight-container mx-auto mb-8 sm:mb-10">
+  <div
+    data-scroll
+    data-scroll-class="reveal"
+    data-scroll-offset="30%"
+    class="project-detail__highlight-container mx-auto mb-8 sm:mb-10 fade-in"
+  >
     <video
       v-if="videoUrl.length > 0"
       :src="require(`~/assets/image/${videoUrl}`)"

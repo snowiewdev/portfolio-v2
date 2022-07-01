@@ -1,5 +1,10 @@
 <template>
-  <div class="project-detail__mobile-image-section mx-auto">
+  <div
+    data-scroll
+    data-scroll-class="reveal"
+    data-scroll-offset="30%"
+    class="project-detail__mobile-image-section mx-auto fade-in"
+  >
     <ProjectDetailMobileImageItem
       v-for="(projectImage, index) in projectImages"
       :key="'project-mobile-image-item-' + index"
