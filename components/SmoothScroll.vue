@@ -34,14 +34,14 @@ export default {
         el: scrollContainer,
         smooth: true,
         getDirection: true,
-        mobile: {
-          breakpoint: 0,
-          smooth: true,
-        },
-        tablet: {
-          breakpoint: 0,
-          smooth: true,
-        },
+        // mobile: {
+        //   breakpoint: 0,
+        //   smooth: true,
+        // },
+        // tablet: {
+        //   breakpoint: 0,
+        //   smooth: true,
+        // },
       });
 
       // to fix locomotive bug on setting up too early (img not yet loaded)

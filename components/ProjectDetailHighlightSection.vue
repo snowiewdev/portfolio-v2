@@ -42,7 +42,7 @@ export default {
 
 <style lang="scss" scoped>
 .project-detail__highlight-container {
-  width: 100vw;
+  width: 97vw;
   max-width: 1400px;
   background: black;
   border: 4px solid black;

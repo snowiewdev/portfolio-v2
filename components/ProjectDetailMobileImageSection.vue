@@ -50,9 +50,8 @@ export default {
   max-width: 1280px;
   display: flex;
   flex-direction: row;
-  /* flex-direction: column;  // 1rem */
-  padding: 30px 0px;
-  gap: 1rem;
+  padding: 30px 0.5rem;
+  gap: 0.5rem;
 }
 
 @screen xs {
