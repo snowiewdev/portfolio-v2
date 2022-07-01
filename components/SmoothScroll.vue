@@ -33,15 +33,18 @@ export default {
       this.scroll = new this.$LocomotiveScroll({
         el: scrollContainer,
         smooth: true,
+        inertia: 0.8,
         getDirection: true,
-        // mobile: {
-        //   breakpoint: 0,
-        //   smooth: true,
-        // },
-        // tablet: {
-        //   breakpoint: 0,
-        //   smooth: true,
-        // },
+        mobile: {
+          breakpoint: 0,
+          inertia: 0.8,
+          smooth: true,
+        },
+        tablet: {
+          breakpoint: 0,
+          inertia: 0.8,
+          smooth: true,
+        },
       });
 
       // to fix locomotive bug on setting up too early (img not yet loaded)

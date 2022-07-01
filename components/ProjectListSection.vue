@@ -249,7 +249,6 @@ export default {
   left: 0;
   width: 300px;
   height: 400px;
-  // opacity: 0;
   pointer-events: none;
   transform: translate(0, -300px);
 }
@@ -271,6 +270,13 @@ export default {
   will-change: clip-path;
   clip-path: inset(100% 0 0 0);
   transition: clip-path 0.4s cubic-bezier(0.79, 0.14, 0.15, 0.86);
+}
+
+// hide image hover reveal on tap device
+@media (pointer: coarse) {
+  .hover-reveal {
+    opacity: 0;
+  }
 }
 
 // responsive
@@ -330,21 +336,5 @@ export default {
   .hover-img-wrapper {
     display: block;
   }
-
-  // .project-list-item__link {
-  //   grid-template-columns: 50px repeat(7, 1fr);
-  // }
-
-  // .project-list-item__index {
-  //   grid-column: 1;
-  // }
-
-  // .project-list-item__title {
-  //   grid-column: span 5;
-  // }
-
-  // .project-list-item__desc {
-  //   grid-column: span 2;
-  // }
 }
 </style>
