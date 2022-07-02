@@ -18,7 +18,8 @@ export default {
       {
         hid: "description",
         name: "description",
-        content: "A Web Developer based in Hong Kong",
+        content:
+          "A Hong Kong web developer passionate in frontend development, now based in Vancouver",
       },
       { name: "format-detection", content: "telephone=no" },
     ],
@@ -29,7 +30,7 @@ export default {
       {
         hid: "og:site_name",
         property: "og:site_name",
-        content: "Snowie Wong Portfolio",
+        content: "Snowie Wong Portfolio | Web Developer",
       },
       { hid: "og:type", property: "og:type", content: "website" },
       {
@@ -40,12 +41,13 @@ export default {
       {
         hid: "og:title",
         property: "og:title",
-        content: "Snowie Wong Portfolio",
+        content: "Snowie Wong Portfolio | Web Developer",
       },
       {
         hid: "og:description",
         property: "og:description",
-        content: "A Web Developer Based in Hong Kong",
+        content:
+          "A Hong Kong web developer passionate in frontend web development, now based in Vancouver",
       },
       {
         hid: "og:image",
@@ -131,6 +133,6 @@ export default {
       "/projects/7",
       "/projects/8",
     ],
-    fallback: true,
+    // fallback: true,
   },
 };

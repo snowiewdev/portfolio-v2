@@ -69,8 +69,8 @@ export default {
           height: 0,
           ease: "Power3.inOut",
           duration: 0.3,
-        }
-        // "+=0.2"
+        },
+        "+=0.2"
       );
       tl.to(".page-transition-content", {
         y: 0,
@@ -115,8 +115,8 @@ export default {
           height: 0,
           ease: "Power3.inOut",
           duration: 0.3,
-        }
-        // "+=0.2"
+        },
+        "+=0.2"
       );
       tl.to(".page-transition-content", {
         y: 0,

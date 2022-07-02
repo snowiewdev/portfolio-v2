@@ -1,69 +1,39 @@
-# portfolio-v2
+# Portfolio Website -- Version Two
 
-## Build Setup
+This is my second portfolio website, built with Nuxt & Vue (and other awesome libraries listed below). It recorded my web development journey working as a full-time web developer from 2021 to 2022.
 
-```bash
-# install dependencies
-$ npm install
+Visit my portfolio here: https://snowiewongdev.com/
 
-# serve with hot reload at localhost:3000
-$ npm run dev
+I had a lot of fun in building this web portfolio, as I have learnt a lot of new skills in creating different animations and interaction, like page transition, text-rotating effect, parallax effect and image-reveal which moves with the cursor. This is also my first time diving deeper into Nuxt and locomotive (so my code may not be the best). Although sometimes I would stuck for hours in trying to make things work, it was satisfying once the desired effect is made, like my baby is finally born lol.
 
-# build for production and launch server
-$ npm run build
-$ npm run start
+I hope you also enjoy viewing my portfolio, and thank you for checking this out. :partying_face:
 
-# generate static project
-$ npm run generate
-```
+## Credits go to the Open Source Community
 
-For detailed explanation on how things work, check out the [documentation](https://nuxtjs.org).
+They are all amazing :) Deserve a merit :D
 
-## Special Directories
+Nuxt: https://nuxtjs.org/
 
-You can create the following extra directories, some of which have special behaviors. Only `pages` is required; you can delete them if you don't want to use their functionality.
+Vue: https://vuejs.org/
 
-### `assets`
+Locomotive: https://github.com/locomotivemtl/locomotive-scroll
 
-The assets directory contains your uncompiled assets such as Stylus or Sass files, images, or fonts.
+GSAP: https://greensock.com/gsap/
 
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/assets).
+TailwindCSS: https://tailwindcss.com/
 
-### `components`
+Netlify: https://www.netlify.com/
 
-The components directory contains your Vue.js components. Components make up the different parts of your page and can be reused and imported into your pages, layouts and even other components.
+Hover-Effect: https://github.com/robin-dela/hover-effect
 
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/components).
+ImagesLoaded: https://imagesloaded.desandro.com/
 
-### `layouts`
+PostCSS: https://postcss.org/
 
-Layouts are a great help when you want to change the look and feel of your Nuxt app, whether you want to include a sidebar or have distinct layouts for mobile and desktop.
+Iconify: https://iconify.design/
 
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/layouts).
+SVG Silh: https://svgsilh.com/
 
+Unplash: https://unsplash.com/
 
-### `pages`
-
-This directory contains your application views and routes. Nuxt will read all the `*.vue` files inside this directory and setup Vue Router automatically.
-
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/get-started/routing).
-
-### `plugins`
-
-The plugins directory contains JavaScript plugins that you want to run before instantiating the root Vue.js Application. This is the place to add Vue plugins and to inject functions or constants. Every time you need to use `Vue.use()`, you should create a file in `plugins/` and add its path to plugins in `nuxt.config.js`.
-
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/plugins).
-
-### `static`
-
-This directory contains your static files. Each file inside this directory is mapped to `/`.
-
-Example: `/static/robots.txt` is mapped as `/robots.txt`.
-
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/static).
-
-### `store`
-
-This directory contains your Vuex store files. Creating a file in this directory automatically activates Vuex.
-
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/store).
+... tons of youtube videos, anonymous useful answers on github issues and stackoverflow, lol

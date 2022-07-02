@@ -16,14 +16,16 @@
           also open to freelance projects and collaboration. Feel free to
           contact me :)
         </p>
-        <p>
-          Or we can just be friends.
-          <br class="inline sm:hidden" />
-          <HighlightSpan style-class="highlight-mint">
-            Come and say hi
-          </HighlightSpan>
-          :)
-        </p>
+        <client-only>
+          <p>
+            Or we can just be friends.
+            <br class="inline sm:hidden" />
+            <HighlightSpan style-class="highlight-mint">
+              Come and say hi
+            </HighlightSpan>
+            :)
+          </p>
+        </client-only>
       </FullWidthContentSection>
 
       <RotatingTitleLink
