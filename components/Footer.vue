@@ -37,7 +37,9 @@ export default {
   props: {},
   computed: {
     needSpacer() {
-      return this.$route.name == "index" ? false : true;
+      return this.$route.name == "index" || this.$route.name == "footer"
+        ? false
+        : true;
     },
   },
 };

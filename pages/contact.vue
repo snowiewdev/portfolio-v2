@@ -113,8 +113,8 @@ export default {
 .contact-container {
   width: 100%;
   max-width: 100vw;
-  // min-height: calc(100vh - 50px);
   min-height: 100vh;
+  // height: -webkit-fill-available;
   padding-bottom: 100px;
   overflow: hidden;
 }
