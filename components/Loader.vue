@@ -49,7 +49,7 @@ export default {
       this.startCover();
       setTimeout(() => {
         this.startLeave();
-      }, 1400); // 1800
+      }, 1500); // 1800
     },
   },
   mounted() {
@@ -77,7 +77,7 @@ export default {
       });
     },
     firstEntryLoading() {
-      setTimeout(this.animation, 1400);
+      setTimeout(this.animation, 1500);
     },
     startCover() {
       const coverTl = gsap.timeline();

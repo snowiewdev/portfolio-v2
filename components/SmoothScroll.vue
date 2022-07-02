@@ -35,7 +35,7 @@ export default {
         smooth: true,
         getDirection: true,
         // multipler: 2,
-        touchMultiplier: 4,
+        touchMultiplier: 3,
         smartphone: {
           breakpoint: 0,
           smooth: true,
