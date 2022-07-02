@@ -28,11 +28,13 @@ export default {
 </script>
 
 <style>
-/* html,
-body {
-  height: 100%;
-  overflow: hidden;
-} */
+html,
+body,
+#__nuxt,
+#__layout,
+.layout-container {
+  height: -webkit-fill-available;
+}
 
 .layout-container {
   width: 100%;

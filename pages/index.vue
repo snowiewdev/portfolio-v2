@@ -61,6 +61,7 @@ body {
   width: 100%;
   max-width: 100vw;
   height: 100vh;
+  height: -webkit-fill-available;
   text-align: center;
   overflow: hidden;
 }

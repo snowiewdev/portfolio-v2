@@ -119,5 +119,18 @@ export default {
     },
   },
 
-  // generate: { fallback: "404.html" },
+  generate: {
+    routes: [
+      // fix nuxt generate ignore dynamic path
+      "/projects/1",
+      "/projects/2",
+      "/projects/3",
+      "/projects/4",
+      "/projects/5",
+      "/projects/6",
+      "/projects/7",
+      "/projects/8",
+    ],
+    fallback: true,
+  },
 };
