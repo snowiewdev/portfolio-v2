@@ -133,6 +133,6 @@ export default {
       "/projects/7",
       "/projects/8",
     ],
-    // fallback: true,
+    fallback: true,
   },
 };
