@@ -10,7 +10,7 @@
             Explore My Journey <br />
             © 2021-22
           </h4>
-          <h4 clsss="mx-4">#webDev #welcome #fruitfulYear #catsAreCute</h4>
+          <h4 clsss="mx-4">#webDev #fruitfulYear #catsAreCute</h4>
         </template>
         <template v-else>
           <h2 class="mb-8">{{ target.name }}</h2>
@@ -49,7 +49,7 @@ export default {
       this.startCover();
       setTimeout(() => {
         this.startLeave();
-      }, 1800);
+      }, 1400); // 1800
     },
   },
   mounted() {
@@ -69,15 +69,15 @@ export default {
           height: 0,
           ease: "Power3.inOut",
           duration: 0.3,
-        },
-        "+=0.2"
+        }
+        // "+=0.2"
       );
       tl.to(".page-transition-content", {
         y: 0,
       });
     },
     firstEntryLoading() {
-      setTimeout(this.animation, 2500);
+      setTimeout(this.animation, 1400);
     },
     startCover() {
       const coverTl = gsap.timeline();
@@ -115,8 +115,8 @@ export default {
           height: 0,
           ease: "Power3.inOut",
           duration: 0.3,
-        },
-        "+=0.2"
+        }
+        // "+=0.2"
       );
       tl.to(".page-transition-content", {
         y: 0,

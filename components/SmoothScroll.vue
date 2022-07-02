@@ -33,16 +33,14 @@ export default {
       this.scroll = new this.$LocomotiveScroll({
         el: scrollContainer,
         smooth: true,
-        inertia: 0.8,
         getDirection: true,
-        mobile: {
+        // touchMultiplier: 2,
+        smartphone: {
           breakpoint: 0,
-          inertia: 0.8,
           smooth: true,
         },
         tablet: {
           breakpoint: 0,
-          inertia: 0.8,
           smooth: true,
         },
       });
