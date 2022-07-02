@@ -34,8 +34,7 @@ export default {
         el: scrollContainer,
         smooth: true,
         getDirection: true,
-        // multipler: 2,
-        touchMultiplier: 3,
+        // touchMultiplier: 3,
         smartphone: {
           breakpoint: 0,
           smooth: true,
