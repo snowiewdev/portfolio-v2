@@ -109,7 +109,7 @@ export default {
   },
   methods: {
     getCurrentProject() {
-      let currentDataKey = this.$route.params.id;
+      let currentDataKey = Number(this.$route.params.id);
       let currentProject = projects[currentDataKey];
       // console.log(currentProject);
 

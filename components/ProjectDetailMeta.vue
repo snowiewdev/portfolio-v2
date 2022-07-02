@@ -27,7 +27,7 @@
             :href="project.website.url"
             target="_blank"
           >
-            View Live website
+            View Live Website
           </a>
           <template v-else> {{ project.website.text }} </template>
         </p>
@@ -48,7 +48,7 @@ export default {
 };
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 .project-detail__meta-container {
   display: flex;
   flex-direction: column;
