@@ -34,7 +34,6 @@
               <HighlightSpan style-class="highlight-green"
                 >VUE.JS</HighlightSpan
               >
-              <!-- <span class="highlight-green">VUE.JS</span>  -->
               // NUXT.JS // JAVASCRIPT // SCSS // CSS // GSAP // TAILWINDCSS //
               BOOTSTRAP // LOCOMOTIVE // PHP // MYSQL // HTML // GIT //
               WORDPRESS // ELEMENTOR // WOOCOMMERCE
@@ -81,7 +80,6 @@
           used within the open source community. Without them, this cannot
           happen.
         </p>
-        <!-- <nuxt-link to="/" class="inline-block"> View Credits </nuxt-link> -->
       </FullWidthContentSection>
 
       <MarqueeSection
@@ -90,7 +88,6 @@
       >
       </MarqueeSection>
 
-      <!-- img-url="contact-cover.jpg" -->
       <NextSection
         title="Contact"
         url="contact"

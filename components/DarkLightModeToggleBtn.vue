@@ -37,7 +37,6 @@ export default {
       this.isDarkMode
         ? (localStorage.theme = "dark")
         : (localStorage.theme = "light"); // update system preference
-      // this.$store.commit("toggleDarkMode");
     },
   },
 };

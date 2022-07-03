@@ -19,7 +19,6 @@ export default {
   height: 40px;
   border: 2px solid $black;
   border-radius: 75% 15%;
-  // transform: rotate(45deg);
   overflow: hidden;
   display: flex;
   justify-content: center;

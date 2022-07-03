@@ -6,7 +6,6 @@
         class="justify-self-start"
         text="Projects"
       ></roll-up-link>
-      <!-- <roll-up-link link="/" class="justify-self-center" text="Snowie Wong"></roll-up-link> -->
       <nuxt-link to="/" class="justify-self-center"> Snowie Wong </nuxt-link>
       <DarkLightModeToggleBtn class="justify-self-end" />
     </nav>

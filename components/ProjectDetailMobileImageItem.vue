@@ -95,7 +95,6 @@ export default {
   position: absolute;
 }
 
-// @screen xs {
 $stairSpace: 50px;
 $doubleStairSpace: 100px;
 
@@ -117,7 +116,6 @@ $doubleStairSpace: 100px;
     margin-top: $doubleStairSpace;
   }
 }
-// }
 
 @screen md {
   $stairSpace: 75px;

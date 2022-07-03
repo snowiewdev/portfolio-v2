@@ -28,7 +28,6 @@ export default {
 #welcome {
   width: 100%;
   stroke: $white;
-  // 2095
   stroke-dasharray: 800;
   stroke-dashoffset: 800;
   fill: none;
@@ -54,7 +53,6 @@ export default {
 
   100% {
     stroke-dashoffset: 0;
-    // fill: $white;
   }
 }
 </style>

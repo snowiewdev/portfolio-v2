@@ -43,7 +43,6 @@ export default {
   },
   mounted() {
     this.initHoverEffect();
-    // this.initTextAnimationSetup();
   },
   beforeDestroy() {
     this.hoverEffect = null;

@@ -2,7 +2,6 @@ const defaultTheme = require("tailwindcss/defaultTheme");
 const colors = require("tailwindcss/colors");
 
 module.exports = {
-  // purge: ["./src/**/*.{js,vue,jsx,ts,tsx}", "./public/**/*.html"],
   prefix: "",
   darkMode: "class",
   content: [
@@ -11,13 +10,6 @@ module.exports = {
     "./pages/**/*.vue",
     "./plugins/**/*.js",
     "./nuxt.config.js",
-    // "./src/**/*.{js,vue,jsx,ts,tsx}",
-    // "./public/**/*.html",
-    // "./assets/**/*.{css}",
-    // "./components/*.{js,vue}",
-    // "./pages/*.vue",
-    // "./*.{vue,js}",
-    // "./plugins/**/*.{js,ts}",
   ],
   theme: {
     extend: {
@@ -37,7 +29,6 @@ module.exports = {
         accent: "#37474F",
         black: "#202527",
         white: "#dbd6d5",
-        // white: "#ffffff",
       },
     },
   },

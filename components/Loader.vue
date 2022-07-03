@@ -182,7 +182,6 @@ body {
 
 .dark {
   .page-transition {
-    // background-color: $brown;
     background-color: $light-primary;
     filter: brightness(0.95);
   }
