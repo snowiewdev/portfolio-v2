@@ -53,7 +53,7 @@ export default {
   },
   methods: {
     goToUrl(url) {
-      this.$router.push(url);
+      this.$router.push({ path: url });
     },
     getImgUrl(img) {
       return require(`~/assets/image/${img}`);

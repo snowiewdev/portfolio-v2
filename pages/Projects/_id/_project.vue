@@ -114,7 +114,7 @@ export default {
       // console.log(currentProject);
 
       if (currentProject == undefined) {
-        return this.$router.push("/404");
+        return this.$router.push({ path: "/404" });
       }
 
       this.project = currentProject;

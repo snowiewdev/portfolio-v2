@@ -91,7 +91,7 @@ export default {
       return utils.getRomanNumber(num) + ".";
     },
     goToUrl(url) {
-      this.$router.push(url);
+      this.$router.push({ path: url });
     },
     getImgUrl(img) {
       return require(`${img}`);
