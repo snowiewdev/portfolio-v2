@@ -1,5 +1,7 @@
 # Portfolio Website -- Version Two
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/3e766224-cff2-481e-8da0-6d13dbb5ab90/deploy-status)](https://app.netlify.com/sites/snowiewongdev/deploys)
+
 This is my second portfolio website, built with Nuxt & Vue (and other awesome libraries listed below). It recorded my web development journey working as a full-time web developer from 2021 to 2022.
 
 Visit my portfolio here: https://snowiewongdev.com/
