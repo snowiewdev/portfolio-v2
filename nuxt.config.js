@@ -8,7 +8,7 @@ export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     title: "Snowie Wong Portfolio",
-    titleTemplate: "Snowie Wong | %s",
+    titleTemplate: "%s | Snowie Wong",
     htmlAttrs: {
       lang: "en",
     },
