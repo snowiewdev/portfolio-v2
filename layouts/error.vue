@@ -2,8 +2,7 @@
   <div
     class="error-container flex flex-col justify-center align-center w-100 text-center"
   >
-    <h2 class="mb-6" v-if="error.statusCode == 404">Page not found</h2>
-    <h2 class="mb-6" v-else>Oops, unexpected error has occurred</h2>
+    <h2 class="mb-6">Page not found</h2>
     <h4 class="body-font-title error-subtitle px-4 mx-auto">
       This lovely typing cat from Giphy has already tried its very best
     </h4>

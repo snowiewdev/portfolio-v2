@@ -61,6 +61,14 @@ export default {
   head() {
     return {
       title: "Contact",
+      meta: [
+        {
+          hid: "description",
+          name: "description",
+          content:
+            "Please feel free to contact Snowie via email for freelance project enquiries or full-time web developer opportunity in Canada",
+        },
+      ],
     };
   },
   data() {

@@ -1,11 +1,15 @@
 <template>
   <div class="next-section" :class="type">
-    <h4 class="next-section__subtitle cursor-scale" @click="goToUrl(url)">
-      {{ subtitle }}
-    </h4>
-    <h2 class="next-section__title cursor-scale" @click="goToUrl(url)">
-      {{ title }}
-    </h2>
+    <nuxt-link class="next-section__subtitle-wrapper" :to="url">
+      <h4 class="next-section__subtitle cursor-scale">
+        {{ subtitle }}
+      </h4>
+    </nuxt-link>
+    <nuxt-link class="next-section__title-wrapper" :to="url">
+      <h2 class="next-section__title cursor-scale">
+        {{ title }}
+      </h2>
+    </nuxt-link>
     <img
       data-scroll
       data-scroll-repeat
@@ -52,9 +56,6 @@ export default {
     },
   },
   methods: {
-    goToUrl(url) {
-      this.$router.push({ path: url });
-    },
     getImgUrl(img) {
       return require(`~/assets/image/${img}`);
     },
@@ -73,6 +74,10 @@ export default {
   max-width: 768px;
   margin: 0 auto;
   position: relative;
+
+  // a {
+  //   width: fit-content;
+  // }
 }
 
 .next-section__subtitle {
@@ -91,6 +96,10 @@ export default {
     margin-left: 1rem;
   }
 }
+
+// .next-section__title-wrapper {
+//   align-self: flex-end;
+// }
 
 .next-section__title {
   font-size: clamp(2.4rem, 6vw, 6.5rem);

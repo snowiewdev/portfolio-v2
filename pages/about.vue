@@ -115,6 +115,14 @@ export default {
   head() {
     return {
       title: "About",
+      meta: [
+        {
+          hid: "description",
+          name: "description",
+          content:
+            "A Hong Kong web developer passionate in frontend web development, now based in Vancouver",
+        },
+      ],
     };
   },
   data() {

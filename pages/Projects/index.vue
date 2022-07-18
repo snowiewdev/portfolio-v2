@@ -37,6 +37,14 @@ export default {
   head() {
     return {
       title: "Projects",
+      meta: [
+        {
+          hid: "description",
+          name: "description",
+          content:
+            "Website projects that Snowie Wong participated and developed using different technologies, such as Vue.js, SCSS, PHP and WordPress",
+        },
+      ],
     };
   },
   data() {

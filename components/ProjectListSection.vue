@@ -13,10 +13,9 @@
         fadeOutHoverRevealImage($event, 'project-list-item-' + project.id)
       "
     >
-      <a
+      <nuxt-link
         class="img-hover-effect-link project-list-item__link small"
-        :href="'projects/' + project.id"
-        @click.prevent="goToUrl('projects/' + project.id)"
+        :to="'/projects/' + project.id"
       >
         <h4 class="project-list-item__index projest-list-text">
           {{ getRomanNumber(project.id) }}
@@ -30,7 +29,8 @@
             v-html="project.meta"
           ></p>
           <p class="view-project-link projest-list-text">
-            View Project <img src="~/assets/image/arrow.svg" alt="link arrow" />
+            View Project
+            <img src="~/assets/image/arrow.svg" alt="link arrow" />
           </p>
         </div>
 
@@ -54,7 +54,7 @@
             ></div>
           </div>
         </div>
-      </a>
+      </nuxt-link>
       <PrimaryDivider></PrimaryDivider>
     </div>
   </div>
@@ -89,9 +89,6 @@ export default {
   methods: {
     getRomanNumber(num) {
       return utils.getRomanNumber(num) + ".";
-    },
-    goToUrl(url) {
-      this.$router.push({ path: url });
     },
     getImgUrl(img) {
       return require(`${img}`);

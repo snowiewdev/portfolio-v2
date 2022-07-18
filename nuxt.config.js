@@ -22,10 +22,6 @@ export default {
           "A Hong Kong web developer passionate in frontend development, now based in Vancouver",
       },
       { name: "format-detection", content: "telephone=no" },
-    ],
-    link: [
-      { hid: "canonical", rel: "canonical", href: "https://snowiewongdev.com" },
-      { rel: "icon", type: "image/x-icon", href: "/favicon.ico" },
       // Open Graph
       {
         hid: "og:site_name",
@@ -59,6 +55,10 @@ export default {
         property: "og:image:alt",
         content: "Snowie Wong Logo",
       },
+    ],
+    link: [
+      { hid: "canonical", rel: "canonical", href: "https://snowiewongdev.com" },
+      { rel: "icon", type: "image/x-icon", href: "/favicon.ico" },
     ],
   },
 

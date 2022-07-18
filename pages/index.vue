@@ -34,7 +34,8 @@ export default {
       {
         hid: "description",
         name: "description",
-        content: "Snowie Wong - A Web Developer based in Hong Kong",
+        content:
+          "Snowie Wong - A Hong Kong web developer passionate in frontend web development, now based in Vancouver",
       },
     ],
   },

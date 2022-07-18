@@ -69,12 +69,20 @@ import Footer from "@/components/Footer.vue";
 export default {
   head() {
     return {
-      title: "Projects",
+      // title: "Projects",
+      title: this.project.projectName,
       link: [
         {
           hid: "canonical",
           rel: "canonical",
           href: "https://snowiewongdev.com/projects/${this.$route.params.slug}",
+        },
+      ],
+      meta: [
+        {
+          hid: "description",
+          name: "description",
+          content: this.project.description,
         },
       ],
     };
@@ -111,7 +119,6 @@ export default {
     getCurrentProject() {
       let currentDataKey = Number(this.$route.params.id);
       let currentProject = projects[currentDataKey];
-      // console.log(currentProject);
 
       if (currentProject == undefined) {
         return this.$router.push({ path: "/404" });

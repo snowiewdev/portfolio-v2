@@ -29,15 +29,26 @@ export default {
   components: {
     RollUpText,
   },
+  // created() {
+  //   this.initDarkMode();
+  // },
   methods: {
     toggleDarkMode(e) {
       e.preventDefault();
       this.isDarkMode = !this.isDarkMode;
       document.body.classList.toggle("dark");
       this.isDarkMode
-        ? (localStorage.theme = "dark")
-        : (localStorage.theme = "light"); // update system preference
+        ? localStorage.setItem("theme", "dark")
+        : localStorage.setItem("theme", "light"); // update system preference
     },
+    // initDarkMode() {
+    //   if (process.client) {
+    //     if (localStorage.getItem("theme") == "dark") {
+    //       this.isDarkMode = true;
+    //       document.body.classList.add("dark");
+    //     }
+    //   }
+    // },
   },
 };
 </script>
